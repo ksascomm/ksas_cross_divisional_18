@@ -1,0 +1,575 @@
+// Prevent FOUC
+.no-js {
+  @include breakpoint(small only) {
+    .top-bar {
+      display: none;
+    }
+  }
+
+  @include breakpoint(medium) {
+    .title-bar {
+      display: none;
+    }
+  }
+  .nav-shield {
+    display: none;
+  }
+}
+
+.site-header {
+  background-color: $blue;
+}
+
+// Navigation breakpoints
+.mobile-menu,
+.site-title-bar {
+  @include hide-for(medium);
+}
+
+.desktop-menu,
+.site-navigation .top-bar-left {
+  @include show-for(medium);
+}
+
+// Mobile menu
+.mobile-menu {
+  display: none; // prevents repaint caused by JS hiding menu onload
+}
+
+.off-canvas {
+  > ul.menu {
+    height: 100vh;
+    padding: 1rem;
+
+    a {
+      color: $white;
+      font-weight: 600;
+      font-size: rem-calc(15);
+    }
+  }
+
+  .menu .active > a { background-color: #ccc; }
+
+}
+
+.title-bar {
+  background: $black;
+}
+
+.title-bar-title {
+  a {
+    font-size: 1rem;
+    color: $medium-gray;
+  }
+}
+
+.mobile-menu,
+.mobile-off-canvas-menu {
+
+  .menu .is-active > a {
+    background-color: lighten($dark-nav-color, 5%);
+  }
+}
+
+// Tablet and desktop menu
+
+.top-bar {
+  &.site-information {
+    @include xy-grid-container;
+    @include breakpoint(small only) {
+      padding: 0; // prevents container visibility on small screens
+    }
+    background-color: $blue;
+    margin-bottom: .5rem;
+  }
+
+  #logo_nav{
+    @include xy-cell();
+    @include breakpoint(small) {
+      text-align: center;
+    }
+    @include breakpoint(large) {
+      text-align: inherit;
+    }
+  }
+  .top-bar-title a {
+    @include breakpoint(small only) {
+      font-size: 1.5rem;
+    }
+    font-size: 2rem;
+    letter-spacing: 0px;
+  }
+
+  .menu a {
+    line-height: 1;
+  }
+
+  .menu>li:not(.menu-text)>a { padding: 1rem; }
+
+  //.dropdown.menu .submenu { border: 0; }
+  //.dropdown.menu .has-submenu.is-down-arrow a { padding-right: 1rem; }
+  //.dropdown.menu .has-submenu.is-down-arrow > a::after { border: 0; }
+  //.dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after { display: none; }
+    .dropdown.menu:first-child > li.is-dropdown-submenu-parent > a::after {
+      border-color: $white transparent transparent
+    }
+    .dropdown.menu > li.is-dropdown-submenu-parent > a {
+      padding-right: 1.5rem;
+    }
+
+  .logo {
+    //@include xy-grid;
+    padding-top: .5rem;
+    @include breakpoint(small only) {
+      @include xy-cell(12);
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          width: 70%;
+        }
+    }
+    @include breakpoint(medium) {  
+      @include xy-cell(4);
+    }
+    @include breakpoint(medium only) {
+       margin-top: 1rem;
+    }
+    @include breakpoint(large) {  
+      @include xy-cell(3);
+    }
+  }
+  .site-desktop-title {
+    @include breakpoint(small only) {  
+      width: 100%;
+      text-align: center;
+      .top-bar-title {
+        @include breakpoint (small only) {
+          @include xy-cell(12);
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    @include breakpoint(medium) {  
+      @include xy-cell(8);
+      text-align: left;
+    }
+    @include breakpoint(large) {  
+      @include xy-cell(9);
+    }
+    h1 {
+        @include breakpoint(medium) {
+          line-height: 1.1em;
+          margin-top:.5rem;
+        }
+        @include breakpoint(large) {
+          line-height: 1.1em;
+          margin-top:1rem;
+        }
+      small {
+        font-size: 50%;
+        color: $white;
+        margin-bottom: 1px;
+        display: block;
+          line-height: 1.3;
+      }
+      a, a:visited {
+        color: $white;
+          &:hover, &:focus {
+            color: $white;
+          }
+      }
+    }    
+  }
+  .menu {
+    font-family: $font-stack-bold;
+    font-weight: $font-stack-bold-weight;
+    a {
+      font-size: 1.125rem;
+      color: $white;
+      &:hover {
+        color: $white;
+      }
+      &:hover:not(.button) {
+        background: darken($blue, 10%);
+      }
+      li:not(:last-child) {
+        border-right: none;
+      }
+    }
+    li.external {
+      //hack: float psuedo ::before element to right so it doesn't mess with F6's ::after dropdown arrows
+      a::before {
+        content: "\ecf6";
+        font-family: $flagship-icon;
+        font-weight: 300;
+        float:right;
+        font-size:85%;
+        padding-left:4px;
+      }
+    }
+    .current_page_parent.current_page_ancestor, {
+      background: darken($blue, 10%);
+    }
+  }
+  .dropdown {
+    .current_page_item {
+      background: darken($blue, 10%);
+    }
+    .current_page_ancestor {
+      .menu {
+        .current_page_item {
+          background: darken($blue, 10%);
+          a {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    @include breakpoint(medium) {
+      font-size: 2rem;
+      line-height: 1.1em;
+    }
+    @include breakpoint(large) {
+      font-size: 2.35rem;
+      line-height: 1.1em;
+    }      
+    small {
+      font-size: 50%;
+      color: $white;
+      margin-bottom: 1px;
+      display: block;
+      line-height: 1.3;
+    }
+    a, a:visited {
+      color: $white;
+        &:hover, &:focus {
+          color: $white;
+        }
+    }        
+  }
+  .input-group {
+    margin-bottom: 0;
+  }
+  form {
+     @include breakpoint (small only) {
+      margin: auto;
+      width: 50%;
+      padding-bottom:1rem;
+    }
+     @include breakpoint (medium) {
+      width: 200px;
+      margin-right: 1.125rem;
+    }
+  }
+  input {
+    height: 2rem;
+    margin-right: 0;
+    &[type='text'] {
+      margin: 0;
+    }
+    &[type="submit"] {
+      font-family: $font-awesome;
+    }
+  }
+  .top-bar-left {
+    padding-left: 2rem;
+  } 
+  ul li ul.submenu {
+    background-color: $white;
+    li {
+      a {
+        color: $black;
+        font-family: $font-stack-semibold;
+        font-weight: $font-stack-semibold-weight;
+        &:hover:not(.button) {
+          background-color: darken($blue, 10%);
+          color: $white;
+        }
+      }
+      &:hover {
+        background-color: darken($blue, 10%);
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray;
+      }
+    }
+  }
+}
+
+.site-navigation {
+  @include breakpoint(small only) {
+    padding: 0; // prevents container visibility on small screens
+  }
+}
+
+// WP post navigation
+.post-navigation {
+  @include clearfix;
+}
+
+.nav-previous {
+  float:left;
+}
+
+.nav-next {
+  float:right;
+}
+
+.roof-header-top, .main-navigation, .top-bar ul {
+  background: $blue;
+}
+
+.site-desktop-title {
+  @include breakpoint(small only) {
+    background: $blue;
+  }
+}
+
+.top-bar-title {
+  img {
+    padding: .25rem 1rem .75rem;
+    //this is when menu breaks line
+    @include breakpoint (small) {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include breakpoint (medium) {
+      max-width: 400px;
+    }
+    @include breakpoint (large) {
+      max-width: 350px;
+    }
+  }
+}
+
+//Explore KSAS area
+
+.roof-header-top {
+  width: 100%;
+  height: 1.5rem;
+  padding: 8px 20px 10px;
+  li.bar {
+    &:after { 
+      font-family: $font-stack-semibold;
+      content: "|";
+      color: $black;
+      }
+  }
+  .roof-menu {
+    font-size: 1rem;
+  }
+  .menu.simple {
+    a.button {
+      padding: 0.7rem 1rem;
+    }
+  }
+  .roof-header-top-links {
+    ul li {
+      display: inline;
+    }
+    a {
+      font-family: $font-stack-semibold;
+      font-weight: $font-stack-semibold-weight;
+      color: $white;
+    }
+  }
+  .off-canvas {
+    background: $white;
+    .menu > li > a {
+      color: $white;
+      &:hover {
+        background: $light-gray;
+      }
+    }    
+  }
+  #global-links {
+    h3 {
+      font-size: 1.25rem;
+      color: $black;
+      font-family: $font-stack-bold;
+      font-weight: $font-stack-bold-weight;
+    }
+    .menu {
+    display: inherit;
+      li {
+        display: list-item;
+        a {
+          padding: 0.35rem 1rem; 
+          font-family: $font-stack-bold;
+          font-weight: $font-stack-bold-weight;
+          color: $blue;
+          &:hover, &:active {
+              color: $black;
+          }
+        }      
+      }
+    }
+  } 
+  form { 
+      @include breakpoint (medium) {
+        width: 200px;
+        //margin-top: -5px;
+      }
+    }
+    input {
+      height: 2rem;
+      &[type="submit"] {
+          font-family: $font-awesome;
+      }
+    }
+    .input-group {
+      margin-bottom: 0;
+    }
+    .button {
+      background-color: #2A78C7;
+      padding: 0 1rem;
+    }  
+}
+
+//Breadcrumbs
+
+.secondary {
+  background-color: $white;
+  a {
+    color: $black;
+  }
+  .breadcrumbs {
+    font-family: $font-stack-semibold;
+    font-weight: $font-stack-semibold-weight;
+    line-height: 1;
+    margin: 0 0 .5rem;
+    list-style: none;
+    li {
+      padding: 0.5rem 0;
+      color: $dark-gray;
+      position: relative;
+      font-size: .85rem;
+    }
+    li:first-child a {
+      
+    }
+
+    li.current_page_item > a {
+      background-color: transparent;
+    }
+    @include breakpoint (small only) {
+      li { 
+          font-size: .85rem;
+        }
+      }
+    a {
+        color: $blue;
+        &:hover {
+          color: $black;
+        }
+    }
+    }
+}
+
+.pagination {
+  margin-top: 2rem;
+  .current {
+    background: $blue;
+  }
+}
+
+.news-post-pagination .pagination a {
+  display: inline-block;
+}
+
+//Sidebar Navigation
+
+.sidebar {
+  padding-left: 1rem;
+  .sidebar-menu {
+    padding: .5rem;
+    h1.sidebar-menu-title {
+      font-family: $font-stack-semibold;
+      font-weight: $font-stack-semibold-weight;
+      font-size: 1.15rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    margin-bottom: 1rem;
+    ul.nav {
+      padding: 0 0 0 0.5rem;
+      margin-left: 0;
+      border-left: .2rem solid $blue;
+      font-family: $font-stack-bold;
+      font-weight: $font-stack-bold-weight;
+      li {
+        font-size: 1rem;
+        a {
+          line-height: 110%;
+          display: block;
+          margin-bottom: 1rem;
+        }
+        &.is-active {
+          a {
+            
+          }
+        }
+        ul.sub-menu {
+          //display: none;
+        }
+        //reduce bold on grandchild and greatgrandchild pages
+        &.current_page_parent.current_page_ancestor, &.current_page_item {
+          //display grandchild and greatgrandchild pages if they exist
+          ul.sub-menu {
+            //display: inherit;
+            li {
+              font-family: $font-stack-semibold;
+              font-weight: $font-stack-semibold-weight;
+              a {
+                margin-top: -.25rem;
+              }
+            }
+          }
+        }
+      }
+      li.external {
+        a::after {
+          content: "\ecf6";
+          font-family: $flagship-icon;
+          font-weight: 300;
+          font-size:85%;
+          padding-left:4px;
+        }
+      }
+    }
+    ul.nav, ul.sub-menu {
+      list-style: none;
+    }
+    ul.sub-menu {
+      li {
+        a {
+          
+        }
+      }
+    }
+    &.faculty-bio-jump {
+      background-color: $white;
+      background-size: 2.666666666666667rem auto;
+      border: .06667rem solid $medium-gray;
+      border-bottom: none;
+      box-shadow: 0 0.4rem 0 0 $blue;
+      margin-bottom: 1rem;
+      padding: .5rem;
+      h1 {
+        font-size:1.25rem;
+        font-family: $font-stack-semibold;
+        font-weight: $font-stack-semibold-weight; 
+      }
+    }
+    &.widow {
+      display: none;
+    }
+  } 
+}

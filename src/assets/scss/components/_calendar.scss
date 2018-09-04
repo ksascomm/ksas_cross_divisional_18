@@ -1,0 +1,100 @@
+footer.timely.ai1ec-event-footer {
+    background: inherit;
+    color: $dark-gray;
+}
+
+.timely p {
+  font-size: 16px;
+  font-family: $font-stack !important;
+  font-weight: $font-stack-weight;
+}
+
+.entry-content .timely a:visited, .comment-content .timely a:visited, .site-footer .widget .timely a:visited {
+  color: $blue;
+}
+
+.timely a {
+  color: $blue;
+  &:link, &:visited, &:active, &:hover {
+    color: $blue;
+  }
+}
+
+#ai1ec-container a {
+  color: $blue;
+  &:link, &:visited, &:active, &:hover {
+    color: $blue;
+  }
+}
+.ai1ec-event-time, span.ai1ec-event-title, .ai1ec-event-details {
+  font-family: $font-stack-bold !important;
+  font-weight: $font-stack-weight;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-date {
+  background: none !important;
+  &.ai1ec-today {
+    background: none !important;
+  }
+}
+
+.ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+  border-top: none !important;
+  background: none !important;
+}
+
+.timely {
+  font-family: inherit !important;
+}
+
+.ai1ec-agenda-widget-view {
+  .ai1ec-event {
+    .ai1ec-event-time, > a {
+      color: $black;
+    }
+    .ai1ec-event-title {
+    }
+  }
+  .ai1ec-date.ai1ec-today {
+    border-top: none;
+  }
+}
+
+.ai1ec-agenda-view .ai1ec-date.ai1ec-today {
+  border-top: none;
+}
+
+.ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
+  background: $blue;
+}
+
+.ai1ec-agenda-view .ai1ec-event .ai1ec-event-title {
+	color: $blue;
+}
+
+.ai1ec-event-avatar {
+  box-shadow: none;
+}
+
+.ai1ec-agenda-view .ai1ec-event:hover .ai1ec-event-title {
+    color: $blue;
+}
+
+.ai1ec-field-label {
+  color: $dark-gray;
+}
+
+.ai1ec-subscribe-dropdown.ai1ec-dropdown.ai1ec-btn.ai1ec-btn-default.ai1ec-btn-xs {
+    margin-left: .75rem;
+    margin-bottom: .75rem;
+}
+
+.ai1ec-no-results {
+  color: $black;
+  padding: .75rem;
+  font-size: 1.125rem !important;
+}
+
+.ai1ec-pull-left {
+  margin-left: .5rem;
+}

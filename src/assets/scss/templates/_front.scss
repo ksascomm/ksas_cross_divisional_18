@@ -1,0 +1,254 @@
+// Page header
+.front-hero {
+
+}
+
+// Intro
+.intro {
+
+}
+
+.hero {
+  background: $gray;
+}
+
+.slide-caption {
+  @include breakpoint (large) {
+    margin-top: 4em;
+  }
+  @include breakpoint (medium) {
+    margin-top: 2em;
+  }
+  a.button {
+    color: $white;
+  }
+}
+
+// Section divider
+.section-divider {
+  @include xy-grid-container;
+  @include xy-grid;
+
+  hr {
+    @include xy-cell(12);
+    @extend .dotted;
+    box-sizing: border-box;
+  }
+}
+
+.homepage-news {
+  .news-title, .hub-title {
+    h2 {
+      font-size: 1.5rem;
+      font-family: $font-header-extrabold;
+      font-weight: $font-header-extrabold-weight;
+    }
+  }
+  .post-listing {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  time.updated {
+    color: $dark-gray;
+    text-transform: uppercase;
+    font-family: $font-stack-semibold;
+    font-weight: $font-stack-semibold-weight;
+  }
+  .homepage-news-archive {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+}
+.homepage-article {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  border-top: 1px solid $gray;
+  &:first-of-type{
+    border-top: none;
+  }
+}
+.hub-article {
+  border-bottom: 1px solid $gray;
+  &:last-of-type {
+    border-bottom: none;
+  }
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  summary {
+    list-style-type: none;
+  }
+}
+
+.hub-title {
+  margin-top: 2rem;
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .fullscreen-image-slider .orbit-caption {
+    padding: 0.3rem;
+  }
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+  .fullscreen-image-slider {
+    .orbit-image {
+      width: 100%;
+    }
+    .orbit-caption {
+      right: 5%;
+      bottom: 50%;
+      -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+      transform: translateY(50%);
+      color: $white;
+      width: 550px;
+      padding: 2rem 4rem;
+      font-size: 1.25rem;
+      background-color: rgba(44, 44, 51, 0.66);
+    }
+  }
+}
+
+.fullscreen-image-slider .orbit-caption > {
+  h1 {
+    font-size: 1.95rem;
+  }
+  h4 > a {
+    color: white;
+  }
+}
+
+.orbit-caption {
+  p {
+    font-family: $font-stack-semibold;
+    font-weight: $font-stack-semibold-weight;
+  }
+}
+
+.highlighted-research {
+  background: $gray;
+  .slide-caption {
+    padding-left: 2rem;
+    @include breakpoint(large) {
+      margin-top: 2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    h5 {
+      color: $dark-gray;
+    }
+    p {
+      font-family: $font-stack-semibold;
+      font-weight: $font-stack-semibold-weight;
+    }
+  }
+  .orbit-previous, .orbit-next {
+    color: $black;
+  }
+  @include breakpoint (small) {
+    img {
+      padding: 0;
+    }
+  }
+  @include breakpoint (large) {
+    img {
+      @include xy-gutters($gutters: 40);
+      @include xy-gutters($gutter-type: padding);
+    }
+  }
+}
+
+#hp-buckets {
+  h3 {
+    padding-left: 1rem;
+  }
+  .buckets {
+  margin: 1.25rem auto;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #cacaca;
+  border-left: 0;
+    .bucket {
+      margin-bottom: 1rem;
+      .callout {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+
+.kasper-intro, .kasper-search {
+  margin: 2em auto;
+  h3 {
+    font-size: 1.75rem;
+  }
+  .button {
+    height:  2.4375rem;
+  }
+}
+
+.featured-hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: rem-calc(200);
+  position: relative;
+  margin-bottom: 1.25rem;
+}
+
+.featured-hero.parent.front-page {
+margin-bottom: inherit;
+  .orbit-caption {
+    .button-group {
+      @include xy-grid;
+      a.appointment.button {
+        font-family: $font-stack-bold;
+        font-weight: $font-stack-bold-weight;
+        width: calc(25% - 10px) !important;
+        margin-right: 10px !important;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media print,
+screen and (min-width: 40em) {
+    .featured-hero.parent {
+        height: 18.75rem;
+    }
+}
+
+.tasks-callout {
+  .home-intro {
+    padding-top: 1rem;
+    .introduction {
+      font-size: 1.25rem;
+    }
+    .homepage-callout {
+      border-radius: 1rem;
+      background: $yellow;
+      margin: 0;
+      .widget {
+        background: inherit !important;
+        border: none !important;
+        box-shadow: none !important;
+        margin-bottom: 0;
+        font-size: 1.125rem;
+      }
+    &.sidebar {
+      margin-top: 0;
+      }
+    }
+    hr {
+      padding-top: .5rem;
+    }
+  }
+  .hub-title {
+    margin-top: 1rem;
+  }
+}

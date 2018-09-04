@@ -1,0 +1,252 @@
+//Directory
+.directory {
+  list-style: none;
+  p {
+    margin-top: 20px;
+  }
+  li.person {
+  margin-bottom: 1rem;
+  width: 100%;
+    &.sub-head {
+      min-height: 1px;
+      margin-bottom: 0;
+      background: none;
+      padding: 0;
+        h2 {
+        font-size: 1.75rem;
+        margin: 0 0 10px 0;
+        color: $black;
+      }
+    }
+    img {
+      margin-right: 1rem;
+      padding-left: 1rem;
+    }
+    .media-object {
+      @include breakpoint(medium) {
+        margin-bottom: 1.75rem;
+      }
+    img {
+      @include breakpoint(small only) {
+        max-width: rem-calc(125px);
+      }      
+      @include breakpoint(medium up) {
+        max-width: rem-calc(150px);
+      }
+    }
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    ul.contact {
+      list-style: none;
+      margin-left: 0;
+      li {
+        @include breakpoint(small) {
+          font-size: .9rem;
+
+        }
+        @include breakpoint(medium) {
+          font-size: 1.125rem;
+        }
+      } 
+    }
+  &.job-market-candidate, &.graduate-student {
+    .media-object {
+      margin-bottom: 1rem;
+    }
+  }  
+  }
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.directory-search {
+  p {
+    font-family: $font-stack-semibold;
+    font-weight: $font-stack-semibold-weight;
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem
+  }
+  .button {
+    background: $blue;
+    margin: .5rem;
+    font-family: $font-stack-bold;
+    font-weight: $font-stack-bold-weight;
+    font-size: 1rem;
+    &.is-checked {
+      background-color: transparent;
+      border: 1px solid $blue;
+      color: $blue;
+    }
+  }
+  .expertise-group {
+    .button {
+      background: $skyblue;
+      font-family: $font-stack-bold;
+      font-weight: $font-stack-bold-weight;
+      &.is-checked {
+        background-color: transparent;
+        border: 1px solid $skyblue;
+        color: $skyblue;
+      }
+    }
+  }
+  .search-sort {
+    margin: .5rem 0;
+    @include breakpoint(large) {
+      position: relative;
+      .button.sort {
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 1rem;
+      }
+    }
+    .input-group {
+      margin-left: .5rem;
+    } 
+  }
+}
+
+.bio {
+  margin-bottom: 1rem;
+  img {
+    &.headshot {
+      @include breakpoint (small only) {
+        max-width: rem-calc(250px);
+      }
+    }
+  }
+}
+
+.people-directory {
+  margin-bottom: 3rem;
+}
+
+//Courses
+ul.expander > li {
+  width: 100%;
+}
+
+.courses.isotope .isotope-item {
+  min-height: 0px !important;
+}
+
+.field {
+  @include breakpoint(small) {
+    margin-bottom: 1.25rem;
+    min-height: 200px;
+  } 
+  @include breakpoint(medium) {
+    border-width: .25em;
+    min-height: 300px;
+  }
+  @include breakpoint(large) {
+    min-height: 325px;
+    margin-bottom: 30px;
+  }
+  p {
+    color: $black;
+    font-size: .9rem;
+    line-height: 1.3;
+    font-family: $font-stack;
+    font-weight: $font-stack-weight;
+  }
+  p.contact {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-family: $font-stack-bold;
+    font-weight: $font-stack-bold-weight;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+  .button {
+    padding: .3rem;
+    cursor: auto;
+    font-family: $font-stack;
+    font-weight: $font-stack-weight;
+  }
+}
+
+.research-project {
+  .button {
+    padding: .5rem;
+    font-size: .9rem;
+  }
+}
+
+ul#profile-tabs {
+  margin-left: 1rem;
+}
+
+
+/* Start: Recommended Isotope styles */
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope {
+  -webkit-transition-duration: 0.8s;
+  -moz-transition-duration: 0.8s;
+  -ms-transition-duration: 0.8s;
+  -o-transition-duration: 0.8s;
+  transition-duration: 0.8s;
+  .isotope-item {
+    -webkit-transition-duration: 0.8s;
+    -moz-transition-duration: 0.8s;
+    -ms-transition-duration: 0.8s;
+    -o-transition-duration: 0.8s;
+    transition-duration: 0.8s;
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    -ms-transition-property: -ms-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    transition-property: transform, opacity;
+  }
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+  &.no-transition {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+    .isotope-item {
+      -webkit-transition-duration: 0s;
+      -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+      -o-transition-duration: 0s;
+      transition-duration: 0s;
+    }
+  }
+  .isotope-item.no-transition {
+    -webkit-transition-duration: 0s;
+    -moz-transition-duration: 0s;
+    -ms-transition-duration: 0s;
+    -o-transition-duration: 0s;
+    transition-duration: 0s;
+  }
+}
+
+.fa-phone-square {
+  transform: rotate(90deg);
+}
+
+/**** disabling Isotope CSS3 transitions ****/

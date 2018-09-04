@@ -1,0 +1,53 @@
+.sites-button {
+  background: $primary-color;
+  font-size: 1.25rem;
+  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
+  border-radius: 3px;
+  border: none;
+}
+
+.button {
+	background: $blue;
+	font-family: $font-stack-semibold;
+	font-weight: $font-stack-semibold-weight;
+	&:hover {
+		@include button-hover;
+    }
+}
+
+.top-bar {
+	.input-group-button {
+		.button {
+			background: $skyblue;
+			&:hover {
+	        	background: $bluejaysblue;
+	        	transition: color 0.5s ease;
+	      	}
+		}
+	}
+}
+
+.roof-header-top {
+	.button {
+    	background-color: $skyblue;
+	    &:hover {
+			@include button-hover;
+	    }
+	}
+}
+
+.entry-content {
+	p {
+		a {
+			&.button {
+				background-color: $blue;
+				border: 1px solid transparent;
+				&:hover {
+					border: 1px solid transparent;
+	        		background: $bluejaysblue;
+	        		transition: color 0.5s ease;	
+				}
+			}
+		}
+	}
+}

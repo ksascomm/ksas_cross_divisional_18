@@ -1,0 +1,65 @@
+@media screen and (min-width: 64em) {
+    .featured-hero.parent.interior .orbit-caption h1 {
+        width: 66.66667%;
+    }
+}
+
+.parent-page {
+	//margin-left: 0 !important;
+	//margin-right: 0 !important;
+	.appointments {
+    	margin-top: 1rem;
+	}
+	/*--- template 2a -make an appointment---*/
+	.grid-x.appointments {
+	    border-bottom-style: solid;
+	    border-bottom-color: #E5E2E0;
+	}
+	.child-pages, .page-content {
+		@include xy-cell(9);
+		margin: 0;
+		.button-group {
+			margin: .5rem auto;
+		}
+	}
+	.page-content {
+		padding-top: 1rem;
+	}
+	#parent-menu a.button,
+	a.appointment.button {
+	    color: white !important;
+	    border: inherit !important;
+	    font-size: 1rem;
+	    font-family: $font-stack-bold;
+	    font-weight: $font-stack-bold-weight;
+	}
+	p.excerpt {
+	    padding-bottom: .5rem;
+	}
+	/*--- all other 2a template pages --*/
+
+	.roadmap .button {
+	    font-size: 1rem;
+	    font-family: $font-stack-bold;
+	    font-weight: $font-stack-bold-weight;
+	}
+	.button-group.expanded .button:first-child:nth-last-child(4),
+	.button-group.expanded .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button {
+	    width: calc(25% - 10px);
+	    margin-right: 10px;
+	}	
+}
+
+a.appointment.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+h1.featured {
+    font-family: $font-header-extrabold;
+    font-weight: $font-header-extrabold-weight;
+    font-size: 2rem;
+}

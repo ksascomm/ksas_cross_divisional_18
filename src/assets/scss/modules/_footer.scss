@@ -1,0 +1,109 @@
+.footer {
+  background-color: $black;
+  margin: 0 auto;
+  border-top: 1px solid $medium-gray;
+  margin-top: rem-calc(60);
+}
+
+.footer-container {
+  text-align:center;
+  @include xy-grid-container;
+  padding: rem-calc(10) 0;
+
+  section {
+    @include xy-cell();
+    @include breakpoint(large) {
+      @include xy-cell(auto);
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  p {
+    color: $white;
+    font-size: 1rem;
+  }
+  #menu-footer-links {
+    padding-top: 1rem;
+    @include breakpoint(large) {
+      @include menu-align(center);
+    }
+    @media screen and (min-width: 64em) and (max-width: 1238px) {
+      padding-left: 4rem;
+    }
+    @include breakpoint(medium down) {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    a { 
+      font-size: 1rem;
+      font-family: $font-stack-bold;
+      font-weight: $font-stack-bold-weight;
+      color: $white;
+      &:hover {
+        border-bottom: 0.0625rem dashed;
+        transition: color 0.5s ease; 
+      }
+    }
+  }  
+  .social-media {
+    a {
+      color: $skyblue;
+      margin-left: 1.3rem;
+      &:hover {
+        color: $bluejaysblue;
+        transition: color 0.5s ease;
+      }
+      @include breakpoint(medium down) {
+        float: left;
+        margin-top: 1rem;
+      }
+      .fa {
+        padding: 0 .5rem;
+        color: $white;
+      }
+    }
+  }  
+  .jhushield {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1.5rem;
+  }
+  .copydate {
+     margin-top: 1rem;
+     @include xy-cell();
+     a {
+      font-family: $font-stack-bold;
+      font-weight: $font-stack-bold-weight;
+      color: $white;
+      &:hover {
+        border-bottom: 0.0625rem dashed;
+        transition: color 0.5s ease; 
+      }
+     }
+  }  
+}
+
+.footer-links li {
+  margin-bottom: 1rem;
+    @include breakpoint(large) {
+      width: 220px;
+  }
+  a {
+    &:hover {
+      border-bottom: none !important;
+    }
+  }
+}
+
+.centered {
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+  }
+}
