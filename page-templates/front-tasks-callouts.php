@@ -14,11 +14,12 @@ get_header(); ?>
 	if ( has_post_thumbnail( $post->ID ) ) : ?>
 		<header class="featured-hero parent front-page" role="banner" data-interchange="[<?php echo the_post_thumbnail_url('featured-small'); ?>, small], [<?php echo the_post_thumbnail_url('featured-medium'); ?>, medium], [<?php echo the_post_thumbnail_url('featured-large'); ?>, large], [<?php echo the_post_thumbnail_url('featured-xlarge'); ?>, xlarge]">
 			<?php 
-			//if ACF Task Finder is enabled, overlay it
-			if( $task_finder = get_field('task_finder') ) : ?>
+			//if ACF is enabled, overlay Task Finder field
+			if ( function_exists('get_field') && get_field('task_finder') ): ?>
 			<div class="orbit-caption">
 				<div class="grid-container">
-					<?php echo $task_finder; ?>
+					<?php $task_finder = get_field('task_finder');
+						echo $task_finder; ?>
 				</div>
 			</div>
 			<?php endif;?>
