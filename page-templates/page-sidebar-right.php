@@ -4,7 +4,7 @@ Template Name: Right Sidebar
 */
 get_header(); ?>
 
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="main-grid sidebar-right">
 		<main class="main-content">
 			<div class="secondary">

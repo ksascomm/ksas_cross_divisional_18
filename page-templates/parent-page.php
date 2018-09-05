@@ -24,7 +24,7 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 		</div>	
 	</header>
 <?php endif;?>		
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="main-grid">
 		<main class="main-content-full-width parent-page">
 			<div class="child-pages">

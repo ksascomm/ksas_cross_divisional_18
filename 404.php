@@ -8,7 +8,7 @@
 
 get_header(); ?>
 
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="secondary">
 		<?php foundationpress_breadcrumb(); ?>
 	</div>

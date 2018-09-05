@@ -31,7 +31,7 @@ get_header(); ?>
 	</div>
 </div>
 
-<div class="main-container">
+<div class="main-container" id="page">
 	    <div class="main-grid homepage sidebar-right">
 	        <main class="main-content homepage-news">	
 

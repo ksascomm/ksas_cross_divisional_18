@@ -4,7 +4,7 @@ Template Name: IRB About
 */
 get_header(); ?>
 
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="main-grid">
 		<main class="main-content">
 			<div class="secondary">

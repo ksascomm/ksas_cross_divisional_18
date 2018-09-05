@@ -6,7 +6,7 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-	<div class="main-container">
+	<div class="main-container" id="page">
 	    <div class="main-grid homepage">
 	        <main class="main-content-full-width">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

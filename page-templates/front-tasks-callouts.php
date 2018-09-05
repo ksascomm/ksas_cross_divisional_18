@@ -29,7 +29,7 @@ get_header(); ?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-<div class="main-container">
+<div class="main-container" id="page">
     <div class="main-grid homepage">
         <main class="main-content-full-width tasks-callout">
 

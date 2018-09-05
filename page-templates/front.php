@@ -31,7 +31,7 @@ if ( $slider_query->have_posts() ) :?>
 
 <?php do_action( 'foundationpress_before_content' ); ?>
 
-	<div class="main-container">
+	<div class="main-container" id="page">
 	    <div class="main-grid homepage sidebar-right">
 	        <main class="main-content homepage-news">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>

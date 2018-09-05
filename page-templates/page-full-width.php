@@ -4,7 +4,7 @@ Template Name: Full Width
 */
 get_header(); ?>
 
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="main-grid">
 		<main class="main-content-full-width">
 			<div class="secondary">

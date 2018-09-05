@@ -4,7 +4,7 @@ Template Name: Page with Sidebar (specified widget)
 */
 get_header(); ?>
 
-<div class="main-container">
+<div class="main-container" id="page">
 	<div class="main-grid">
 		<main class="main-content">
 			<div class="secondary">
