@@ -30,6 +30,9 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 
 		// Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
 		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 125, 125, true );   // default thumb size
+		add_image_size( 'directory', 150, 216, true );
+		add_image_size( 'news', 175, 175, true );
 
 		// RSS thingy
 		add_theme_support( 'automatic-feed-links' );
