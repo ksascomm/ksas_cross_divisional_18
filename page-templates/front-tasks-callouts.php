@@ -54,6 +54,29 @@ get_header(); ?>
 				<hr>
 			</div>
 
+			<?php //if ACF is enabled, display deadlines
+			if ( function_exists('get_field') && get_field('upcoming_deadlines') ): ?>
+				<?php if ( have_rows( 'upcoming_deadlines' ) ) : ?>
+					<div class="grid-x grid-padding-x grid-container">
+						<h2 class="deadlines-heading">
+							<?php $field_name = "upcoming_deadlines";
+							$field = get_field_object($field_name);
+							echo $field['label'];?>
+						</h2>
+					</div>
+					<div class="grid-x grid-padding-x small-up-3 dates">
+						<?php while ( have_rows( 'upcoming_deadlines' ) ) : the_row(); ?>
+							<div class="cell">
+								<div class="date">
+									<span class="far fa-calendar-alt"></span>
+									<h4><?php the_sub_field( 'deadline_date' ); ?></h4>
+									<p><?php the_sub_field( 'deadline_information' ); ?></p>
+								</div>
+							</div>
+						<?php endwhile; ?>
+					</div>
+				<?php endif;?>
+			<?php endif;?>
 			<div class="grid-x grid-padding-x grid-container">
 				<div class="cell small-12 large-8 homepage-news">
 				
