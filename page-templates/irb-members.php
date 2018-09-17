@@ -5,8 +5,8 @@ Template Name: IRB Members
 get_header(); ?>
 
 <div class="main-container" id="page">
-	<div class="main-grid">
-		<main class="main-content-full-width">
+   <div class="main-grid">
+      <main class="main-content">
 			<div class="secondary">
 				<?php foundationpress_breadcrumb(); ?>
 			</div>
@@ -93,6 +93,7 @@ get_header(); ?>
             </div>
          </section>
 		 </main>
+      <?php get_sidebar(); ?>
 	</div>
 </div>
 <?php get_footer();
