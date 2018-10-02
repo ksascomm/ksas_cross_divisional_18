@@ -132,6 +132,9 @@
   background: $gray;
   .slide-caption {
     padding-left: 2rem;
+    @include breakpoint (small) {
+      padding-left: 0;
+    }
     @include breakpoint(large) {
       margin-top: 2rem;
     }
@@ -146,21 +149,23 @@
     p {
       font-family: $font-stack-semibold;
       font-weight: $font-stack-semibold-weight;
-      font-size: 1.25rem;
+      font-size: 1.125rem;
     }
   }
   .orbit-previous, .orbit-next {
     color: $black;
   }
-  @include breakpoint (small) {
-    img {
+  img {
+    @include breakpoint (small only) { 
       padding: 0;
     }
-  }
-  @include breakpoint (large) {
-    img {
-      @include xy-gutters($gutters: 40);
-      @include xy-gutters($gutter-type: padding);
+    @include breakpoint (large) {
+        @include xy-gutters($gutters: 0);
+        @include xy-gutters($gutter-type: padding);
+    }   
+    @include breakpoint (xlarge) {
+        @include xy-gutters($gutters: 40);
+        @include xy-gutters($gutter-type: padding);
     }
   }
 }
