@@ -23,7 +23,8 @@ table thead {
 .entry-content {
 	.accordion {
 		.accordion-title {
-			border-bottom: 1px solid $gray;
+			border-bottom-width: 1px;
+      border: 1px solid $gray;
 		}
 	}
 }
