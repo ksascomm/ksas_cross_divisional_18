@@ -6,7 +6,7 @@ $theme_option = flagship_sub_get_global_options();
 get_header(); ?>
 
 
-<?php get_template_part( 'template-parts/homepage-slider' ); ?>
+<?php get_template_part( 'template-parts/homepage-slider-full' ); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<main class="home-intro" id="page" tabindex="0" aria-label="Website Introduction">
