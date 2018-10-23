@@ -9,7 +9,7 @@ get_header(); ?>
 <?php get_template_part( 'template-parts/homepage-slider-full' ); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<main class="home-intro" id="page" tabindex="0" aria-label="Website Introduction">
+	<main class="home-intro blue" id="page" tabindex="0" aria-label="Website Introduction">
 		<div class="grid-x grid-padding-x grid-container">
 			<div class="cell small-12">
 				<?php the_content(); ?>	
