@@ -30,7 +30,7 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 			<div class="child-pages">
 				<!--Student Roadmap & Completing a Degree-->
 				<?php if (is_page (array(112, 332) )) : ?> 
-					<div class="expanded button-group roadmap" id="parent-menu">
+					<div class="expanded stacked-for-small button-group roadmap" id="parent-menu">
 						<?php foreach ( $pages as $page ) { ?>
 						  <a class="button" href="<?php echo  get_permalink($page->ID); ?>" rel="bookmark" title="<?php echo $page->post_title; ?>"><?php echo $page->post_title; ?></a>
 						<?php } ?>
@@ -39,10 +39,10 @@ if ( has_post_thumbnail( $post->ID ) ) : ?>
 				<?php elseif (is_page(array(113, 114)) ) : ?>
 					<?php foreach ( $pages as $page ) { ?>
 						<div class="grid-x appointments">
-							<div class="cell small-12 large-3">
+							<div class="cell small-12 medium-5 large-3">
 								<a class="appointment button" href="<?php echo get_permalink($page->ID); ?>" rel="bookmark" title="<?php echo $page->post_title; ?>"><?php echo $page->post_title; ?></a>
 							</div>
-							<div class="cell small-12 large-8 large-offset-1">
+							<div class="cell small-12 medium-6 medium-offset-1 large-8 large-offset-1">
 								<p class="excerpt post-<?php echo $page->ID;?>"><?php echo $page->post_excerpt; ?></p>
 							</div>
 						</div>

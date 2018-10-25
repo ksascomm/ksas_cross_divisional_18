@@ -5,8 +5,6 @@
 }
 
 .parent-page {
-	//margin-left: 0 !important;
-	//margin-right: 0 !important;
 	.appointments {
     	margin-top: 1rem;
 	}
@@ -16,7 +14,12 @@
 	    border-bottom-color: #E5E2E0;
 	}
 	.child-pages, .page-content {
-		@include xy-cell(9);
+		@include breakpoint (small) {
+			@include xy-cell(12);
+		}
+		@include breakpoint (large) {
+			@include xy-cell(10);
+		}
 		margin: 0;
 		.button-group {
 			margin: .5rem auto;
@@ -43,10 +46,12 @@
 	    font-family: $font-stack-bold;
 	    font-weight: $font-stack-bold-weight;
 	}
-	.button-group.expanded .button:first-child:nth-last-child(4),
-	.button-group.expanded .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button {
-	    width: calc(25% - 10px);
-	    margin-right: 10px;
+	@include breakpoint (medium) {
+		.button-group.expanded .button:first-child:nth-last-child(4),
+		.button-group.expanded .button:first-child:nth-last-child(4):first-child:nth-last-child(4) ~ .button {
+		    width: calc(25% - 10px);
+		    margin-right: 10px;
+		}
 	}	
 }
 
