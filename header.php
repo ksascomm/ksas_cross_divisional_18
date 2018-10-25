@@ -117,7 +117,7 @@
 				</h1>
 			</div>
 		</div>
-		<nav class="top-bar main-navigation" role="navigation">
+		<nav class="top-bar main-navigation hide-for-print" role="navigation">
 			<div class="top-bar-left">
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x">						
