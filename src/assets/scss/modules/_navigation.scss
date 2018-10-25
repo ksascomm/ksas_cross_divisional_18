@@ -18,6 +18,9 @@
 
 .site-header {
   background-color: $blue;
+  @include breakpoint (medium only) {
+    margin-top: -10px;
+  }
 }
 
 // Navigation breakpoints
