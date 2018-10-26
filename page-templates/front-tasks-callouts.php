@@ -12,7 +12,7 @@ get_header(); ?>
 	// If a featured image is set, insert into layout and use Interchange
 	// to select the optimal image size per named media query.
 	if ( has_post_thumbnail( $post->ID ) ) : ?>
-		<header class="featured-hero parent front-page" role="banner" data-interchange="[<?php echo the_post_thumbnail_url('featured-small'); ?>, small], [<?php echo the_post_thumbnail_url('featured-medium'); ?>, medium], [<?php echo the_post_thumbnail_url('featured-large'); ?>, large], [<?php echo the_post_thumbnail_url('featured-xlarge'); ?>, xlarge]">
+		<header class="featured-hero parent front-page hide-for-print" role="banner" data-interchange="[<?php echo the_post_thumbnail_url('featured-small'); ?>, small], [<?php echo the_post_thumbnail_url('featured-medium'); ?>, medium], [<?php echo the_post_thumbnail_url('featured-large'); ?>, large], [<?php echo the_post_thumbnail_url('featured-xlarge'); ?>, xlarge]">
 			<?php 
 			//if ACF is enabled, overlay Task Finder field
 			if ( function_exists('get_field') && get_field('task_finder') ): ?>
