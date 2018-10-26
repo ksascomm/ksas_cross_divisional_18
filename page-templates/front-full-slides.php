@@ -5,7 +5,10 @@ Template Name: Front (Full Width Slider)
 $theme_option = flagship_sub_get_global_options();
 get_header(); ?>
 
-
+<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
+	<header class="featured-hero parent front-page hide-for-print" role="banner" data-interchange="[<?php the_post_thumbnail_url('featured-small'); ?>, small], [<?php the_post_thumbnail_url('featured-medium'); ?>, medium], [<?php the_post_thumbnail_url('featured-large'); ?>, large], [<?php the_post_thumbnail_url('featured-xlarge'); ?>, xlarge]" aria-label="Featured Image">
+	</header>
+<?php endif; ?>
 <?php get_template_part( 'template-parts/homepage-slider-full' ); ?>
 <?php do_action( 'foundationpress_before_content' ); ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
