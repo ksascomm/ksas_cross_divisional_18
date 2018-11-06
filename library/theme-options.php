@@ -210,6 +210,14 @@ function flagship_sub_options_page_fields() {
 		'choices' => array(' ', 'arts-culture', 'at-work', 'health', 'politics-society', 'science-technology', 'student-life', 'university-news', 'voices-opinion'),
 		'std'    => ' ',
 	);	
+	$options[24] =
+	array(
+		'section' => 'technical_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_siteimprove_analytics',
+		'title'   => __( 'Siteimprove Analytics', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Do you want to display the Siteimprove Analytics script?', 'flagship_sub_textdomain'  ),
+		'type'    => 'checkbox',
+		'std'    => '0',
+	);	
 	return $options;
-
 }
