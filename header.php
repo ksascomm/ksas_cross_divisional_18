@@ -47,15 +47,11 @@
 			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/dist/assets/images/favicons/apple-icon-120x120.png">
 	    	<meta name="theme-color" content="#121212">
 	    <?php } ?>
-
-
 		<?php wp_head(); ?>
-
+		
 		<!--Scripts-->
 		<?php get_template_part( 'template-parts/analytics' ); ?>
 		<?php get_template_part( 'template-parts/script-initiators' ); ?>
-
-
 	</head>
 	<body <?php body_class(); ?>>
 	<div role="navigation" aria-label="Skip to main content">
