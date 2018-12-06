@@ -29,7 +29,7 @@ get_header(); ?>
 <?php endwhile; endif; ?>
 <?php //if ACF is enabled, display deadlines
 if ( function_exists('get_field') && get_field('buckets') ): ?>
-	<div class="buckets">
+	<div class="agora buckets">
 		<div class="grid-x grid-padding-x grid-container">
 			<?php if ( have_rows( 'buckets' ) ) : ?>
 			<h2 class="bucket-heading"><?php the_field( 'callout' ); ?></h2>
