@@ -17,23 +17,25 @@ get_header(); ?>
 			<?php endwhile; ?>
 			
 			<section class="documents">
-				<h2>Revised Common Rule</h2>
 				<div class="callout primary">
-				<p>On January 21, 2019, all new federally funded human subjects research studies must comply with the revisions to the U.S. Department of Health and Human Services (DHHS) human subjects research regulations. Where research studies are also Food and Drug Administration (FDA) regulated “clinical investigations,” they must also comply with those regulations. The FDA is working on harmonizing its regulations with the revised version of the DHHS regulations. In addition, all research conducted in Maryland must continue to follow the Common Rule.</p>
-				<p>Complete Information can be found on the Revised Common Rule <a href="https://homewoodirb.jhu.edu/about/revised-common-rule/">webpage</a>.</p>
-				</div>
+				<h2>Revised Common Rule</h2>
+				<?php if ( function_exists('get_field') && get_field('callout')) : ?>
+					<div class="callout">
+						<?php the_field( 'callout' ); ?>
+					</div>
+				<?php endif;?>
 				<div class="grid-x">
 					<?php $application_ehirb_revised_common_rule_query = new WP_Query(array(
-							'posts_per_page'	=> -1,
+						'posts_per_page'	=> -1,
 						'orderby' => 'title',
 						'order' => 'asc',
 						'post_type' => 'documents',
-							'meta_query'	=> array(
+						'meta_query' => array(
 							array(
-										'key'		=> 'ehirb_category_revised_common_rule',
-										'value'		=> 'application',
-									'compare'	=> 'LIKE'
-								)
+								'key'		=> 'ehirb_category_revised_common_rule',
+								'value'		=> 'application',
+								'compare'	=> 'LIKE'
+							)
 						)
 					)); if ($application_ehirb_revised_common_rule_query->have_posts() ) :?>
 					<div class="cell small-12 large-6">
@@ -194,10 +196,11 @@ get_header(); ?>
 					</div>
 					<?php endif; ?>
 				</div>
+			</div>
 				<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
 <!--This is where Pre-2018 Common Rule documents go-->
 				<div class="callout alert">
-					<h3>Pre-2018 Common Rule</h3>
+					<h3>Common Rule</h3>
 					<div class="grid-x">
 						<?php $application_ehirb_query = new WP_Query(array(
 								'posts_per_page'	=> -1,
