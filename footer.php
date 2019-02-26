@@ -36,6 +36,7 @@
 				<ul id="menu-footer-links" class="menu simple hide-for-small-only" role="menu">
 					<li role="menuitem"><a href="https://jobs.jhu.edu/">Employment</a></li>
 					<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts</a></li>
+					<li role="menuitem"><a href="https://it.johnshopkins.edu/policies/privacystatement">Privacy Statement</a></li>
 				</ul>
 			</div>
 			<div class="small-12 medium-3 cell social-media hide-for-small-only">
