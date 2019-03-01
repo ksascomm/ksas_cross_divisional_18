@@ -151,6 +151,20 @@ li {
   }
 }
 
+//left-padding on full-width and sidebar right
+.main-content-full-width {
+  @include breakpoint(large) {
+    @include xy-cell(12);
+      padding-left: 1rem;
+  }
+}
+
+.main-grid.sidebar-right {
+  .main-content {
+     padding-left: 1rem;
+  }
+}
+
 .main-content-full-width, .main-content {
   h1 {
     font-size: 2rem;
