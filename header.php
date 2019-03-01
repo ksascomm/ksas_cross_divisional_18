@@ -66,7 +66,7 @@
 	<?php endif; ?>
 
 
-	<header class="site-header" role="banner">
+	<header class="site-header" role="banner" aria-labelledby="dept-info">
 		<div class="site-title-bar title-bar" <?php foundationpress_title_bar_responsive_toggle(); ?>>
 			<div class="title-bar-left">
 				<button aria-label="<?php _e( 'Main Menu', 'foundationpress' ); ?>" class="menu-icon" type="button" data-toggle="<?php foundationpress_mobile_menu_id(); ?>"></button>
@@ -104,7 +104,7 @@
 			</div>
 			<div class="site-desktop-title top-bar-title">
 				<h1>
-					<a href="<?php echo site_url(); ?>">
+					<a id="dept-info" href="<?php echo site_url(); ?>">
 						<?php if ( ! empty( get_bloginfo('description') ) ) : ?>
 							<small class="hide-for-small-only"><?php echo get_bloginfo( 'description' ); ?></small>
 						<?php endif; ?>
