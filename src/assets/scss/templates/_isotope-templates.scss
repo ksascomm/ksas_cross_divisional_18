@@ -245,3 +245,43 @@ ul.expander > li {
 }
 
 /**** disabling Isotope CSS3 transitions ****/
+
+.callout {
+  &.guides {
+    background-color: $light-gray;
+  }
+  &.academic-skills {
+    background-color: #e1faea;
+    color: #0a0a0a;
+  }
+  &.time-management {
+    background-color: #f7e4e1;
+    color: #0a0a0a;
+  }
+  &.study-tips {
+   background-color: $powderblue;
+  }  
+}
+
+.button {
+  &.guides {
+    background: $light-gray;
+    color: #0a0a0a;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+  }
+  &.academic-skills {
+    background: #e1faea;
+    color: #0a0a0a;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+  }
+  &.time-management {
+    background: #f7e4e1;
+    color: #0a0a0a;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+  }
+  &.study-tips {
+    background: $powderblue;
+    color: #0a0a0a;
+    border: 1px solid rgba(10, 10, 10, 0.25);
+  }
+}
