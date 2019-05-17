@@ -113,7 +113,7 @@
 				</h1>
 			</div>
 		</div>
-		<nav class="top-bar main-navigation hide-for-print" role="navigation" aria-label="Main Menu">
+		<nav class="top-bar main-navigation hide-for-print" aria-label="Main Menu">
 			<div class="top-bar-left">
 				<div class="grid-container">
 					<div class="grid-x grid-padding-x">						
