@@ -122,16 +122,7 @@ function flagship_sub_options_page_fields() {
 		'desc'    => __( 'Do you want to be able to filter by role (faculty, research staff, emertiti)?', 'flagship_sub_textdomain' ),
 		'type'    => 'checkbox',
 		'std'    => '0',
-);		
-	$options[13] =
-	array(		
-		'section' => 'directory_section',
-		'id'      => FLAGSHIP_SUB_SHORTNAME . '_research_search',
-		'title'   => __( 'Filter by Expertise', 'flagship_sub_textdomain' ),
-		'desc'    => __( 'Do you want to be able to filter by expertise/research area?', 'flagship_sub_textdomain' ),
-		'type'    => 'checkbox',
-		'std'    => '0',
-);	
+);
 	$options[16] =
 	array(
 		'section' => 'select_section',

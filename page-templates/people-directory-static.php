@@ -12,23 +12,8 @@ get_header(); ?>
 			'hide_empty'    => true,
 		)
         );
-	$filters = get_terms(
-        'filter', array(
-			'orderby'       => 'name',
-			'order'         => 'ASC',
-			'hide_empty'    => true,
-		)
-        );
 	$role_slugs = array();
-	$filter_slugs = array();
-	foreach ($roles as $role ) {
-		$role_slugs[] = $role->slug;
-	}
 	$role_classes = implode(' ', $role_slugs);
-	foreach ($filters as $filter ) {
-		$filter_slugs[] = $filter->slug;
-	}
-	$filter_classes = implode(' ', $filter_slugs);
 	$children = get_pages( array(
 		'child_of' => $post->ID,
 	) );
