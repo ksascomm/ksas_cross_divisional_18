@@ -14,7 +14,7 @@
 	$ancestors = get_post_ancestors( $post->ID ); // Get the array of ancestors
 	$ancestor_id = ($ancestors) ? $ancestors[ count($ancestors) -1 ]: $post->ID;
 	$the_ancestor = get_page( $ancestor_id );
-	$ancestor_url = get_permalink($post->post_parent);
+	$ancestor_url = get_permalink($the_ancestor);
 	$ancestor_title = $the_ancestor->post_title;
 
 	if ( is_page() && $post->post_parent ) {
@@ -28,9 +28,9 @@
 		<div class="sidebar-menu" aria-labelledby="sidebar-navigation">
 			<h1 class="sidebar-menu-title" id="sidebar-navigation">Also in 
 			<?php if (is_home() ) :?>
-				<a href="<?php echo get_home_url(); ?>/about/">About</a>
+				<a href="<?php echo get_home_url(); ?>/about/" aria-label="Sidebar Menu: About">About</a>
 			<?php else : ?>
-				<a href="<?php echo $ancestor_url;?>"><?php echo $ancestor_title; ?></a>
+				<a href="<?php echo $ancestor_url;?>" aria-label="Sidebar Menu: <?php echo $ancestor_title; ?>"><?php echo $ancestor_title; ?></a>
 			<?php endif;?>
 			</h1>
 			<?php wp_nav_menu( array(
