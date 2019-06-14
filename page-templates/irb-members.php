@@ -18,7 +18,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 		
          <?php $members_query = new WP_Query(array(
-            'posts_per_page'  => -1,
+            'posts_per_page'  => 250,
             'orderby' => 'title',
             'order' => 'asc',
             'post_type' => 'documents',
@@ -51,7 +51,7 @@ get_header(); ?>
                <?php 
                   // args
                   $args = array(
-                     'posts_per_page'  => -1,
+                     'posts_per_page'  => 250,
                      'orderby' => 'title',
                      'order' => 'asc',
                      'post_type'    => 'documents',

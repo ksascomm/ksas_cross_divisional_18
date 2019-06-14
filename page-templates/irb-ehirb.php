@@ -26,7 +26,7 @@ get_header(); ?>
 				<?php endif;?>
 				<div class="grid-x">
 					<?php $application_ehirb_revised_common_rule_query = new WP_Query(array(
-						'posts_per_page'	=> -1,
+						'posts_per_page' => 250,
 						'orderby' => 'title',
 						'order' => 'asc',
 						'post_type' => 'documents',
@@ -59,16 +59,16 @@ get_header(); ?>
 					</div>
 					<?php endif; ?>
 					<?php $fsa_ehirb_revised_common_rule_query = new WP_Query(array(
-							'posts_per_page'	=> -1,
+						'posts_per_page' => 250,
 						'orderby' => 'title',
 						'order' => 'asc',
 						'post_type' => 'documents',
-							'meta_query'	=> array(
+						'meta_query' => array(
 							array(
-										'key'		=> 'ehirb_category_revised_common_rule',
-										'value'		=> 'actions',
-									'compare'	=> 'LIKE'
-								)
+								'key'		=> 'ehirb_category_revised_common_rule',
+								'value'		=> 'actions',
+								'compare'	=> 'LIKE'
+							)
 						)
 					)); if ($fsa_ehirb_revised_common_rule_query->have_posts() ) :?>
 					<div class="cell small-12 large-6">
@@ -94,15 +94,15 @@ get_header(); ?>
 				</div>
 				<div class="grid-x">
 					<?php $consent_ehirb_revised_common_rule_query = new WP_Query(array(
-							'posts_per_page'	=> -1,
+						'posts_per_page' => 250,
 						'orderby' => 'title',
 						'order' => 'asc',
 						'post_type' => 'documents',
-							'meta_query'	=> array(
+						'meta_query'	=> array(
 							array(
-										'key'		=> 'ehirb_category_revised_common_rule',
-										'value'		=> 'consent',
-									'compare'	=> 'LIKE'
+								'key' => 'ehirb_category_revised_common_rule',
+								'value'	=> 'consent',
+								'compare' => 'LIKE'
 								)
 						)
 					)); if ($consent_ehirb_revised_common_rule_query->have_posts() ) :?>
@@ -127,15 +127,15 @@ get_header(); ?>
 					</div>
 					<?php endif; ?>
 					<?php $related_ehirb_revised_common_rule_query = new WP_Query(array(
-							'posts_per_page'	=> -1,
+							'posts_per_page'	=> 250,
 						'orderby' => 'title',
 						'order' => 'asc',
-								'post_type'		=> 'documents',
-							'meta_query'	=> array(
-						array(
-									'key'		=> 'affiliated_section',
-									'value'		=> 'eHIRB-revised',
-								'compare'	=> 'LIKE'
+						'post_type'	=> 'documents',
+						'meta_query' => array(
+							array(
+								'key' => 'affiliated_section',
+								'value'	=> 'eHIRB-revised',
+								'compare' => 'LIKE'
 							)
 					)
 					)); if( $related_ehirb_revised_common_rule_query->have_posts() ): ?>
@@ -162,17 +162,17 @@ get_header(); ?>
 				</div>
 				<div class="grid-x">
 					<?php $general_ehirb_revised_common_rule_query = new WP_Query(array(
-							'posts_per_page'	=> -1,
+						'posts_per_page'	=> 250,
 						'orderby' => 'title',
 						'order' => 'asc',
 						'post_type' => 'documents',
 						'meta_key' => 'primary_section',
 						'meta_value' => 'ehirb-revised',
-							'meta_query'	=> array(
+						'meta_query' => array(
 							array(
-										'key'		=> 'ehirb_category_revised_common_rule',
-									'compare'	=> 'NOT EXISTS'
-								)
+								'key'		=> 'ehirb_category_revised_common_rule',
+								'compare'	=> 'NOT EXISTS'
+							)
 						)
 					)); if ($general_ehirb_revised_common_rule_query->have_posts() ) :?>
 					<div class="cell small-12 large-6">
@@ -203,16 +203,16 @@ get_header(); ?>
 					<h3>Common Rule</h3>
 					<div class="grid-x">
 						<?php $application_ehirb_query = new WP_Query(array(
-								'posts_per_page'	=> -1,
+							'posts_per_page'	=> 250,
 							'orderby' => 'title',
 							'order' => 'asc',
 							'post_type' => 'documents',
-								'meta_query'	=> array(
+							'meta_query' => array(
 								array(
-											'key'		=> 'ehirb_category',
-											'value'		=> 'application',
-										'compare'	=> 'LIKE'
-									)
+									'key'		=> 'ehirb_category',
+									'value'		=> 'application',
+									'compare'	=> 'LIKE'
+								)
 							)
 						)); if ($application_ehirb_query->have_posts() ) :?>
 						<div class="cell small-12 large-6">
@@ -236,16 +236,16 @@ get_header(); ?>
 						</div>
 						<?php endif; ?>
 						<?php $fsa_ehirb_query = new WP_Query(array(
-								'posts_per_page'	=> -1,
+							'posts_per_page' => 250,
 							'orderby' => 'title',
 							'order' => 'asc',
 							'post_type' => 'documents',
-								'meta_query'	=> array(
+							'meta_query' => array(
 								array(
-											'key'		=> 'ehirb_category',
-											'value'		=> 'actions',
-										'compare'	=> 'LIKE'
-									)
+									'key'		=> 'ehirb_category',
+									'value'		=> 'actions',
+									'compare'	=> 'LIKE'
+								)
 							)
 						)); if ($fsa_ehirb_query->have_posts() ) :?>
 						<div class="cell small-12 large-6">
@@ -271,16 +271,16 @@ get_header(); ?>
 					</div>
 					<div class="grid-x">
 						<?php $consent_ehirb_query = new WP_Query(array(
-								'posts_per_page'	=> -1,
+							'posts_per_page' => 250,
 							'orderby' => 'title',
 							'order' => 'asc',
 							'post_type' => 'documents',
-								'meta_query'	=> array(
+							'meta_query' => array(
 								array(
-											'key'		=> 'ehirb_category',
-											'value'		=> 'consent',
-										'compare'	=> 'LIKE'
-									)
+									'key'		=> 'ehirb_category',
+									'value'		=> 'consent',
+									'compare'	=> 'LIKE'
+								)
 							)
 						)); if ($consent_ehirb_query->have_posts() ) :?>
 						<div class="cell small-12 large-6">
@@ -304,17 +304,17 @@ get_header(); ?>
 						</div>
 						<?php endif; ?>
 						<?php $related_ehirb_query = new WP_Query(array(
-								'posts_per_page'	=> -1,
+							'posts_per_page'	=> 250,
 							'orderby' => 'title',
 							'order' => 'asc',
-									'post_type'		=> 'documents',
-								'meta_query'	=> array(
-							array(
-										'key'		=> 'affiliated_section',
-										'value'		=> 'eHIRB',
+							'post_type'		=> 'documents',
+							'meta_query'	=> array(
+								array(
+									'key'		=> 'affiliated_section',
+									'value'		=> 'eHIRB',
 									'compare'	=> 'LIKE'
 								)
-						)
+							)
 						)); if( $related_ehirb_query->have_posts() ): ?>
 						<div class="cell small-12 large-6">
 							<h4>Related Documents & Resources</h4>
@@ -339,15 +339,15 @@ get_header(); ?>
 					</div>
 					<div class="grid-x">
 						<?php $general_ehirb_query = new WP_Query(array(
-								'posts_per_page'	=> -1,
+							'posts_per_page' => 250,
 							'orderby' => 'title',
 							'order' => 'asc',
 							'post_type' => 'documents',
 							'meta_key' => 'primary_section',
 							'meta_value' => 'ehirb',
-								'meta_query'	=> array(
-								array(
-											'key'		=> 'ehirb_category',
+							'meta_query' => array(
+									array(
+										'key'		=> 'ehirb_category',
 										'compare'	=> 'NOT EXISTS'
 									)
 							)

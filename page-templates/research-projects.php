@@ -9,7 +9,7 @@ $flagship_researchprojects_query = new WP_Query(array(
 	'post_type' => 'ksasresearchprojects',
 	'orderby' => 'date',
 	'order' => 'DESC',
-	'posts_per_page' => '-1'
+	'posts_per_page' => 250
 	));
 ?>
 
