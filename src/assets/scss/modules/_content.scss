@@ -163,6 +163,9 @@ li {
   .main-content {
      padding-left: 1rem;
   }
+  .main-content.homepage-news {
+    padding-left: 0rem;
+  }
 }
 
 .main-content-full-width, .main-content {
