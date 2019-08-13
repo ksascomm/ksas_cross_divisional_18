@@ -18,13 +18,20 @@ get_header(); ?>
 		$role_slugs[] = $role->slug;
 	}
 	$role_classes = implode(' ', $role_slugs);
+	$children = get_pages( array(
+		'child_of' => $post->ID,
+	) );	
 ?>
 <div class="main-container" id="page">
 	<div class="secondary">
 		<?php foundationpress_breadcrumb(); ?>
 	</div>	
 	<div class="main-grid">
+	<?php if ( count( $children ) >= 1 ) : ?>
 		<main class="main-content">
+	<?php else: ?>
+		<main class="main-content-full-width">
+	<?php endif;?>
 			<?php do_action( 'foundationpress_before_content' ); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
@@ -126,7 +133,9 @@ get_header(); ?>
 			</div>
 		</main>
 		<?php do_action( 'foundationpress_after_content' ); ?>
-		<?php get_sidebar(); ?>
+		<?php if ( count( $children ) >= 1 ) : ?>
+			<?php get_sidebar(); ?>
+		<?php endif;?>
 	</div>
 </div>
 <?php
