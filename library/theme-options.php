@@ -209,6 +209,15 @@ function flagship_sub_options_page_fields() {
 		'desc'    => __( 'Do you want to display the Siteimprove Analytics script?', 'flagship_sub_textdomain'  ),
 		'type'    => 'checkbox',
 		'std'    => '0',
-	);	
+	);
+	$options[25] =
+	array(
+		'section' => 'select_section',
+		'id'      => FLAGSHIP_SUB_SHORTNAME . '_explore_ksas',
+		'title'   => __( 'Hide Explore KSAS Button?', 'flagship_sub_textdomain' ),
+		'desc'    => __( 'Do you want hide the "Explore KSAS" button?', 'flagship_sub_textdomain' ),
+		'type'    => 'checkbox',
+		'std'    => '0',
+);	
 	return $options;
 }

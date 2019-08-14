@@ -7,6 +7,8 @@
  */
 
 ?>
+<?php $theme_option = flagship_sub_get_global_options();?>
+
 <ul class="menu simple roof-menu align-right">
 	<?php global $blog_id; $kasper = array(124); if (!in_array($blog_id, $kasper)) :?>
 	<li class="roof-padding">
@@ -23,8 +25,12 @@
 		</form>
 	</li>
 	<?php endif;?>
+	<?php $explore_ksas_cond = $theme_option['flagship_sub_explore_ksas'];
+		if ($explore_ksas_cond === 0 ):?>
 	<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore KSAS <span class="fa fa-bars" aria-hidden="true"></span></a></li>
-</ul>	
+	<?php endif;?>
+</ul>
+<?php if ($explore_ksas_cond === 0 ):?>
 <div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas aria-hidden="true">
 	<div id="global-links" class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-3">
 		<h1 class="show-for-sr">Explore KSAS</h1>
@@ -62,3 +68,4 @@
 		</button>			
 	</div>
 </div>
+<?php endif;?>
