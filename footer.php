@@ -27,19 +27,21 @@
 	<?php else: ?>
 		
        <div class="grid-x grid-padding-x hide-for-print">
-			<div class="small-12 medium-5 cell">
+			<div class="small-12 medium-4 cell">
 				<a href="https://www.jhu.edu/">
 					<img class="jhushield" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
 				</a>
 			</div>
 			<div class="small-12 medium-4 cell">
-				<ul id="menu-footer-links" class="menu simple hide-for-small-only" role="menu">
-					<li role="menuitem"><a href="https://jobs.jhu.edu/">Employment</a></li>
-					<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts</a></li>
-					<li role="menuitem"><a href="https://it.johnshopkins.edu/policies/privacystatement">Privacy Statement</a></li>
-				</ul>
+				<div class="footer-links">
+					<ul class="menu" role="menu">
+						<li role="menuitem"><a href="https://jobs.jhu.edu/">Employment</a></li>
+						<li role="menuitem"><a href="https://www.jhu.edu/alert/">Emergency Alerts</a></li>
+						<li role="menuitem"><a href="https://it.johnshopkins.edu/policies/privacystatement">Privacy Statement</a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="small-12 medium-3 cell social-media hide-for-small-only">
+			<div class="small-12 medium-4 cell social-media hide-for-small-only">
 				<a href="http://facebook.com/JHUArtsSciences"><span class="fab fa-facebook fa-2x"></span><span class="screen-reader-text">Facebook</span></a>
 				<a href="https://www.instagram.com/JHUArtsSciences/"><span class="fab fa-instagram fa-2x"></span><span class="screen-reader-text">Instagram</span></a>
 				<a href="https://twitter.com/JHUArtsSciences"><span class="fab fa-twitter fa-2x"></span><span class="screen-reader-text">Twitter</span></a>
