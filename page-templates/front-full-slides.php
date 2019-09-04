@@ -43,7 +43,7 @@ get_header(); ?>
 				<div class="homepage-news-archive" role="complementary" aria-labelledby="newsarchive">         
 					<h4 id="newsarchive">
 						<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-							View <?php echo $theme_option['flagship_sub_feed_name']; ?> Archive <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+							View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
 						</a>
 					</h4>
 				

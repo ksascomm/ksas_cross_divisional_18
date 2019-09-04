@@ -204,7 +204,8 @@ if ( ! function_exists( 'foundationpress_breadcrumb' ) ) {
 				echo '<li class="current item-current-search">Search results for: ' . get_search_query() . '</li>';
 
 			} elseif (is_home() ) {
-				echo '<li class="item-parent item-parent-747"><a class="bread-parent bread-parent-747" href="' . site_url() . '/about/" title="About">About</a></li><li class="current item-' . $post->ID . '">' . 'News Archive' . '</li>';
+				$theme_option = flagship_sub_get_global_options();
+				echo '<li class="item-parent item-parent-747"><a class="bread-parent bread-parent-747" href="' . site_url() . '/about/" title="About">About</a></li><li class="current item-' . $post->ID . '">' . $theme_option['flagship_sub_feed_name'] . '</li>';
 
 			} elseif ( is_404() ) {
 

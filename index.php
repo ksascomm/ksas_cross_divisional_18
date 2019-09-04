@@ -22,7 +22,7 @@ $theme_option = flagship_sub_get_global_options(); ?>
 			<div class="secondary">
 				<?php foundationpress_breadcrumb(); ?>
 			</div>				
-			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?> Archive</h1>
+			<h1 class="page-title"><?php echo $theme_option['flagship_sub_feed_name']; ?></h1>
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
