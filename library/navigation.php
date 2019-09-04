@@ -89,8 +89,11 @@ if ( ! function_exists( 'foundationpress_add_menuclass' ) ) {
 	add_filter( 'wp_nav_menu', 'foundationpress_add_menuclass' );
 }
 
-// SIDEBAR NAV MENU
+// remove menu-item-id from <li> in navigation. ksasaca_css_attributes_filter is in ksas_global_functions.php plugin.
+add_filter('nav_menu_item_id', 'ksasaca_css_attributes_filter', 100, 1);
 
+
+// SIDEBAR NAV MENU
 // add hook
 add_filter( 'wp_nav_menu_objects', 'my_wp_nav_menu_objects_sub_menu', 10, 2 );
 
