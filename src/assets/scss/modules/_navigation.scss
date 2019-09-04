@@ -375,7 +375,13 @@
   }
   .menu.simple {
     a.button {
+      background-color: $white;
+      color: $blue;
       padding: 0.7rem 1rem;
+      &:hover {
+        color: $white;
+        background-color: $darkblue;
+      }
     }
   }
   .roof-header-top-links {
