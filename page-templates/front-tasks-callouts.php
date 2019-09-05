@@ -96,13 +96,12 @@ get_header(); ?>
 						<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
 					<?php endwhile; ?>
 					
-					<div class="homepage-news-archive" role="complementary" aria-labelledby="newsarchive">         
-						<h4 id="newsarchive">
-							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-								View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
-							</a>
-						</h4>
-					
+					<div class="homepage-news-archive">         
+						
+						<a class="button news-archive" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
+							View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+						</a>
+				
 					</div>   
 				<?php endif; ?>
 				

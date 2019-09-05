@@ -40,14 +40,13 @@ get_header(); ?>
 					<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
 				<?php endwhile; ?>
 				
-				<div class="homepage-news-archive" role="complementary" aria-labelledby="newsarchive">         
-					<h4 id="newsarchive">
-						<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-							View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
-						</a>
-					</h4>
-				
-				</div>   
+				<article class="homepage-news-archive" aria-label="<?php echo $theme_option['flagship_sub_feed_name']; ?>">         
+					
+					<a class="button news-archive" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
+						View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+					</a>
+			
+				</article>    
 			<?php endif; ?>
 			
 				<?php $hub_query_cond = $theme_option['flagship_sub_hub_cond'];
@@ -79,10 +78,10 @@ get_header(); ?>
 		</div>
 				
 		<?php if ( is_active_sidebar( 'sidebar1' ) || is_active_sidebar('homepage0')  ) : ?>
-			<aside class="homepage sidebar" id="sidebar1">
+			<div class="homepage sidebar" id="sidebar1">
 				<?php dynamic_sidebar( 'sidebar1' ); ?>
 				<?php dynamic_sidebar( 'homepage0' ); ?>
-			</aside>
+			</div>
 		<?php endif;?>
 
 	</div>

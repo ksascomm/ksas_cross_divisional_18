@@ -29,7 +29,7 @@ get_header(); ?>
 <?php endwhile; endif; ?>
 <?php //if ACF is enabled, display deadlines
 if ( function_exists('get_field') && get_field('buckets') ): ?>
-	<div class="agora buckets">
+	<div class="agora buckets" role="region" aria-label="<?php the_field( 'callout' ); ?>">
 		<div class="grid-x grid-padding-x grid-container">
 			<?php if ( have_rows( 'buckets' ) ) : ?>
 			<h2 class="bucket-heading"><?php the_field( 'callout' ); ?></h2>
@@ -70,14 +70,13 @@ if ( function_exists('get_field') && get_field('buckets') ): ?>
 						<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
 					<?php endwhile; ?>
 					
-					<div class="homepage-news-archive" role="complementary" aria-labelledby="newsarchive">         
-						<h4 id="newsarchive">
-							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-								View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
-							</a>
-						</h4>
-					
-					</div>   
+					<article class="homepage-news-archive" aria-label="<?php echo $theme_option['flagship_sub_feed_name']; ?>">         
+						
+						<a class="button news-archive" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
+							View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+						</a>
+				
+					</article>    
 				<?php endif; ?>
 				
 				<?php $hub_query_cond = $theme_option['flagship_sub_hub_cond'];

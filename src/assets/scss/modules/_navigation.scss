@@ -201,7 +201,7 @@
       &:hover {
         color: $white;
       }
-      &:hover:not(.button) {
+      &:hover:not(.button), &:focus {
         background: darken($blue, 10%);
       }
       li:not(:last-child) {
