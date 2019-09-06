@@ -22,11 +22,11 @@
   }
   .social-media {
     a {
-      color: $skyblue;
+      color: $white;
       margin-left: 1.3rem;
       &:hover {
-        color: $bluejaysblue;
         transition: color 0.5s ease;
+        border-bottom: 0.0625rem dashed;
       }
       @include breakpoint(medium down) {
         float: left;
