@@ -21,17 +21,17 @@ get_header(); ?>
 					<h3>Who We Serve</h3>
 					<div class="grid-x grid-padding-x buckets">	
 						<?php if ( is_active_sidebar( 'homepage-left-3rd' ) ) : ?>
-							<div id="homepage1" class="cell large-4 bucket" role="complementary">
+							<div id="homepage1" class="cell large-4 bucket" role="complementary" aria-label="Homepage Widget Area 1">
 								<?php dynamic_sidebar( 'homepage-left-3rd' ); ?>
 							</div>
 						<?php endif; ?>
 						<?php if ( is_active_sidebar( 'homepage-middle-3rd' ) ) : ?>
-							<div id="homepage2" class="cell large-4 bucket" role="complementary">
+							<div id="homepage2" class="cell large-4 bucket" role="complementary" aria-label="Homepage Widget Area 2">
 								<?php dynamic_sidebar( 'homepage-middle-3rd' ); ?>
 							</div>
 						<?php endif; ?>
 						<?php if ( is_active_sidebar( 'homepage-right-3rd' ) ) : ?>
-							<div id="homepage3" class="cell large-4 bucket" role="complementary">
+							<div id="homepage3" class="cell large-4 bucket" role="complementary" aria-label="Homepage Widget Area 3">
 								<?php dynamic_sidebar( 'homepage-right-3rd' ); ?>
 							</div>
 						<?php endif; ?>
@@ -54,13 +54,13 @@ get_header(); ?>
 					<?php while ($news_query->have_posts() ) : $news_query->the_post(); ?>
 						<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
 					<?php endwhile; ?>
-					<div class="homepage-news-archive" role="complementary" aria-labelledby="newsarchive">         
-						<h4 id="newsarchive">
-							<a href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
-								View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
-							</a>
-						</h4>
-					</div>   
+					<article class="homepage-news-archive" aria-label="<?php echo $theme_option['flagship_sub_feed_name']; ?>">         
+						
+						<a class="button news-archive" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
+							View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
+						</a>
+				
+					</article> 
 				<?php endif; ?>
 				</div>
 
