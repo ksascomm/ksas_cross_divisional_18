@@ -119,6 +119,11 @@
       }
     }
   }
+  p.listing {
+    a {
+      @include accessiblelink;
+    }
+  }
 }
 
 .people-directory {

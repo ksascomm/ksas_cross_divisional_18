@@ -176,3 +176,33 @@ table thead {
     left: auto;
   }
 }
+
+.resources-documents {
+  .accordion-title {
+    font-size: 1.25rem;
+  }
+  dl {
+    dt {
+      margin-bottom: 0rem;
+      font-family: $font-stack-semibold;
+      font-weight: $font-stack-semibold-weight;
+      a {
+        border: none;
+        border-bottom: .125em solid;
+        border-bottom-color: #d6d6d6;
+        background-color: transparent;
+        border-radius: 0;
+        transition: border-color,background-color,color;
+        transition-duration: 250ms,250ms,250ms;
+        transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
+        &:hover {
+          border-bottom: .125em solid;
+          border-bottom-color: #4A484C;
+        }
+      }
+    }
+    dd {
+      margin-bottom: 0.5rem;
+    }    
+  }
+}

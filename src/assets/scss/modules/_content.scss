@@ -192,23 +192,12 @@ li {
   h6 {
     font-size: 1rem;
   }
-  .entry-content, .accordion-content {
+  .entry-content, .accordion-content, .tabs-panel {
     p {
       line-height: 1.45;
       letter-spacing: -.2px;
       a {
-        border: none;
-        border-bottom: .125em solid;
-        border-bottom-color: $medium-gray;
-        background-color: transparent;
-        border-radius: 0;
-        transition: border-color,background-color,color;
-        transition-duration: 250ms,250ms,250ms;
-        transition-timing-function: ease-in-out,ease-in-out,ease-in-out;
-        &:hover {
-          border-bottom: .125em solid;
-          border-bottom-color: $dark-gray;
-        }
+        @include accessiblelink;
       }
       em, i {
         font-family: $font-stack-italic;
@@ -355,4 +344,9 @@ blockquote, blockquote p {
     padding-left: 1rem;
     padding-bottom: 1rem;
   }
+}
+
+.wp-caption>figcaption {
+  color: $dark-gray;
+  font-size: 1rem;
 }
