@@ -42,6 +42,9 @@
       font-size: 1.5rem;
       font-family: $font-header-extrabold;
       font-weight: $font-header-extrabold-weight;
+      a {
+        @include accessiblelink;
+      }
     }
   }
   .post-listing {
@@ -296,6 +299,9 @@ screen and (min-width: 40em) {
     }
     &:first-of-type {
       padding-top: 1.25rem;
+    }
+    a {
+      @include accessiblelink;
     }
   }
 }
