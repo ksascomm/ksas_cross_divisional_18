@@ -37,6 +37,11 @@
 }
 
 .homepage-news {
+  p {
+    a {
+       @include accessiblelink;
+    }
+  }
   .news-title, .hub-title {
     h2 {
       font-size: 1.5rem;

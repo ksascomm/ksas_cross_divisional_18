@@ -123,3 +123,17 @@ footer.timely.ai1ec-event-footer {
     background: $blue !important;
   }
 }
+
+.timely .ai1ec-nav-pills > li.ai1ec-active > a, .timely .ai1ec-nav-pills > li.ai1ec-active > a:hover, .timely .ai1ec-nav-pills > li.ai1ec-active > a:focus {
+  background-color: $darkblue !important;
+}
+
+.ai1ec-active > a, .entry-content .timely .ai1ec-dropdown-menu > .ai1ec-active > a,  {
+  //color: $black !important;
+}
+
+.ai1ec-dropdown-menu > .ai1ec-active > a, .ai1ec-dropdown-menu > .ai1ec-active > a:hover, .ai1ec-dropdown-menu > .ai1ec-active > a:focus {
+  background-color: $darkblue !important;
+  color: $white;
+}
+
