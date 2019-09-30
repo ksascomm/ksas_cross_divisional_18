@@ -106,3 +106,11 @@ article.page a, .textwidget p a, .textwidget ul li a, .ecpt-page-sidebar a {
     content: '\f3aa';
   }
 }
+
+.entry-content {
+  .callout.primary {
+    a {
+      @include accessiblelink;
+    }
+  }
+}
