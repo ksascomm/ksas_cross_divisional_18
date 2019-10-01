@@ -223,7 +223,7 @@ li {
           border-bottom: none;
             &:focus, &[aria-selected='true'] {
               background: $gray;
-              color: $blue;
+              color: $darkblue;
             }
         }
       }
