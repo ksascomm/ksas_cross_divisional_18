@@ -14,8 +14,8 @@ register_sidebar(array(
 		'description' => __('The first (primary) sidebar.'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Global Sidebar Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));
 
 	register_sidebar(array(
@@ -24,8 +24,8 @@ register_sidebar(array(
 		'description' => __('The offcanvas sidebar.', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Offcanvas Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));
 
 	register_sidebar(array(
@@ -34,8 +34,8 @@ register_sidebar(array(
 		'description' => __('The sidebar for the homepage only. Appears below Global Sidebar', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Homepage Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));
 
 	register_sidebar(array(
@@ -44,8 +44,8 @@ register_sidebar(array(
 		'description' => __('The left column on the homepage.', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Homepage Left Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));
 
 	register_sidebar(array(
@@ -54,8 +54,8 @@ register_sidebar(array(
 		'description' => __('The right column on the homepage.', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Homepage Right Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));
 
 	register_sidebar( array(
@@ -64,8 +64,8 @@ register_sidebar(array(
 		'description' => __('Sidebar #1. Call this sidebar on each page you want it to appear', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Sidebar Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 2',
@@ -73,8 +73,8 @@ register_sidebar(array(
 		'description' => __('Sidebar #2. Call this sidebar on each page you want it to appear', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Sidebar Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 3',
@@ -82,8 +82,8 @@ register_sidebar(array(
 		'description' => __('Sidebar #3. Call this sidebar on each page you want it to appear', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Sidebar Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 4',
@@ -91,8 +91,8 @@ register_sidebar(array(
 		'description' => __('Sidebar #4. Call this sidebar on each page you want it to appear', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Sidebar Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 5',
@@ -100,8 +100,8 @@ register_sidebar(array(
 		'description' => __('Sidebar #5. Call this sidebar on each page you want it to appear', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Sidebar Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 6',
@@ -109,8 +109,8 @@ register_sidebar(array(
 		'description' => __('Sidebar #6. Call this sidebar on each page you want it to appear', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Sidebar Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 		));
     register_sidebar( array(
 		'name' => 'Sidebar 7',
@@ -118,8 +118,8 @@ register_sidebar(array(
 		'description' => __('Sidebar #7. Call this sidebar on each page you want it to appear', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s" aria-label="Sidebar Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 		));
 	register_sidebar(array(
 		'id' => 'homepage-left-3rd',
@@ -127,8 +127,8 @@ register_sidebar(array(
 		'description' => __('The left third column on the homepage. Appears above Left/Right 2', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="primary callout %2$s" aria-label="Homepage Left Third Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));
 
 	register_sidebar(array(
@@ -137,8 +137,8 @@ register_sidebar(array(
 		'description' => __('The middle third column on the homepage. Appears above Left/Right 2', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="secondary callout %2$s" aria-label="Homepage Middle Third Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));
 
 
@@ -148,8 +148,8 @@ register_sidebar(array(
 		'description' => __('The right third column on the homepage. Appears above Left/Right 2', 'foundationpress'),
 		'before_widget' => '<aside id="%1$s" class="primary callout %2$s" aria-label="Homepage Right Third Content %1$s">',
 		'after_widget' => '</aside>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '<h3 class="widgettitle">',
+		'after_title' => '</h3>',
 	));    
 	}
 
