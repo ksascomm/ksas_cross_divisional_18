@@ -87,10 +87,11 @@
       background: $skyblue;
       font-family: $font-stack-bold;
       font-weight: $font-stack-bold-weight;
+      color: $black;
       &.is-checked {
         background-color: transparent;
         border: 1px solid $skyblue;
-        color: $skyblue;
+        color: $black;
       }
     }
   }

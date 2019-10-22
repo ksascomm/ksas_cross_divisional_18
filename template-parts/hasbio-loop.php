@@ -1,4 +1,4 @@
-<li class="item person <?php echo get_the_roles($post); ?>">
+<li class="item person <?php echo get_the_directory_filters($post); ?> <?php echo get_the_roles($post); ?>">
 	<div class="media-object">
 		<?php if ( has_post_thumbnail() ) { ?> 
 			<div class="media-object-section hide-for-print">
