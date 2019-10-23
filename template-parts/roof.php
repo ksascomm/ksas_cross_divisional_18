@@ -27,7 +27,7 @@
 	<?php endif;?>
 	<?php $explore_ksas_cond = $theme_option['flagship_sub_explore_ksas'];
 		if ($explore_ksas_cond === 0 ):?>
-	<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore KSAS <span class="fa fa-bars" aria-hidden="true"></span></a></li>
+	<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore JHU <span class="fa fa-bars" aria-hidden="true"></span></a></li>
 	<?php endif;?>
 </ul>
 <?php if ($explore_ksas_cond === 0 ):?>
