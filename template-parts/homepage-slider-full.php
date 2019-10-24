@@ -21,8 +21,16 @@
 				<ul class="orbit-container">
 				<?php $slidernumber = 0;
 				while ($slider_query->have_posts() ) : $slider_query->the_post(); $slidernumber++; ?>
-					<li class="orbit-slide">	
-						<img class="orbit-image hide-for-print" src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" alt="<?php the_title(); ?>">
+					<li class="orbit-slide">
+						<?php
+						// Get the URL of the custom meta image field
+						$get_slider_image_url = get_post_meta(get_the_ID(), 'ecpt_slideimage', true);
+						// Gets the custom post type image id
+						$get_slider_image_id = attachment_url_to_postid($get_slider_image_url);
+						// Get's the alt text from the image
+						$slider_alt = get_post_meta ( $get_slider_image_id, '_wp_attachment_image_alt', true );
+						?>						
+						<img class="orbit-image hide-for-print" src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" alt="<?php echo $slider_alt;?>">
 					<?php if (get_the_title() || !empty( get_the_content() )) :?>
 					    <figcaption class="orbit-caption" aria-hidden="true">
 					    	<?php if (get_the_title()) :?>
