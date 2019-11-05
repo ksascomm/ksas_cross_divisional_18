@@ -9,7 +9,7 @@
 	        {
  				$uglyexcerpt = strip_tags($post->post_content);
 				$uglyexcerpt = str_replace("", "'", $uglyexcerpt);
-				$excerpt = wp_trim_words($uglyexcerpt, 25, '...');
+				$excerpt = wp_trim_words($uglyexcerpt, 35, '...');
         	}
         	elseif (is_singular('people')) {
         		$longexcerpt = strip_tags(get_post_meta($post->ID, 'ecpt_bio', true));
