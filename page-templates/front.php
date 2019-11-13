@@ -12,12 +12,12 @@ $slider_query = new WP_Query(array(
 	'order' => 'ASC',
 ));
 if ( $slider_query->have_posts() ) :?>
-<div class="highlighted-research">	
+<div class="highlighted-research show-for-large">	
 	<div class="orbit" role="region" aria-label="Featured Images" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
 		<ul class="orbit-container">
 			<?php if ($slider_query->post_count > 1 ) : ?>
-			<button class="orbit-previous" onclick="ga('send', 'event', 'Homepage Slider', 'Previous Slide Click');"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-			<button class="orbit-next" onclick="ga('send', 'event', 'Homepage Slider', 'Next Slide Click');"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+			<button class="orbit-previous show-for-large" onclick="ga('send', 'event', 'Homepage Slider', 'Previous Slide Click');"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+			<button class="orbit-next show-for-large" onclick="ga('send', 'event', 'Homepage Slider', 'Next Slide Click');"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
 			<?php endif;?>
 			<?php while ($slider_query->have_posts() ) : $slider_query->the_post(); ?>
 			<li class="orbit-slide">
