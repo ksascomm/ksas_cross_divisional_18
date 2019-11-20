@@ -13,7 +13,7 @@ $slider_query = new WP_Query(array(
 ));
 if ( $slider_query->have_posts() ) :?>
 <div class="highlighted-research show-for-large">	
-	<div class="orbit" role="region" aria-label="Featured Images" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
+	<div class="orbit" role="region" aria-label="Featured Images" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; autoPlay:false;">
 		<ul class="orbit-container">
 			<?php if ($slider_query->post_count > 1 ) : ?>
 			<button class="orbit-previous show-for-large" onclick="ga('send', 'event', 'Homepage Slider', 'Previous Slide Click');"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
