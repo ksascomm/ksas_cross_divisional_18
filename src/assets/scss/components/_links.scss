@@ -51,7 +51,7 @@ footer.timely.ai1ec-event-footer {
 }
 
 article.page a, .documents a, .single-search-result a {
-  &[href$=".pdf"]:after, &[href$=".doc"]:after, &[href$=".docx"]:after, &[href$=".xls"]:after, &[href$=".xlsx"]:after, &[href$=".ppt"]:after, &[href$=".pptx"]:after {
+  &[href$=".pdf"]:after, &[href$=".doc"]:after, &[href$=".docx"]:after, &[href$=".xls"]:after, &[href$=".xlsx"]:after, &[href$=".ppt"]:after, &[href$=".pptx"]:after, &[href$=".jpg"]:after, &[href$=".jpeg"]:after, &[href$=".png"]:after {
     font-family: $font-awesome;
     color: $black;
     font-size: 1.125rem;
