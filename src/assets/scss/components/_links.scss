@@ -69,6 +69,9 @@ article.page a, .documents a, .single-search-result a {
   &[href$=".ppt"]:after, &[href$=".pptx"]:after {
     content: '\f1c4';
   }
+  &[href$=".jpg"]:after, &[href$=".jpeg"]:after, &[href$=".png"]:after {
+    content: '\f1c5';
+  }  
 }
 
 .textwidget p a, .textwidget ul li a, .ecpt-page-sidebar a {

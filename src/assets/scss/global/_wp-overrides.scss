@@ -32,3 +32,12 @@ p.wp-caption-text{
 .sui-2-3-22 {
   display: none;
 }
+
+//WP Blocks
+.wp-block-file a, .wp-block-image a {
+  @include accessiblelink;
+}
+
+.wp-block-file *+.wp-block-file__button {
+    display: none;
+}
