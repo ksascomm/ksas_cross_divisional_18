@@ -1,7 +1,7 @@
 a {
   color: $blue;
   &:hover, &:focus {
-    color: $darkblue;
+    color: $black;
   }
 }
 
@@ -18,7 +18,8 @@ a {
 body {
   font-family: $font-stack;
   font-weight: $font-stack-weight;
-  font-size: $global-font-size * 1.125
+  font-size: $global-font-size * 1.125;
+  color: $black;
 }
 
 h1 {

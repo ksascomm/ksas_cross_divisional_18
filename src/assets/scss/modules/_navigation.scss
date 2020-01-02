@@ -401,6 +401,7 @@
       &:hover {
         color: $white;
         background-color: $darkblue;
+        border: 1px solid $white;
       }
     }
   }
@@ -465,6 +466,9 @@
     }
     .button {
       padding: 0 1rem;
+      &:hover {
+        border: 1px solid $white;
+      }      
     }
   }  
 }
