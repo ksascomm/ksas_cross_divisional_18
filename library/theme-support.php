@@ -51,6 +51,9 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 		// Add Page Excerpt Box
 		add_post_type_support( 'page', 'excerpt' );
 
+		// Enable block styles on the front end
+    	add_theme_support( 'wp-block-styles' );
+
 	}
 
 	add_action( 'after_setup_theme', 'foundationpress_theme_support' );
