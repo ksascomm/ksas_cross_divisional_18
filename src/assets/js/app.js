@@ -10,5 +10,6 @@ import Foundation from 'foundation-sites';
 
 //import './lib/isotope';
 //import './lib/directory';
+import './lib/accessibility-fixes';
 
 $(document).foundation();
