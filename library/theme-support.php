@@ -46,7 +46,7 @@ if ( ! function_exists( 'foundationpress_theme_support' ) ) :
 		add_theme_support( 'wc-product-gallery-slider' );
 
 		// Add foundation.css as editor style https://codex.wordpress.org/Editor_Style
-		add_editor_style( 'dist/assets/css/' . foundationpress_asset_path( 'app.css' ) );
+		//add_editor_style( 'dist/assets/css/' . foundationpress_asset_path( 'app.css' ) );
 
 		// Add Page Excerpt Box
 		add_post_type_support( 'page', 'excerpt' );
