@@ -2,7 +2,7 @@
 
 For Kreiger-based organizations that cross divisions and/or don't require majority of KSAS-specific plugins.
 
-This theme is built off [FoundationPress](https://github.com/olefredrik/FoundationPress). Uses Foundation 6.4.3. Relevant FoundationPress docs below:
+This theme is built off [FoundationPress](https://github.com/olefredrik/FoundationPress). Uses Foundation 6.6.1. Relevant FoundationPress docs below:
 
 ## Quickstart
 
