@@ -5,6 +5,7 @@
   "description": "For Kreiger-based organizations that cross divisions and/or don't require majority of KSAS-specific plugins. Built off FoundaationPress.",
   "homepage": "https://sites.krieger.jhu.edu",
   "license": "MIT",
+  "private": true,
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
@@ -16,7 +17,6 @@
   },
   "keywords": [
     "WordPress",
-    "starter theme",
     "Foundation",
     "semantic",
     "mobile first",
