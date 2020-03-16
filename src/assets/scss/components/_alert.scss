@@ -21,3 +21,10 @@
         }              
     }    
 }
+
+.corona {
+    p a {
+       @include accessiblelink;
+       border-bottom-color: $black;
+    }    
+}
