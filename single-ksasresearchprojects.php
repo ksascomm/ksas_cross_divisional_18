@@ -10,25 +10,43 @@ get_header(); ?>
 
 <div class="main-container" id="page">
 	<div class="main-grid">
-		<main class="main-content">
+		<main class="main-content-full-width">
 			<div class="secondary">
 				<?php foundationpress_breadcrumb(); ?>
-			</div>		
+			</div>
+			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<header>
+					<h1>
+					<?php the_title(); ?>
+					</h1>
+				</header>				
 			<?php while ( have_posts() ) : the_post(); ?>
-				<h3><?php the_title(); ?></h3>
-					<div class="project-body">
-						<?php the_post_thumbnail('full'); ?>
-						<?php if (get_post_meta($post->ID, 'ecpt_associate_name', true)) : ?>
-							<p><strong>Associate Name:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_associate_name', true); ?></p>
-						<?php endif; ?>
-						<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
-							<p><strong>Funding Source/Period of the Grant:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?></p>
-						<?php endif; ?>
-						<?php if (get_post_meta($post->ID, 'ecpt_description_full', true)) : ?>
-							<p><strong>Description:</strong>&nbsp;<?php echo get_post_meta($post->ID, 'ecpt_description_full', true); ?></p>
-						<?php endif; ?>
+				<div class="entry-content">
+					<div class="grid-x">
+						<?php if ( has_post_thumbnail() ) : ?>
+							<div class="cell small-12 medium-5 large-2">
+								<?php the_post_thumbnail('medium'); ?>
+							</div>
+						<?php endif;?>
+						<div class="cell small-12 medium-7 large-10">
+							<ul>
+							<?php if (get_post_meta($post->ID, 'ecpt_associate_name', true)) : ?>
+								<li><strong>Associate Name:</strong> <?php echo get_post_meta($post->ID, 'ecpt_associate_name', true); ?>
+								</li>
+							<?php endif; ?>
+							<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
+								<li><strong>Funding Source/Period of the Grant:</strong> <?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?>
+								</li>
+							<?php endif; ?>	
+							<?php if (get_post_meta($post->ID, 'ecpt_description_full', true)) : ?>
+								<li><strong>Description:</strong> <?php echo get_post_meta($post->ID, 'ecpt_description_full', true); ?></li>
+							<?php endif; ?>
+							</ul>
+						</div>
 					</div>
+				</div>
 			<?php endwhile; ?>
+			</article>
 		</main>
 	</div>
 </div>
