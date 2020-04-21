@@ -53,7 +53,7 @@ $website = tribe_get_event_website_link();
 ?>
 
 <div class="tribe-events-meta-group tribe-events-meta-group-details">
-	<h2 class="tribe-events-single-section-title"> <?php esc_html_e( 'Details', 'the-events-calendar' ) ?> </h2>
+	<div class="tribe-events-single-section-title">Event Details</div>
 	<dl>
 
 		<?php
@@ -68,7 +68,7 @@ $website = tribe_get_event_website_link();
 				<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
 			</dd>
 
-			<dt class="tribe-events-end-date-label"> <?php esc_html_e( 'End:', 'the-events-calendar' ) ?> </dt>
+			<dt class="tribe-events-end-date-label"><i class="far fa-calendar-alt"></i> <?php esc_html_e( 'End:', 'the-events-calendar' ) ?> </dt>
 			<dd>
 				<abbr class="tribe-events-abbr tribe-events-end-date dtend" title="<?php esc_attr_e( $end_ts ) ?>"> <?php esc_html_e( $end_date ) ?> </abbr>
 			</dd>
@@ -93,7 +93,7 @@ $website = tribe_get_event_website_link();
 				<abbr class="tribe-events-abbr tribe-events-start-datetime updated published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_datetime ) ?> </abbr>
 			</dd>
 
-			<dt class="tribe-events-end-datetime-label"> <?php esc_html_e( 'End:', 'the-events-calendar' ) ?> </dt>
+			<dt class="tribe-events-end-datetime-label"> <i class="far fa-calendar-alt"></i> <?php esc_html_e( 'End:', 'the-events-calendar' ) ?> </dt>
 			<dd>
 				<abbr class="tribe-events-abbr tribe-events-end-datetime dtend" title="<?php esc_attr_e( $end_ts ) ?>"> <?php esc_html_e( $end_datetime ) ?> </abbr>
 			</dd>
@@ -103,12 +103,12 @@ $website = tribe_get_event_website_link();
 		else :
 			?>
 
-			<dt class="tribe-events-start-date-label"><i class="far fa-calendar-alt"></i> <?php esc_html_e( 'Date', 'the-events-calendar' ) ?> </dt>
+			<dt class="tribe-events-start-date-label"><span class="far fa-calendar-alt"></span></dt>
 			<dd>
 				<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
 			</dd>
 
-			<dt class="tribe-events-start-time-label"><i class="far fa-clock"></i> <?php echo esc_html( $time_title ); ?> </dt>
+			<dt class="tribe-events-start-time-label"><span class="far fa-clock"></span></dt>
 			<dd>
 				<div class="tribe-events-abbr tribe-events-start-time published dtstart" title="<?php esc_attr_e( $end_ts ) ?>">
 					<?php echo $time_formatted; ?>
@@ -120,33 +120,15 @@ $website = tribe_get_event_website_link();
 		<?php
 		// Event Cost
 		if ( ! empty( $cost ) ) : ?>
-
-			<dt class="tribe-events-event-cost-label"><i class="fas fa-dollar-sign"></i> <?php esc_html_e( 'Cost', 'the-events-calendar' ) ?> </dt>
-			<dd class="tribe-events-event-cost"> <?php esc_html_e( $cost ); ?> </dd>
+			<dd class="tribe-events-event-cost"><?php esc_html_e( $cost ); ?></dd>
 		<?php endif ?>
 
-		<?php
-		echo tribe_get_event_categories(
-			get_the_id(), array(
-				'before'       => '',
-				'sep'          => ', ',
-				'after'        => '',
-				'label'        => null, // An appropriate plural/singular label will be provided
-				'label_before' => '<dt class="tribe-events-event-categories-label">',
-				'label_after'  => '</dt>',
-				'wrap_before'  => '<dd class="tribe-events-event-categories">',
-				'wrap_after'   => '</dd>',
-			)
-		);
-		?>
 
 		<?php echo tribe_meta_event_tags( sprintf( esc_html__( '%s Tags:', 'the-events-calendar' ), tribe_get_event_label_singular() ), ', ', false ) ?>
 
 		<?php
 		// Event Website
 		if ( ! empty( $website ) ) : ?>
-
-			<dt class="tribe-events-event-url-label"><i class="fas fa-external-link-square-alt"></i> <?php esc_html_e( 'Website:', 'the-events-calendar' ) ?> </dt>
 			<dd class="tribe-events-event-url"> <?php echo $website; ?> </dd>
 		<?php endif ?>
 
