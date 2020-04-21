@@ -62,3 +62,8 @@
     border-bottom-color: $dark-gray;
   }
 }
+
+@mixin widget-title {
+  font-family: $font-header-extrabold;
+  font-weight: $font-header-extrabold-weight;
+}
