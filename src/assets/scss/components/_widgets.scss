@@ -498,3 +498,84 @@
 		}
 	}
 }
+
+//Modern Tribe Events Calendar Widgets
+.tribe-events-list-widget, .tribe-events-adv-list-widget {
+    background: url('../images/blueInWhite_corner1.svg') no-repeat right bottom;
+    background-color: $white;
+    background-size: 2.666666666666667rem auto;
+    border: .06667rem solid $blue;
+    border-bottom: none;
+    box-shadow: 0 0.4rem 0 0 $blue;
+	h3.widgettitle, h4.widgettitle, h5.widgettitile {
+		font-size: 1.25rem;
+		font-family: $font-header-extrabold;
+		font-weight: $font-header-extrabold-weight;
+		padding: .75rem;
+		margin-bottom: 0;
+	} 
+	.tribe-list-widget {
+		padding-top: 1rem;
+	}
+	.tribe-events-list-widget-events {
+		h4.tribe-event-title {
+			font-size: 1.125rem;
+		}
+		.tribe-event-duration {
+			span.tribe-event-date-start, span.tribe-event-time {
+				font-family: $font-stack-semibold;
+				font-weight: $font-stack-semibold-weight;
+			}
+			span.timezone {
+				display: none;
+			}
+		}
+	}
+	.tribe-events-widget-link a {
+		padding: 1rem !important;
+	    text-transform: uppercase;
+	    font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+	    font-weight: 600;
+	    font-size: .9rem;
+	    &::after{
+			font-family: "Font Awesome 5 Free", "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+		    padding-left: .2rem;
+		    font-weight: 900;
+		    content: "\f138";
+	    }
+	}
+  .tribe-mini-calendar-event {
+    padding: 0 .5rem;
+    .list-info {
+      font-size: .9rem;
+      h2.tribe-events-title {
+        font-family: $font-stack-bold;
+        font-weight: $font-stack-bold-weight;
+        font-size: 1rem;
+        margin-bottom: .5rem;
+      }
+      .tribe-events-duration {
+        font-size: .9rem;
+      }     
+    }    
+    .list-date {
+      background: $blue;
+    }
+    .list-dayname {
+      color: $black !important;
+      font-size: .75rem;
+    }
+    .tribe-section-s {
+      padding-top: 0;
+    }
+  } 
+  p.tribe-events-widget-link {
+    @include button;
+    margin-top: .5rem;
+    margin-left: .5rem;
+    a {
+      color: $white;
+    }
+  }	
+
+}
