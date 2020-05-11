@@ -20,6 +20,9 @@ get_header();
 <div class="main-container" id="page">
     <div class="main-grid">
 		<main id="tribe-events-pg-template" class="tribe-events-pg-template main-content-full-width">
+			<div class="secondary">
+				<?php foundationpress_breadcrumb(); ?>
+			</div>
 			<?php tribe_events_before_html(); ?>
 			<?php tribe_get_view(); ?>
 			<?php tribe_events_after_html(); ?>
