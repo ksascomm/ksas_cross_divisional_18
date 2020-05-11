@@ -42,7 +42,7 @@
 		</div>
 
 	<?php } ?>
-	<?php if (is_home() || is_single() && ! is_singular(array( 'studyfields', 'ai1ec_event', 'people', 'testimonial' )) ) : ?>
+	<?php if (is_home() || is_single() && ! is_singular(array( 'studyfields', 'tribe_events', 'people', 'testimonial' )) ) : ?>
 	<div class="sidebar-menu-area" aria-labelledby="sidebar-navigation">
 		<div class="sidebar-menu">
 			<h1 class="sidebar-menu-title" id="sidebar-navigation">Also in <a href="<?php echo get_home_url(); ?>/about/" aria-label="Sidebar Menu: About">About</a></h1>

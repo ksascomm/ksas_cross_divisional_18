@@ -42,7 +42,7 @@ if ( ! function_exists( 'foundationpress_breadcrumb' ) ) {
 				if (is_singular('bulletinboard') ) {
 					echo '<li><a href="' . $home_url . '/undergraduate/">Undergraduate</a></li>';
 					echo '<li><a href="' . $home_url . '/bbtype/">Bulletins</a></li>';
-				} elseif (is_singular('ai1ec_event') ) {
+				} elseif (is_singular('tribe_events') ) {
 					echo '<li><a href="' . $home_url . '/events/">Events</a></li>';
 				} elseif (is_singular('ksasexhibits') ) {
 					echo '<li><a href="' . $home_url . '/exhibitions">Exhibitions</a></li>';
