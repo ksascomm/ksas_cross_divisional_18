@@ -499,7 +499,7 @@
 	}
 }
 
-//All widgets
+//All Tribe widgets
 .tribe-events-list-widget,.tribe-events-adv-list-widget, .widget.tribe_mini_calendar_widget,  {
 	h3.widgettitle, h4.widgettitle, h5.widgettitile {
 		font-size: 1.25rem;
@@ -518,6 +518,11 @@
     border: .06667rem solid $blue;
     border-bottom: none;
     box-shadow: 0 0.4rem 0 0 $blue;
+	p {
+		padding: .75rem;
+		font-size: .9em;
+		line-height: 1.45;
+	}    
 	.tribe-list-widget {
 		padding-top: 1rem;
 	}
