@@ -199,7 +199,7 @@ get_header(); ?>
 			</div>
 				<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
 <!--This is where Pre-2018 Common Rule documents go-->
-				<div class="callout alert">
+				<div class="callout warning">
 					<h3>Common Rule</h3>
 					<div class="grid-x">
 						<?php $application_ehirb_query = new WP_Query(array(
