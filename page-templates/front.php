@@ -7,9 +7,8 @@ get_header(); ?>
 <?php $theme_option = flagship_sub_get_global_options();
 $slider_query = new WP_Query(array(
 	'post_type' => 'slider',
-	'posts_per_page' => 5,
-	'orderby' => 'menu_order',
-	'order' => 'ASC',
+	'posts_per_page' => 10,
+	'orderby' => 'rand',
 ));
 if ( $slider_query->have_posts() ) :?>
 <div class="highlighted-research show-for-large">	
