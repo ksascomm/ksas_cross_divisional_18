@@ -11,5 +11,6 @@ import Foundation from 'foundation-sites';
 //import './lib/isotope';
 //import './lib/directory';
 import './lib/accessibility-fixes';
+import './lib/background-video';
 
 $(document).foundation();
