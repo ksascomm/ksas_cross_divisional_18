@@ -113,7 +113,7 @@
 				'height': 'auto',
 				'position': 'absolute',
 				'left': '50%',
-				'top': '80%',
+				'top': '50%',
 				'transform': 'translate(-50%,-50%)'
 			});
 			if( el_settings.fullScreen ) {

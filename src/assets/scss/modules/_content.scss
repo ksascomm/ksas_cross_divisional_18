@@ -193,6 +193,11 @@ li {
   h6 {
     font-size: 1rem;
   }
+  &.video.homepage-news {
+      p {
+        font-size: 1.25rem;
+      }
+  }
   .entry-content, .accordion-content, .tabs-panel {
     p {
       line-height: 1.45;

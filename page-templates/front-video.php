@@ -13,7 +13,7 @@ get_header(); ?>
 
 	<div class="main-container" id="page">
 	    <div class="main-grid homepage sidebar-right">
-	        <main class="main-content homepage-news">
+	        <main class="main-content video homepage-news">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					
 						<?php $frontpagecontent = the_content(); if ($frontpagecontent != '' ) : ?>
