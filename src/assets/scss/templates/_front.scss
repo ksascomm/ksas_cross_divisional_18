@@ -245,16 +245,35 @@ screen and (min-width: 40em) {
     .introduction {
       font-size: 1.25rem;
     }
+    p:first-of-type {
+      padding-top: inherit;
+    }
     .homepage-callout {
-      border-radius: 1rem;
-      background: $yellow;
       margin: 0;
+      &.sidebar {
+        @include breakpoint(small) { 
+          @include xy-cell(12);
+        }        
+        @include breakpoint(large) { 
+          @include xy-cell(4);
+        }
+      }
       .widget {
-        background: inherit !important;
-        border: none !important;
-        box-shadow: none !important;
-        margin-bottom: 0;
-        font-size: 1.125rem;
+        background: url('../images/blueInWhite_corner1.svg') no-repeat right bottom;
+        background-color: $white;
+        background-size: 2.666666666666667rem auto;
+        border: .06667rem solid $blue;
+        border-bottom: none;
+        box-shadow: 0 0.4rem 0 0 $blue;
+        margin-bottom: inherit;
+        h3.widgettitle {
+          font-size: 1.125rem;
+        }
+        .text-widget {
+          p {
+            padding-top: 0;
+          }
+        }
       }
     &.sidebar {
       margin-top: 0;

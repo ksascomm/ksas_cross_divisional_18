@@ -38,10 +38,10 @@ get_header(); ?>
 			
 				<div class="grid-x grid-padding-x grid-container">
 					<?php if ( is_active_sidebar('homepage0')  ) : ?>
-						<div class="cell small-12 medium-8 introduction">
+						<div class="cell small-12 large-8 introduction">
 							<?php the_content(); ?>	
 						</div>	
-						<aside class="cell small-12 medium-4 homepage-callout sidebar hide-for-print"> 
+						<aside class="cell small-12 large-4 homepage-callout sidebar hide-for-print"> 
 							<?php dynamic_sidebar( 'homepage0' ); ?>
 						</aside>
 					<?php else: ?>
