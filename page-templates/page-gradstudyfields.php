@@ -40,6 +40,9 @@ $gradstudyfields_query = new WP_Query(array(
 						  <div class="card-section">
 						  	<h1><?php the_title(); ?></h1>
 							<ul class="info">
+								<?php if ( get_post_meta($post->ID, 'ecpt_degreesoffered', true) ) : ?>
+									<span class="fas fa-graduation-cap"></span> Degrees Offered: <?php echo get_post_meta($post->ID, 'ecpt_degreesoffered', true); ?>
+								<?php endif;?>
 								<li><span class="fas fa-link"></span> <a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" aria-label="<?php the_title(); ?> Program Website">Program Website</a></li>
 								<li><span class="far fa-id-card"></span> <?php echo get_post_meta($post->ID, 'ecpt_contactname', true); ?></li>
 								<li><span class="fas fa-at"></span> <a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>"><?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?></a></li>
