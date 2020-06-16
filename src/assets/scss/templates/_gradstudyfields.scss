@@ -1,0 +1,45 @@
+.grad-program {
+	h1 {
+		font-family: $font-stack-bold;
+		font-weight: $font-stack-bold-weight;
+		font-size: 1.5rem;
+		a {
+			@include accessiblelink;
+		}
+	}
+	dl dt {
+		margin-bottom: 0;
+		font-family: $font-stack-semibold;
+		font-weight: $font-stack-semibold-weight;
+		font-size: 1.25rem;
+	}
+	dd {
+		margin-bottom: 0.5rem;
+		line-height: 1.3;
+    	letter-spacing: -.2px;
+		a {
+			@include accessiblelink;
+		}
+	}
+	ul.info {
+		margin-left: 0;
+		list-style-type: none;
+		li {
+			a {
+				@include accessiblelink;
+			}
+		}
+	}
+	&.card {
+		background: url('../images/blueInWhite_corner1.svg') no-repeat right bottom;
+	    background-color: $white;
+	    background-size: 2.666666666666667rem auto;
+		border: .06667rem solid $blue;
+		border-bottom: none;
+    	box-shadow: 0 0.4rem 0 0 $blue;
+    	color: $black;
+    	.card-section {
+    		padding: .75rem;
+    	}
+	}
+}
