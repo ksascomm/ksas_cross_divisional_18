@@ -33,10 +33,10 @@ $gradstudyfields_query = new WP_Query(array(
 				</article>
 			<?php endwhile; ?>
 			<?php if ( $gradstudyfields_query->have_posts() ) : ?>
-				<div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3">
+				<div class="grid-x grid-padding-x small-up-1 medium-up-2 large-up-3" data-equalizer data-equalize-on="medium">
 				<?php while ( $gradstudyfields_query->have_posts() ) : $gradstudyfields_query->the_post();?>
 					<div class="cell">
-						<div class="card grad-program">
+						<div class="card grad-program" data-equalizer-watch>
 						  <div class="card-section">
 						  	<h1><?php the_title(); ?></h1>
 							<ul class="info">
@@ -44,22 +44,21 @@ $gradstudyfields_query = new WP_Query(array(
 									<span class="fas fa-graduation-cap"></span> Degrees Offered: <?php echo get_post_meta($post->ID, 'ecpt_degreesoffered', true); ?>
 								<?php endif;?>
 								<li><span class="fas fa-link"></span> <a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" aria-label="<?php the_title(); ?> Program Website">Program Website</a></li>
-								<li><span class="far fa-id-card"></span> <?php echo get_post_meta($post->ID, 'ecpt_contactname', true); ?></li>
-								<li><span class="fas fa-at"></span> <a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>"><?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?></a></li>
-								<?php if ( get_post_meta($post->ID, 'ecpt_phonenumber', true) ) : ?>
-									<li><span class="fas fa-phone-square-alt"></span> <?php echo get_post_meta($post->ID, 'ecpt_phonenumber', true); ?></li>
-								<?php endif;?>
+								<li><span class="far fa-id-card"></span> 
+									 <a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>"><?php echo get_post_meta($post->ID, 'ecpt_contactname', true); ?></a></li>
+								<li><strong>Deadline: </strong><?php echo get_post_meta($post->ID, 'ecpt_deadline', true); ?>
+									<?php if ( get_post_meta($post->ID, 'ecpt_adddeadline', true) ) : ?>; <?php echo get_post_meta($post->ID, 'ecpt_adddeadline', true); ?>
+										<?php endif;?>
+								</li>
 							</ul>		
-							<dl>	
-								<dt>Deadline</dt>
-									<dd><?php echo get_post_meta($post->ID, 'ecpt_deadline', true); ?><?php if ( get_post_meta($post->ID, 'ecpt_adddeadline', true) ) : ?>, <?php echo get_post_meta($post->ID, 'ecpt_adddeadline', true); ?>
-									<?php endif;?>
-									</dd>
+								
 								<?php if ( get_post_meta($post->ID, 'ecpt_supplementalmaterials', true) ) : ?>
-									<dt>Supplemental Materials</dt>
-									<dd><?php echo get_post_meta($post->ID, 'ecpt_supplementalmaterials', true); ?></dd>
+									<dl>
+										<dt>Supplemental Materials</dt>
+										<dd><?php echo get_post_meta($post->ID, 'ecpt_supplementalmaterials', true); ?></dd>
+									</dl>
 								<?php endif;?>
-							</dl>
+							
 						  </div>
 						</div>
 					</div>
