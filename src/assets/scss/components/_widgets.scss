@@ -2,67 +2,6 @@
 	margin-bottom: 2rem;
 }
 
-//Event Calendar
-.widget_ai1ec_agenda_widget {
-	background: $gray;
-	h3.widgettitle, h4.widgettitle, h5.widgettitile {
-		font-size: 1.25rem;
-		font-family: $font-header-extrabold;
-		font-weight: $font-header-extrabold-weight;
-		padding: .75rem .75rem 0 .75rem;
-		margin-bottom: 0;
-	}
-	.ai1ec-agenda-widget-view .ai1ec-date-title, .ai1ec-agenda-view .ai1ec-date-title {
-		background-image: none;
-		background: $blue;
-		color: $white;
-		border: none;
-	}
-	.ai1ec-agenda-widget-view .ai1ec-month, .ai1ec-agenda-view .ai1ec-month {
-		font-family: $font-stack-semibold;
-		font-weight: $font-stack-semibold-weight;
-		color: $white;
-		text-align: center;
-		padding: 0;
-	}
-	.ai1ec-agenda-widget-view .ai1ec-day, .ai1ec-agenda-view .ai1ec-day {
-		font-family: $font-stack-semibold;
-		font-weight: $font-stack-semibold-weight;
-	}
-	.ai1ec-agenda-widget-view .ai1ec-weekday, .ai1ec-agenda-view .ai1ec-weekday {
-		text-transform: uppercase;
-	}
-	.ai1ec-agenda-widget-view .ai1ec-date-title:hover, .ai1ec-agenda-view .ai1ec-date-title:hover {
-    	color: $white !important;
-	}
-	.ai1ec-agenda-widget-view .ai1ec-event > a:hover {
-    	border-color: #808080;
-    	color: $blue;
-	}
-	.ai1ec-date {
-    	padding: 0 .75rem;
-	}
-	span.ai1ec-event-title, span.ai1ec-event-location {
-		font-family: $font-stack !important;
-		font-weight: $font-stack-weight;
-	}
-	a.ai1ec-btn.ai1ec-btn-default.ai1ec-btn-xs.ai1ec-pull-right.ai1ec-calendar-link {
-		margin-right: .75rem;
-		margin-bottom: .75rem;
-	}
-	.ai1ec-agenda-widget-view .ai1ec-date, .ai1ec-agenda-view .ai1ec-date {
-		border: none;
-	}
-	.ai1ec-no-results {
-		color: $black;
-		padding: .75rem;
-	}
-}
-
-.ai1ec-allday-badge {
-	background: $blue;
-}
-
 //Profile & Testimonial Widget
 .widget.ksas_profile, .widget.ksas_testimonial {
 	background: url('../images/blueInWhite_corner1.svg') no-repeat right bottom;
