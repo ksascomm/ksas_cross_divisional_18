@@ -1,8 +1,13 @@
 .frm_forms {
-	label {
+	label, .frm_primary_label {
 		font-family: $font-stack-semibold !important;
 		font-weight: $font-stack-semibold-weight !important;
 		font-size: 1rem !important;
+	}
+	.frm_section_heading h3 {
+		font-family: $font-stack-semibold !important;
+		font-weight: $font-stack-semibold-weight !important;
+		font-size: 1.5rem !important;
 	}
 	span.frm_required {
 		color: $fireengine;
@@ -55,5 +60,25 @@
 	  border-color: $fireengine;
 	  border-width: 1px;
 	  border-style: solid;
+	}
+	select {
+		font-family: $font-stack-semibold !important;
+		font-weight: $font-stack-semibold-weight !important;
+		font-size: 1rem !important;
+		&.frm_time_select {
+			background-position: right;
+    		background-origin: inherit;
+		}
+		
+	}
+	.frmfont:before, select.frmfont, .frm_icon_font:before, select.frm_icon_font {
+		display: inline-block;
+    	font-style: normal;
+    	font-variant: normal;
+    	text-rendering: auto;
+    	-webkit-font-smoothing: antialiased;
+    	font-family: "Font Awesome 5 Free" !important; 
+		font-weight: 900; 
+		content: '\f093';
 	}
 }
