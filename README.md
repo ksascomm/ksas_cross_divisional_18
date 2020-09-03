@@ -9,8 +9,8 @@ This theme is built off [FoundationPress](https://github.com/olefredrik/Foundati
 ### 1. Clone the repository and install with npm
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/
-$ git clone https://github.com/olefredrik/FoundationPress.git
-$ cd FoundationPress
+$ git clone https://github.com/ksascomm/ksas_cross_divisional_18.git
+$ cd ksas_cross_divisional_18
 $ npm install
 ```
 
