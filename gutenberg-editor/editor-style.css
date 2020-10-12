@@ -42,6 +42,16 @@ body {
     color: #31261d;
 }
 
+p b,
+p strong {
+  font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 600;
+}
+
+p u {
+  text-decoration: none;
+}
+
 /* TinyMCE Editor */
 .editor-styles-wrapper p strong,
 .editor-rich-text p strong {
@@ -109,6 +119,20 @@ body {
 .editor-writing-flow .wp-block h6{
     font-family: "gentona-semibold","Helvetica Neue",Roboto,sans-serif;
     font-weight: 600;
+}
+
+h1 {
+  font-family: "quadon-bold", "Helvetica Neue", Roboto, sans-serif;
+  font-weight: 500;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "gentona-semibold","Helvetica Neue",Roboto,sans-serif;
+  font-weight: 600;
 }
 
 /* Blockquote styles */
