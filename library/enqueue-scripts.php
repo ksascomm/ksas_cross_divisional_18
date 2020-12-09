@@ -46,16 +46,16 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		//wp_deregister_script( 'jquery' );
 
 		// CDN hosted jQuery placed in the header, as some plugins require that jQuery is loaded in the header.
-		//wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', array(), '3.2.1', false );
+		//wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js', array(), '3.5.1', false );
 
 		// Deregister the jquery-migrate version bundled with WordPress.
 		//wp_deregister_script( 'jquery-migrate' );
 
 		// CDN hosted jQuery migrate for compatibility with jQuery 3.x
-		//wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.0.1.min.js', array('jquery'), '3.0.1', false );
+		//wp_register_script( 'jquery-migrate', '//code.jquery.com/jquery-migrate-3.3.2.min.js', array('jquery'), '3.3.2', false );
 
 		// Enqueue jQuery migrate. Uncomment the line below to enable.
-		// wp_enqueue_script( 'jquery-migrate' );
+		//wp_enqueue_script( 'jquery-migrate' );
 
 		// Enqueue Foundation scripts
 		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '5.1.0', true );
@@ -75,16 +75,13 @@ endif;
 
 // Defer non-essential/plugin javascript files
 // Defer jQuery Parsing using the HTML5 defer property
-if (!(is_admin() )) {
-    function defer_parsing_of_js ( $url ) {
-        if ( FALSE === strpos( $url, '.js' ) ) return $url;
-        if ( strpos( $url, 'jquery.js' ) ) return $url;
-        if ( strpos( $url, 'app.js' ) ) return $url;
-        // return "$url' defer ";
-        return "$url' defer onload='";
-    }
-    add_filter( 'clean_url', 'defer_parsing_of_js', 11, 1 );
+function defer_parsing_of_js( $url ) {
+	if ( is_user_logged_in() ) return $url; //don't break WP Admin
+	if ( FALSE === strpos( $url, '.js' ) ) return $url;
+	if ( strpos( $url, 'jquery.js' ) ) return $url;
+	return str_replace( ' src', ' defer src', $url );
 }
+add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 
 //remove Tablepress default styles; use Foundation
 //add_filter( 'tablepress_use_default_css', '__return_false' );
