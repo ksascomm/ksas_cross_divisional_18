@@ -25,7 +25,7 @@ function redirect_empty_bios() {
 		if(empty($bio) && isset($link)) {
 		    wp_redirect(esc_url($link), 301);
 		    exit;
-		} 
+		}
 	endif;
 }
 
@@ -41,3 +41,11 @@ function get_the_directory_filters( $post ) {
 		endif;
 		return $directory_filter_name;
 }
+
+function deactivate_on_people_page() {
+	// Disable WordPress Lazy Load on People pages.
+	if ( is_page_template( 'page-templates/people-directory.php' ) ) {
+		add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+	}
+}
+add_filter( 'wp', __NAMESPACE__ . '\deactivate_on_people_page' );
