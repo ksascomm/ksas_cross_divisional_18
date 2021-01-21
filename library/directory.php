@@ -44,7 +44,7 @@ function get_the_directory_filters( $post ) {
 
 function deactivate_on_people_page() {
 	// Disable WordPress Lazy Load on People pages.
-	if ( is_page_template( 'page-templates/people-directory.php' ) ) {
+	if ( is_page_template( array( 'page-templates/people-directory.php', 'page-templates/research-projects.php' ) ) ) {
 		add_filter( 'wp_lazy_loading_enabled', '__return_false' );
 	}
 }
