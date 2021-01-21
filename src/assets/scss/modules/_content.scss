@@ -12,7 +12,7 @@ a {
     &:hover, &:active {
         color: $black;
         border-bottom-style: solid;
-    }  
+    }
 }
 
 body {
@@ -90,7 +90,7 @@ li {
     }
 
     @include breakpoint(large) {
-      @include xy-cell(12);
+      @include xy-cell(11);
     }
   }
 
@@ -207,7 +207,7 @@ li {
       }
       em, i {
         font-family: $font-stack-italic;
-      }          
+      }
     }
     ul, ol, dl {
       line-height: 1.45;
@@ -236,14 +236,14 @@ li {
                 color: $darkblue;
               }
           }
-        }      
-      } 
+        }
+      }
     }
     table {
       td {
         a {
           @include accessiblelink;
-        }        
+        }
       }
     }
     h1, h2, h3, h4, h5 {
@@ -289,7 +289,7 @@ li {
     margin-top: .5rem;
   }
 }
-.post-singular {  
+.post-singular {
   &.category-books {
     img {
       @include image-float-left;

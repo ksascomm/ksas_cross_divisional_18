@@ -18,7 +18,7 @@ $flagship_researchprojects_query = new WP_Query(array(
 		<main class="main-content-full-width">
 			<div class="secondary">
 				<?php foundationpress_breadcrumb(); ?>
-			</div>			
+			</div>
 			<?php do_action( 'foundationpress_before_content' ); ?>
 			<?php
             while ( have_posts() ) : the_post(); ?>
@@ -38,7 +38,7 @@ $flagship_researchprojects_query = new WP_Query(array(
 					'order'			=> 'ASC',
 					'hide_empty'	=> true,
 				));
-				
+
 					$count_projects = count($projects);
 					if ($count_projects > 0) : ?>
 						<p>Filter by Project Type or Research Area:</p>
@@ -78,33 +78,31 @@ $flagship_researchprojects_query = new WP_Query(array(
 							$program_type_name = join( " ", $program_type_names );
 							$project_type = join( ", ", $project_types );
 				endif; ?>
-				
+
 				<!-- Set classes for isotype.js filter buttons -->
-				<div class="cell item  <?php echo $program_type_name; ?>">
-					
-					<div class="field" id="<?php echo $program_type->slug ?>">
-						
+				<div class="projects cell item  <?php echo $program_type_name; ?>">
+
+					<div class="field card" id="<?php echo $program_type->slug ?>">
+
 						<?php if ( has_post_thumbnail()) { ?>
 							<?php the_post_thumbnail('thumbnail'); ?>
 						<?php } ?>
-						<h5>
+						<div class="card-section">
+						<h4>
 							<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>" class="field"><?php the_title(); ?></a>
-						</h5>
-						
-						<div class="grid-x">
-							<div class="small-12 cell fields ">
-								<p>
+						</h4>
+								<ul class="vertical menu">
 									<?php if (get_post_meta($post->ID, 'ecpt_associate_name', true)) : ?>
-										<strong><?php echo get_post_meta($post->ID, 'ecpt_associate_name', true); ?></strong><br>
+										<li><strong><?php echo get_post_meta($post->ID, 'ecpt_associate_name', true); ?></strong></li>
 									<?php endif; ?>
 									<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
-										<strong><?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?></strong><br>
+										<li><strong><?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?></strong></li>
 									<?php endif; ?>
-									<?php if (get_post_meta($post->ID, 'ecpt_description_short', true)) : ?>
-										<?php echo get_post_meta($post->ID, 'ecpt_description_short', true); ?><br>
+									<?php if (get_post_meta($post->ID, 'ecpt_description_full', true)) : ?>
+										<li class="description"><?php echo wp_trim_words ( get_post_meta( $post->ID, 'ecpt_description_full', true ), 30 ); ?></li>
 									<?php endif; ?>
-								</p>
-							</div>
+								</ul>
+
 						</div>
 					</div>
 				</div>
