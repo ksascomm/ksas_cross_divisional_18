@@ -91,18 +91,13 @@ $flagship_researchprojects_query = new WP_Query(array(
 						<h4>
 							<a href="<?php echo get_permalink() ?>" title="<?php the_title(); ?>" class="field"><?php the_title(); ?></a>
 						</h4>
-								<ul class="vertical menu">
-									<?php if (get_post_meta($post->ID, 'ecpt_associate_name', true)) : ?>
-										<li><strong><?php echo get_post_meta($post->ID, 'ecpt_associate_name', true); ?></strong></li>
-									<?php endif; ?>
-									<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
-										<li><strong><?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?></strong></li>
-									<?php endif; ?>
-									<?php if (get_post_meta($post->ID, 'ecpt_description_full', true)) : ?>
-										<li class="description"><?php echo wp_trim_words ( get_post_meta( $post->ID, 'ecpt_description_full', true ), 30 ); ?></li>
-									<?php endif; ?>
-								</ul>
-
+						<?php if (get_post_meta($post->ID, 'ecpt_associate_name', true)) : ?>
+							<p><strong><?php echo get_post_meta($post->ID, 'ecpt_associate_name', true); ?></strong></p>
+						<?php endif; ?>
+						<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
+							<p><strong><?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?></strong></p>
+						<?php endif; ?>
+					<?php the_excerpt(  ); ?>
 						</div>
 					</div>
 				</div>
