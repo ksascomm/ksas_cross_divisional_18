@@ -19,35 +19,36 @@ get_header(); ?>
 					<h1>
 					<?php the_title(); ?>
 					</h1>
-				</header>				
-			<?php while ( have_posts() ) : the_post(); ?>
+				</header>
+			<?php
+			while ( have_posts() ) :
+				the_post();
+				?>
 				<div class="entry-content">
-					<div class="grid-x">
+					<div class="media-object stack-for-small">
 						<?php if ( has_post_thumbnail() ) : ?>
-							<div class="cell small-12 medium-5 large-2">
-								<?php the_post_thumbnail('medium'); ?>
+							<div class="media-object-section">
+								<?php the_post_thumbnail( 'medium' ); ?>
 							</div>
-						<?php endif;?>
-						<div class="cell small-12 medium-7 large-10">
-							<ul>
-							<?php if (get_post_meta($post->ID, 'ecpt_associate_name', true)) : ?>
-								<li><strong>Associate Name:</strong> <?php echo get_post_meta($post->ID, 'ecpt_associate_name', true); ?>
-								</li>
+						<?php endif; ?>
+						<div class="media-object-section">
+							<?php if ( get_post_meta( $post->ID, 'ecpt_associate_name', true ) ) : ?>
+								<p><strong>Associate Name:</strong> <?php echo get_post_meta( $post->ID, 'ecpt_associate_name', true ); ?>
+								</p>
 							<?php endif; ?>
-							<?php if (get_post_meta($post->ID, 'ecpt_dates', true)) : ?>
-								<li><strong>Funding Source/Period of the Grant:</strong> <?php echo get_post_meta($post->ID, 'ecpt_dates', true); ?>
-								</li>
-							<?php endif; ?>	
-							<?php if (get_post_meta($post->ID, 'ecpt_description_full', true)) : ?>
-								<li><strong>Description:</strong> <?php echo get_post_meta($post->ID, 'ecpt_description_full', true); ?></li>
+							<?php if ( get_post_meta( $post->ID, 'ecpt_dates', true ) ) : ?>
+								<p><strong>Funding Source/Period of the Grant:</strong> <?php echo get_post_meta( $post->ID, 'ecpt_dates', true ); ?>
+								</p>
 							<?php endif; ?>
-							</ul>
 						</div>
 					</div>
+					<h3>Project Description</h3>
+					<?php the_content(); ?>
 				</div>
 			<?php endwhile; ?>
 			</article>
 		</main>
 	</div>
 </div>
-<?php get_footer();
+<?php
+get_footer();
