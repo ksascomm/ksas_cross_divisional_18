@@ -17,16 +17,16 @@ $flagship_researchprojects_query = new WP_Query(array(
 	<div class="main-grid">
 		<main class="main-content-full-width">
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
+				<?php ksasacademic_breadcrumb(); ?>
 			</div>
-			<?php do_action( 'foundationpress_before_content' ); ?>
+			<?php do_action( 'ksasacademic_before_content' ); ?>
 			<?php
             while ( have_posts() ) : the_post(); ?>
 			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<header aria-label="<?php the_title(); ?>">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				</header>
-				<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
+				<?php do_action( 'ksasacademic_page_before_entry_content' ); ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div>
@@ -109,7 +109,7 @@ $flagship_researchprojects_query = new WP_Query(array(
 				</div>
 			</div>
 		</main>
-		<?php do_action( 'foundationpress_after_content' ); ?>
+		<?php do_action( 'ksasacademic_after_content' ); ?>
 		<?php get_sidebar(); ?>
 	</div>
 </div>

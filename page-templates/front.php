@@ -11,7 +11,7 @@ $slider_query = new WP_Query(array(
 	'orderby' => 'rand',
 ));
 if ( $slider_query->have_posts() ) :?>
-<div class="highlighted-research show-for-large">	
+<div class="highlighted-research show-for-large">
 	<div class="orbit" role="region" aria-label="Featured Images" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; autoPlay:false;">
 		<ul class="orbit-container">
 			<?php if ($slider_query->post_count > 1 ) : ?>
@@ -28,16 +28,16 @@ if ( $slider_query->have_posts() ) :?>
 </div>
 <?php endif; ?>
 
-<?php do_action( 'foundationpress_before_content' ); ?>
+<?php do_action( 'ksasacademic_before_content' ); ?>
 
 	<div class="main-container" id="page">
 	    <div class="main-grid homepage sidebar-right">
 	        <main class="main-content homepage-news">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-					
+
 						<?php $frontpagecontent = the_content(); if ($frontpagecontent != '' ) : ?>
-							<?php the_content(); ?>	
-					
+							<?php the_content(); ?>
+
 					<?php endif; ?>
 				<?php endwhile; endif; ?>
 				<?php //News Query
@@ -53,13 +53,13 @@ if ( $slider_query->have_posts() ) :?>
 					<?php while ($news_query->have_posts() ) : $news_query->the_post(); ?>
 						<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
 					<?php endwhile; ?>
-					<article class="homepage-news-archive" aria-label="<?php echo $theme_option['flagship_sub_feed_name']; ?>">         
-						
+					<article class="homepage-news-archive" aria-label="<?php echo $theme_option['flagship_sub_feed_name']; ?>">
+
 						<a class="button news-archive" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
 							View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
 						</a>
-				
-					</article> 
+
+					</article>
 				<?php endif; ?>
 				<?php
             		$hub_query_cond = $theme_option['flagship_sub_hub_cond'];
@@ -77,15 +77,15 @@ if ( $slider_query->have_posts() ) :?>
 				    	<div class="small-6 cell hide-for-print" role="complementary">
 				    		<div class="primary callout">
 				    			<?php dynamic_sidebar('homepage1'); ?>
-				    		</div> 
+				    		</div>
 						</div>
 						<div class="small-6 cell hide-for-print" role="complementary">
 							<div class="primary callout">
 				    			<?php dynamic_sidebar('homepage2'); ?>
-				    		</div> 
+				    		</div>
 						</div>
 				    </div>
-				<?php endif;?>				
+				<?php endif;?>
 
 			</main>
 			<?php if ( is_active_sidebar( 'sidebar1' ) || is_active_sidebar('homepage0') ) : ?>
@@ -96,6 +96,6 @@ if ( $slider_query->have_posts() ) :?>
 			<?php endif; ?>
 		</div>
 	</div>
-<?php do_action( 'foundationpress_after_content' ); ?>
+<?php do_action( 'ksasacademic_after_content' ); ?>
 
 <?php get_footer();

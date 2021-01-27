@@ -10,7 +10,7 @@ get_header(); ?>
 			'orderby' 		=> 'slug',
 			'order'         => 'ASC',
 			'hide_empty'    => true,
-	
+
 		)
     );
 	$role_slugs = array();
@@ -30,16 +30,16 @@ get_header(); ?>
 		<main class="main-content-full-width">
 	<?php endif;?>
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
-			</div>	
-			<?php do_action( 'foundationpress_before_content' ); ?>
+				<?php ksasacademic_breadcrumb(); ?>
+			</div>
+			<?php do_action( 'ksasacademic_before_content' ); ?>
 			<?php
             while ( have_posts() ) : the_post(); ?>
 			<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 				<header aria-label="<?php the_title(); ?>">
 					<h1 class="entry-title"><?php the_title(); ?></h1>
 				</header>
-				<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
+				<?php do_action( 'ksasacademic_page_before_entry_content' ); ?>
 				<div class="entry-content">
 					<?php the_content(); ?>
 				</div>
@@ -51,7 +51,7 @@ get_header(); ?>
                     foreach ($roles as $role ) {
 						$role_slug = $role->slug;
 						$role_name = $role->name;
-				
+
 						$people_query = new WP_Query(
 	                    array(
 							'post_type' => 'people',
@@ -61,14 +61,14 @@ get_header(); ?>
 							'order' => 'ASC',
 							'posts_per_page' => 250,
 						) );
-						
+
 						if ($people_query->have_posts() ) : ?>
 							<li class="person sub-head quicksearch-match <?php echo $role->slug; ?>">
 							<h2 class="black capitalize"><?php echo $role_name; ?>
 							</h2>
 							</li>
 							<?php while ($people_query->have_posts() ) : $people_query->the_post(); ?>
-					
+
 					<?php
                     if ( get_post_meta($post->ID, 'ecpt_bio', true) ) :
 							get_template_part( 'template-parts/hasbio-loop' );
@@ -80,7 +80,7 @@ get_header(); ?>
 				</ul>
 			</div>
 		</main>
-		<?php do_action( 'foundationpress_after_content' ); ?>
+		<?php do_action( 'ksasacademic_after_content' ); ?>
 		<?php if ( count( $children ) >= 1 ) : ?>
 			<?php get_sidebar(); ?>
 		<?php endif;?>

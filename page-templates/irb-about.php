@@ -8,7 +8,7 @@ get_header(); ?>
 	<div class="main-grid">
 		<main class="main-content">
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
+				<?php ksasacademic_breadcrumb(); ?>
 			</div>
 			<div class="grid-x">
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -63,7 +63,7 @@ get_header(); ?>
 					);
 					// query
 					$related_about_query = new WP_Query( $args );
-					
+
 					?>
 					<?php if( $related_about_query->have_posts() ): ?>
 					<div class="cell small-12 large-6">

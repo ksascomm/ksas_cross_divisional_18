@@ -4,13 +4,13 @@
  *
  * Used for both single and index/archive/search.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 
 ?>
 
-<article aria-labelledby="post-<?php the_ID(); ?>" 
+<article aria-labelledby="post-<?php the_ID(); ?>"
 	<?php if( is_sticky() ) :?>
 		<?php post_class('post-listing homepage-article wp-sticky'); ?>>
 		<div class="ribbon"><span>FEATURED</span></div>
@@ -18,7 +18,7 @@
 		<?php post_class('post-listing homepage-article'); ?>>
 	<?php endif;?>
 	<header>
-		<?php foundationpress_entry_meta(); ?>
+		<?php ksasacademic_entry_meta(); ?>
 		<h2>
 			<?php if ( get_post_meta($post->ID, 'ecpt_external_link', true) ) : ?>
 				<a href="<?php echo get_post_meta($post->ID, 'ecpt_external_link', true); ?>" target="_blank" rel="noopener" title="<?php the_title(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?> <span class="icon-new-tab2" aria-hidden="true"></span>
@@ -35,13 +35,13 @@
 				<?php the_post_thumbnail(array(200,200), array('class' => 'alignleft news-thumb')); ?>
 			</div>
 			<div class="cell small-12 medium-7 large-9">
-				<?php the_excerpt(); ?>	
+				<?php the_excerpt(); ?>
 			</div>
 		<?php else: ?>
 			<div class="cell small-12">
-				<?php the_excerpt(); ?>	
+				<?php the_excerpt(); ?>
 			</div>
 		<?php endif;?>
 		</div>
-	</div>	
+	</div>
 </article>

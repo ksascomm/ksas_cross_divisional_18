@@ -17,16 +17,16 @@ $gradstudyfields_query = new WP_Query(array(
 	<div class="main-grid">
 		<main class="main-content-full-width">
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
+				<?php ksasacademic_breadcrumb(); ?>
 			</div>
-			<?php do_action( 'foundationpress_before_content' ); ?>
+			<?php do_action( 'ksasacademic_before_content' ); ?>
 			<?php get_template_part( 'template-parts/featured-image' ); ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 					<header aria-label="<?php the_title(); ?>">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</header>
-					<?php do_action( 'foundationpress_page_before_entry_content' ); ?>
+					<?php do_action( 'ksasacademic_page_before_entry_content' ); ?>
 					<div class="entry-content">
 						<?php the_content(); ?>
 					</div>
@@ -44,21 +44,21 @@ $gradstudyfields_query = new WP_Query(array(
 									<span class="fas fa-graduation-cap"></span> Degrees Offered: <?php echo get_post_meta($post->ID, 'ecpt_degreesoffered', true); ?>
 								<?php endif;?>
 								<li><span class="fas fa-link"></span> <a href="<?php echo get_post_meta($post->ID, 'ecpt_website', true); ?>" aria-label="<?php the_title(); ?> Program Website">Program Website</a></li>
-								<li><span class="far fa-id-card"></span> 
+								<li><span class="far fa-id-card"></span>
 									 <a href="mailto:<?php echo get_post_meta($post->ID, 'ecpt_emailaddress', true); ?>"><?php echo get_post_meta($post->ID, 'ecpt_contactname', true); ?></a></li>
 								<li><strong>Deadline: </strong><?php echo get_post_meta($post->ID, 'ecpt_deadline', true); ?>
 									<?php if ( get_post_meta($post->ID, 'ecpt_adddeadline', true) ) : ?>; <?php echo get_post_meta($post->ID, 'ecpt_adddeadline', true); ?>
 										<?php endif;?>
 								</li>
-							</ul>		
-								
+							</ul>
+
 								<?php if ( get_post_meta($post->ID, 'ecpt_supplementalmaterials', true) ) : ?>
 									<dl>
 										<dt>Supplemental Materials</dt>
 										<dd><?php echo get_post_meta($post->ID, 'ecpt_supplementalmaterials', true); ?></dd>
 									</dl>
 								<?php endif;?>
-							
+
 						  </div>
 						</div>
 					</div>
@@ -67,7 +67,7 @@ $gradstudyfields_query = new WP_Query(array(
 				</div>
 			<?php endif;?>
 		</main>
-		<?php do_action( 'foundationpress_after_content' ); ?>
+		<?php do_action( 'ksasacademic_after_content' ); ?>
 	</div>
 </div>
 <?php

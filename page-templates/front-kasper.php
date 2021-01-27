@@ -4,7 +4,7 @@ Template Name: Front (KASPER Only)
 */
 get_header(); ?>
 
-<?php do_action( 'foundationpress_before_content' ); ?>
+<?php do_action( 'ksasacademic_before_content' ); ?>
 
 <div class="hero">
 	<div class="grid-x grid-padding-x grid-container">
@@ -33,17 +33,17 @@ get_header(); ?>
 
 <div class="main-container" id="page">
 	    <div class="main-grid homepage sidebar-right">
-	        <main class="main-content homepage-news">	
+	        <main class="main-content homepage-news">
 
 
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 					<div class="cell small-12 large-9">
-						<?php the_content(); ?>	
+						<?php the_content(); ?>
 					</div>
 					<hr>
 				<?php endwhile; endif; ?>
-					
-				
+
+
 				<div class="homepage-news">
 
 				<?php //News Query
@@ -60,13 +60,13 @@ get_header(); ?>
 					<?php while ($news_query->have_posts() ) : $news_query->the_post(); ?>
 						<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
 					<?php endwhile; ?>
-					<div class="homepage-news-archive">         
-						
+					<div class="homepage-news-archive">
+
 						<a class="button news-archive" href="<?php echo get_permalink( get_option( 'page_for_posts' ) ); ?>">
 							View All <?php echo $theme_option['flagship_sub_feed_name']; ?> <span class="fa fa-chevron-circle-right" aria-hidden="true"></span>
 						</a>
-				
-					</div>    
+
+					</div>
 				<?php endif; ?>
 				</div>
 			</main>
@@ -74,9 +74,9 @@ get_header(); ?>
 				<div class="homepage sidebar" id="sidebar1">
 					<?php dynamic_sidebar( 'homepage0' ); ?>
 				</div>
-			<?php endif; ?>	
+			<?php endif; ?>
 		</div>
 	</div>
-<?php do_action( 'foundationpress_after_content' ); ?>
+<?php do_action( 'ksasacademic_after_content' ); ?>
 
 <?php get_footer();

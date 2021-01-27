@@ -8,7 +8,7 @@ get_header(); ?>
 	<div class="main-grid">
 		<main class="main-content-full-width">
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
+				<?php ksasacademic_breadcrumb(); ?>
 			</div>
 			<?php get_template_part( 'template-parts/featured-image' ); ?>
 			<?php while ( have_posts() ) : the_post(); ?>

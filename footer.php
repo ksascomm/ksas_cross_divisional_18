@@ -4,8 +4,8 @@
  *
  * Contains the closing of the "off-canvas-wrap" div and all content after.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 ?>
 
@@ -15,7 +15,7 @@
 	<?php if ( has_nav_menu( 'footer-links' ) ) : ?>
 		<div class="grid-x grid-padding-x hide-for-print">
 			<div class="cell small-12 footer-links">
-				<?php foundationpress_footer_links(); ?>
+				<?php ksasacademic_footer_links(); ?>
 			</div>
 			<div class="small-12 cell centered">
 				<a href="https://www.jhu.edu/">
@@ -25,7 +25,7 @@
 		</div>
 
 	<?php else: ?>
-		
+
        <div class="grid-x grid-padding-x hide-for-print">
 			<div class="small-12 medium-4 cell">
 				<a href="https://www.jhu.edu/">
@@ -35,8 +35,8 @@
 			<div class="small-12 medium-4 cell">
 				<div class="footer-links">
 					<ul class="menu" role="menu">
-						<li role="menuitem"><a href="https://accessibility.jhu.edu/" target="_blank">Accessibility</a></li>	
-						<li role="menuitem"><a href="https://jobs.jhu.edu/" target="_blank">Careers</a></li>	
+						<li role="menuitem"><a href="https://accessibility.jhu.edu/" target="_blank">Accessibility</a></li>
+						<li role="menuitem"><a href="https://jobs.jhu.edu/" target="_blank">Careers</a></li>
 						<li role="menuitem"><a href="https://it.johnshopkins.edu/policies/privacystatement" target="_blank">Privacy Statement</a></li>
 					</ul>
 				</div>
@@ -54,7 +54,7 @@
 				<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, <?php echo $theme_option['flagship_sub_copyright'];?></p>
 			</div>
         </div>
-     
+
     </div>
 </footer>
 

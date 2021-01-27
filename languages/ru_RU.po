@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: foundationpress-libsass-template 5.4.0\n"
@@ -188,9 +188,9 @@ msgstr ""
 
 #. archive/search.
 #. *
-#. * @subpackage FoundationPress
-#. * @since FoundationPress 1.0.0
-#. 
+#. * @subpackage KSASAcademic
+#. * @since KSASAcademic 1.0.0
+#.
 #: content.php:16
 msgid "Continue reading..."
 msgstr "Продолжить чтение..."

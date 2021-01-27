@@ -4,8 +4,8 @@
  *
  * Used for both single and index/archive/search.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 
 ?>
@@ -36,7 +36,7 @@
 				<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>"><?php the_title(); ?></a>
 			<?php endif; ?>
 		</h2>
-		<?php foundationpress_entry_meta(); ?>
+		<?php ksasacademic_entry_meta(); ?>
 	</header>
 
 	<div class="entry-content">
@@ -46,11 +46,11 @@
 				<?php the_post_thumbnail(array(200,200), array('class' => 'alignleft news-thumb')); ?>
 			</div>
 			<div class="cell small-12 medium-7 large-9">
-				<?php the_content(); ?>	
+				<?php the_content(); ?>
 			</div>
 		<?php else: ?>
 			<div class="cell small-12">
-				<?php the_content(); ?>	
+				<?php the_content(); ?>
 			</div>
 		<?php endif;?>
 		</div>

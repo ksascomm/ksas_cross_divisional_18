@@ -4,8 +4,8 @@
  *
  * Used for both single and index/archive/search.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 
 ?>
@@ -28,6 +28,6 @@
 		</p>
 		<h3>Description:</h3>
 		<?php the_excerpt(); ?>
-		<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+		<?php edit_post_link( __( '(Edit)', 'ksasacademic' ), '<span class="edit-link">', '</span>' ); ?>
 	</div>
 </article>

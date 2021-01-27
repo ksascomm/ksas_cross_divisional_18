@@ -2,8 +2,8 @@
 /**
  * The template for displaying all single research projects
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 
 get_header(); ?>
@@ -12,7 +12,7 @@ get_header(); ?>
 	<div class="main-grid">
 		<main class="main-content-full-width">
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
+				<?php ksasacademic_breadcrumb(); ?>
 			</div>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header>

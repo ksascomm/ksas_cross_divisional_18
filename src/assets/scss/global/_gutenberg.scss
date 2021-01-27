@@ -103,7 +103,7 @@ Frontend styles for gutenberg blocks
 		justify-content: center;
 		position: relative;
 	}
-	
+
 	.blocks-gallery-image figure,
 	.blocks-gallery-item figure {
 		margin: 0;
@@ -122,7 +122,7 @@ Frontend styles for gutenberg blocks
 	.blocks-gallery-item img {
 		width: 100%;
 	}
-			
+
 	.blocks-gallery-image figcaption,
 	.blocks-gallery-item figcaption {
 		position: absolute;
@@ -141,7 +141,7 @@ Frontend styles for gutenberg blocks
 									rgba(0, 0, 0, 0.3) 60%,
 									transparent);
 	}
-	
+
 	.blocks-gallery-image figcaption img,
 	.blocks-gallery-item figcaption img {
 		display: inline;
@@ -153,7 +153,7 @@ Frontend styles for gutenberg blocks
 	&.is-cropped .blocks-gallery-item img {
 		width: 100%;
 	}
-		
+
 	.blocks-gallery-image,
 	.blocks-gallery-item {
 		width: calc((100% - 16px) / 2);
@@ -291,3 +291,8 @@ Frontend styles for gutenberg blocks
 	}
 
 } // @supports
+
+
+.edit-post-layout__metaboxes {
+  background-color: #fff !important;
+}

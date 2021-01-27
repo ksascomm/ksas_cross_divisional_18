@@ -7,15 +7,15 @@ get_header(); ?>
 	<div class="main-grid">
 		<main class="main-content-full-width">
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
+				<?php ksasacademic_breadcrumb(); ?>
 			</div>
-			
+
 			<?php while ( have_posts() ) : the_post(); ?>
-			
+
 			<?php get_template_part( 'template-parts/content', 'page' ); ?>
-			
+
 			<?php endwhile; ?>
-			
+
 			<section class="documents">
 				<div class="callout primary">
 				<h2>Revised Common Rule</h2>

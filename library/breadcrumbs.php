@@ -6,8 +6,8 @@
  * @param bool $separatorclass should a separator class be added (in case :before is not an option).
  */
 
-if ( ! function_exists( 'foundationpress_breadcrumb' ) ) {
-	function foundationpress_breadcrumb( $showhome = true, $separatorclass = false ) {
+if ( ! function_exists( 'ksasacademic_breadcrumb' ) ) {
+	function ksasacademic_breadcrumb( $showhome = true, $separatorclass = false ) {
 
 		// Settings
 		$separator  = '&gt;';
@@ -49,7 +49,7 @@ if ( ! function_exists( 'foundationpress_breadcrumb' ) ) {
 				} elseif (is_singular('documents') ) {
 					echo '<li><a href="' . $home_url . '/documents">Documents</a></li>';
 				} elseif (is_singular('ksasresearchprojects') ) {
-					echo '<li><a href="' . $home_url . '/research">Research Projects</a></li>';	
+					echo '<li><a href="' . $home_url . '/research">Research Projects</a></li>';
 				} elseif (is_singular('profile') ) {
 					if (has_term('spotlight', 'profiletype') ) {
 					 	echo '<li><a href="' . $home_url . '/profiletype/spotlight">Spotlights</a></li>';
@@ -65,7 +65,7 @@ if ( ! function_exists( 'foundationpress_breadcrumb' ) ) {
 						echo '<li><a href="' . $home_url . '/testimonialtype/current-students/">Undergraduate Testimonials</a></li>';
 					} elseif (has_term('internship', 'testimonialtype') ) {
 						echo '<li><a href="' . $home_url . '/testimonialtype/internship-testimonial/">Undergraduate Testimonials</a></li>';
-					}					
+					}
 				} elseif (is_singular('people') ) {
 					echo '<li><a href="' . $home_url . '/people/">People</a></li>';
 				} else {
@@ -196,7 +196,7 @@ if ( ! function_exists( 'foundationpress_breadcrumb' ) ) {
 			} elseif ( get_query_var('paged') ) {
 
 				// Paginated archives
-				echo '<li class="current item-current-' . get_query_var('paged') . '">' . __('Page', 'foundationpress' ) . ' ' . get_query_var('paged') . '</li>';
+				echo '<li class="current item-current-' . get_query_var('paged') . '">' . __('Page', 'ksasacademic' ) . ' ' . get_query_var('paged') . '</li>';
 
 			} elseif ( is_search() ) {
 

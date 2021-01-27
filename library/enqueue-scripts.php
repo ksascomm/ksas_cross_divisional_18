@@ -5,16 +5,16 @@
  * Learn more about enqueue_script: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_script}
  * Learn more about enqueue_style: {@link https://codex.wordpress.org/Function_Reference/wp_enqueue_style }
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 
 
 // Check to see if rev-manifest exists for CSS and JS static asset revisioning
 //https://github.com/sindresorhus/gulp-rev/blob/master/integration.md
 
-if ( ! function_exists( 'foundationpress_asset_path' ) ) :
-	function foundationpress_asset_path( $filename ) {
+if ( ! function_exists( 'ksasacademic_asset_path' ) ) :
+	function ksasacademic_asset_path( $filename ) {
 		$filename_split = explode( '.', $filename );
 		$dir            = end( $filename_split );
 		$manifest_path  = dirname( dirname( __FILE__ ) ) . '/dist/assets/' . $dir . '/rev-manifest.json';
@@ -33,11 +33,11 @@ if ( ! function_exists( 'foundationpress_asset_path' ) ) :
 endif;
 
 
-if ( ! function_exists( 'foundationpress_scripts' ) ) :
-	function foundationpress_scripts() {
+if ( ! function_exists( 'ksasacademic_scripts' ) ) :
+	function ksasacademic_scripts() {
 
 		// Enqueue the main Stylesheet.
-		//wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'app.css' ), array(), '5.1.0', 'all' );
+		//wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/dist/assets/css/' . ksasacademic_asset_path( 'app.css' ), array(), '5.1.0', 'all' );
 
 	    wp_enqueue_style( 'main-stylesheet', get_template_directory_uri() . '/dist/assets/css/app.css', array(), filemtime(get_template_directory() . '/src/assets/scss'), 'all' );
 
@@ -58,7 +58,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		//wp_enqueue_script( 'jquery-migrate' );
 
 		// Enqueue Foundation scripts
-		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'app.js' ), array( 'jquery' ), '5.1.0', true );
+		wp_enqueue_script( 'foundation', get_template_directory_uri() . '/dist/assets/js/' . ksasacademic_asset_path( 'app.js' ), array( 'jquery' ), '5.1.0', true );
 
 		// Enqueue FontAwesome from CDN. Uncomment the line below if you need FontAwesome.
 		//wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.13.0/css/all.css', array(), '5.13.0', 'all' );
@@ -70,7 +70,7 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 
 	}
 
-	add_action( 'wp_enqueue_scripts', 'foundationpress_scripts' );
+	add_action( 'wp_enqueue_scripts', 'ksasacademic_scripts' );
 endif;
 
 // Defer non-essential/plugin javascript files
@@ -85,3 +85,13 @@ add_filter( 'script_loader_tag', 'defer_parsing_of_js', 10 );
 
 //remove Tablepress default styles; use Foundation
 //add_filter( 'tablepress_use_default_css', '__return_false' );
+
+
+add_action('admin_head', 'cpt_meta_background_color');
+function cpt_meta_background_color() {
+	echo '<style>
+	.post-type-testimonial .edit-post-layout .interface-interface-skeleton__content {
+		background-color: #fefefe;
+	}
+	</style>';
+}

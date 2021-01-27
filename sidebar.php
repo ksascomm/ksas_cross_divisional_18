@@ -2,8 +2,8 @@
 /**
  * The sidebar containing the main widget area
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 
 ?>
@@ -26,7 +26,7 @@
 	if ( $kiddies ) { ?>
 
 		<div class="sidebar-menu" aria-labelledby="sidebar-navigation">
-			<h1 class="sidebar-menu-title" id="sidebar-navigation">Also in 
+			<h1 class="sidebar-menu-title" id="sidebar-navigation">Also in
 			<?php if (is_home() ) :?>
 				<a href="<?php echo get_home_url(); ?>/about/" aria-label="Sidebar Menu: About">About</a>
 			<?php else : ?>
@@ -76,7 +76,7 @@
                         );
                     ?>
 			</div>
-			<?php if (has_term('', 'role') && ! has_term('job-market-candidate', 'role') ) : ?>			
+			<?php if (has_term('', 'role') && ! has_term('job-market-candidate', 'role') ) : ?>
 				<div class="sidebar-menu faculty-bio-jump" aria-labelledby="jump-menu">
 					<label for="jump">
 						<h1 id="jump-menu">Jump to Faculty Member</h1>
@@ -84,7 +84,7 @@
 					<select name="jump" id="jump" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
 						<?php
                         if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-							<option>---<?php the_title(); ?></option> 
+							<option>---<?php the_title(); ?></option>
 						<?php endwhile; endif; ?>
 						<?php
                         $jump_menu_query = new WP_Query(
@@ -115,7 +115,7 @@
 			<select name="jump" id="jump" onchange="window.open(this.options[this.selectedIndex].value,'_top')">
 				<?php
 		        if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-					<option>---<?php the_title(); ?></option> 
+					<option>---<?php the_title(); ?></option>
 				<?php endwhile; endif; ?>
 				<?php $jump_menu_query = new WP_Query(array(
 					'post-type' => 'testimonial',
@@ -123,7 +123,7 @@
 					'orderby' => 'title',
 					'order' => 'ASC',
 					'posts_per_page' => 250)); ?>
-				<?php while ($jump_menu_query->have_posts()) : $jump_menu_query->the_post(); ?>				
+				<?php while ($jump_menu_query->have_posts()) : $jump_menu_query->the_post(); ?>
 					<option value="<?php the_permalink() ?>"><?php the_title(); ?></option>
 				<?php endwhile; ?>
 			</select>
@@ -137,14 +137,14 @@
 	<div class="widget-sidebar">
 		<!--This is the Global Sidebar, not page-specific Sidebar #1 -->
 		<?php dynamic_sidebar( 'sidebar1' ); ?>
-		
+
 	</div>
 
 <?php endif; ?>
 
 
 <!-- Page Specific Sidebar -->
-	<?php if ( have_posts()) : while ( have_posts() ) : the_post(); 
+	<?php if ( have_posts()) : while ( have_posts() ) : the_post();
 		$sidebar = get_post_meta($post->ID, 'ecpt_page_sidebar', true); ?>
 		<div class="widget-ecpt-page-sidebar">
 			<?php dynamic_sidebar($sidebar); ?>

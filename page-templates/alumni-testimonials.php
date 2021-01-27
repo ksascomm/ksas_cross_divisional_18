@@ -7,8 +7,8 @@ Template Name: Alumni Testimonials
  * Please note that this is the WordPress construct of pages and that
  * other "pages" on your WordPress site will use a different template.
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 
 get_header(); ?>
@@ -17,8 +17,8 @@ get_header(); ?>
     <div class="main-grid">
         <main class="main-content-full-width">
             <div class="secondary">
-                <?php foundationpress_breadcrumb(); ?>
-            </div>      
+                <?php ksasacademic_breadcrumb(); ?>
+            </div>
             <?php  while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part( 'template-parts/content', 'page' ); ?>
             <?php endwhile; ?>
@@ -77,7 +77,7 @@ get_header(); ?>
                                 <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                     <?php endwhile; ?>
                 </div>

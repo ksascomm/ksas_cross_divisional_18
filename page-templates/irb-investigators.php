@@ -8,13 +8,13 @@ get_header(); ?>
    <div class="main-grid">
       <main class="main-content">
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
+				<?php ksasacademic_breadcrumb(); ?>
 			</div>
-		
+
 			<?php while ( have_posts() ) : the_post(); ?>
-				
+
 					<?php get_template_part( 'template-parts/content', 'page' ); ?>
-			
+
 			<?php endwhile; ?>
 
          <?php $investigators_query = new WP_Query(array(
@@ -24,7 +24,7 @@ get_header(); ?>
             'post_type' => 'documents',
             'meta_key' => 'primary_section',
             'meta_value' => 'investigators',
-         )); ?> 
+         )); ?>
         <section class="documents">
          <div class="grid-x">
             <?php if ( $investigators_query->have_posts() ) :?>
@@ -41,14 +41,14 @@ get_header(); ?>
                         <?php endif; ?>
                         <?php if( get_field( "resource_link") ): ?>
                         <p><a href="http://<?php the_field('resource_link'); ?>">Read Additional <?php the_title();?> Information</a></p>
-                        <?php endif; ?>	 
+                        <?php endif; ?>
                      </div>
                   </li>
                   <?php endwhile; ?>
                </ul>
             </div>
             <?php endif; ?>
-            <?php 
+            <?php
                // args
                $args = array(
                	'posts_per_page'	=> -1,
@@ -63,10 +63,10 @@ get_header(); ?>
                			)
                	)
                );
-               
+
                // query
                $related_investigators_query = new WP_Query( $args );
-               
+
                ?>
             <?php if( $related_investigators_query->have_posts() ): ?>
             <div class="cell small-12 large-6">
@@ -82,7 +82,7 @@ get_header(); ?>
                         <?php endif; ?>
                         <?php if( get_field( "resource_link") ): ?>
                         <p><a target="_blank" href="http://<?php the_field('resource_link'); ?>">Read Additional <?php the_title();?> Information</a></p>
-                        <?php endif; ?>	 
+                        <?php endif; ?>
                      </div>
                   </li>
                   <?php endwhile; ?>

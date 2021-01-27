@@ -35,7 +35,7 @@ Description: Used to style the content editor in posts and pages
   font-display: swap;
 }
 
-body { 
+body {
     font-family: "gentona-light","Helvetica Neue",Roboto,sans-serif;
     font-weight: 300;
     font-size: 18px;
@@ -163,4 +163,8 @@ h6 {
     border-left: 0;
     margin-left: 0;
     padding-left: 0;
+}
+
+.edit-post-layout__metaboxes {
+  background-color: #fff !important;
 }

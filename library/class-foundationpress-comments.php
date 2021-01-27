@@ -2,11 +2,11 @@
 /**
  * FoundationPress Comments
  *
- * @package FoundationPress
+ * @package KSASAcademic
  */
 
-if ( ! class_exists( 'Foundationpress_Comments' ) ) :
-	class Foundationpress_Comments extends Walker_Comment {
+if ( ! class_exists( 'Ksasacademic_Comments' ) ) :
+	class Ksasacademic_Comments extends Walker_Comment {
 
 		// Init classwide variables.
 		public $tree_type = 'comment';
@@ -22,7 +22,7 @@ if ( ! class_exists( 'Foundationpress_Comments' ) ) :
 	 * start_lvl() only goes as high as 1 deep nested comments */
 		function __construct() { ?>
 
-			<h3><?php comments_number( __( 'No Responses to', 'foundationpress' ), __( 'One Response to', 'foundationpress' ), __( '% Responses to', 'foundationpress' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
+			<h3><?php comments_number( __( 'No Responses to', 'ksasacademic' ), __( 'One Response to', 'ksasacademic' ), __( '% Responses to', 'ksasacademic' ) ); ?> &#8220;<?php the_title(); ?>&#8221;</h3>
 			<ol class="comment-list">
 
 		<?php }
@@ -65,7 +65,7 @@ if ( ! class_exists( 'Foundationpress_Comments' ) ) :
 				<?php
 				/* translators: %s: comment author link */
 				printf(
-					__( '<cite class="fn">%s</cite>', 'foundationpress' ),
+					__( '<cite class="fn">%s</cite>', 'ksasacademic' ),
 					get_comment_author_link()
 				);
 				?>
@@ -78,7 +78,7 @@ if ( ! class_exists( 'Foundationpress_Comments' ) ) :
 				<section id="comment-content-<?php comment_ID(); ?>" class="comment">
 					<?php if ( ! $comment->comment_approved ) : ?>
 							<div class="notice">
-					<p class="bottom"><?php _e( 'Your comment is awaiting moderation.', 'foundationpress' ); ?></p>
+					<p class="bottom"><?php _e( 'Your comment is awaiting moderation.', 'ksasacademic' ); ?></p>
 				</div>
 					<?php else : comment_text(); ?>
 					<?php endif; ?>

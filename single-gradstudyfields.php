@@ -2,8 +2,8 @@
 /**
  * The template for displaying all single Grad Study Fields
  *
- * @package FoundationPress
- * @since FoundationPress 1.0.0
+ * @package KSASAcademic
+ * @since KSASAcademic 1.0.0
  */
 
 get_header();
@@ -13,7 +13,7 @@ get_header();
 	<div class="main-grid">
 		<main class="main-content">
 			<div class="secondary">
-				<?php foundationpress_breadcrumb(); ?>
+				<?php ksasacademic_breadcrumb(); ?>
 			</div>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<article aria-labelledby="post-<?php the_ID(); ?>" <?php post_class('post-singular'); ?>>
@@ -48,12 +48,12 @@ get_header();
 							<?php if ( get_post_meta($post->ID, 'ecpt_gresubjectexam', true) ) : ?>
 								<p><strong>Does this program require or recommend GRE Subject Exams?</strong> <?php echo get_post_meta($post->ID, 'ecpt_gresubjectexam', true); ?></p>
 							<?php endif; ?>
-							<?php edit_post_link( __( '(Edit)', 'foundationpress' ), '<span class="edit-link">', '</span>' ); ?>
+							<?php edit_post_link( __( '(Edit)', 'ksasacademic' ), '<span class="edit-link">', '</span>' ); ?>
 						</div>
 				</article>
 			<?php endwhile; ?>
 		</main>
-	    <?php do_action('foundationpress_after_content'); ?>
+	    <?php do_action('ksasacademic_after_content'); ?>
     	<?php get_sidebar(); ?>
 	</div>
 </div>
