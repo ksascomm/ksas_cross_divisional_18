@@ -7,10 +7,10 @@
         );
 	if ( $slider_query->have_posts() ) :
     ?>
-     
+
 	<div class="fullscreen-image-slider hide-for-small-only">
 		<div class="orbit" role="region" aria-label="Homepage Slider" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out; autoPlay:false;">
-			<div class="orbit-wrapper">	
+			<div class="orbit-wrapper">
 				<?php if ($slider_query->post_count > 1 ) : ?>
 				<div class="orbit-controls">
 					<button class="orbit-previous show-for-large" onclick="ga('send', 'event', 'Homepage Slider', 'Previous Slide Click');"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
@@ -29,7 +29,7 @@
 						$get_slider_image_id = attachment_url_to_postid($get_slider_image_url);
 						// Get's the alt text from the image
 						$slider_alt = get_post_meta ( $get_slider_image_id, '_wp_attachment_image_alt', true );
-						?>						
+						?>
 						<img class="orbit-image hide-for-print" src="<?php echo get_post_meta($post->ID, 'ecpt_slideimage', true); ?>" alt="<?php echo $slider_alt;?>">
 					<?php if (get_the_title() || !empty( get_the_content() )) :?>
 					    <figcaption class="orbit-caption" aria-hidden="true">
@@ -46,8 +46,8 @@
 					<?php endif;?>
 			   		</li>
 				<?php endwhile; ?>
-				</ul>	
-			</div>		
+				</ul>
+			</div>
 		</div>
 	</div>
 	<?php endif; ?>

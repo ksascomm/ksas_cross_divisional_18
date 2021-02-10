@@ -164,13 +164,13 @@
     color: $black;
   }
   img {
-    @include breakpoint (small only) { 
+    @include breakpoint (small only) {
       padding: 0;
     }
     @include breakpoint (large) {
         @include xy-gutters($gutters: 0);
         @include xy-gutters($gutter-type: padding);
-    }   
+    }
     @include breakpoint (xlarge) {
         @include xy-gutters($gutters: 40);
         @include xy-gutters($gutter-type: padding);
@@ -251,10 +251,10 @@ screen and (min-width: 40em) {
     .homepage-callout {
       margin: 0;
       &.sidebar {
-        @include breakpoint(small) { 
+        @include breakpoint(small) {
           @include xy-cell(12);
-        }        
-        @include breakpoint(large) { 
+        }
+        @include breakpoint(large) {
           @include xy-cell(4);
         }
       }
@@ -304,8 +304,8 @@ screen and (min-width: 40em) {
         padding-top: .25rem;
         padding-bottom: .25rem;
       }
-    }  
-  } 
+    }
+  }
 }
 
 .home-intro {
@@ -470,7 +470,7 @@ screen and (min-width: 40em) {
 
 /**
  * Pause/play button
- */ 
+ */
 .jquery-background-video-pauseplay {
   position: absolute;
   background: transparent !important;
@@ -520,5 +520,53 @@ screen and (min-width: 40em) {
 button.jquery-background-video-pauseplay.play, button.jquery-background-video-pauseplay.pause {
   &:focus {
     outline: -webkit-focus-ring-color auto 5px !important;
+  }
+}
+
+.hero {
+  .full-screen-image {
+    position: relative;
+    .front-hero {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      /*height: rem-calc(150);
+      @include breakpoint(medium) {
+        height: rem-calc(250);
+      }
+      @include breakpoint(xlarge) {
+        height: rem-calc(400);
+      }*/
+      .caption {
+        position: absolute;
+        right: 5%;
+        bottom: 50%;
+        -webkit-transform: translateY(50%);
+        -ms-transform: translateY(50%);
+        transform: translateY(50%);
+        color: $white;
+        width: 400px;
+        padding: .75rem 1rem;
+        font-size: 1rem;
+        background-color: rgba(44, 44, 51, 0.66);
+        font-family: $font-stack-semibold;
+        font-weight: $font-stack-semibold-weight;
+        h1 {
+          font-size: 1.25rem;
+          text-shadow: 2px 2px 2px #000;
+          text-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+        }
+        @include breakpoint(xlarge) {
+          padding: 1rem 1.5rem;
+          width: 550px;
+          p, li {
+            font-size: 1.25rem;
+          }
+          h1 {
+            font-size: 1.75rem;
+          }
+        }
+      }
+    }
   }
 }

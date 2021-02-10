@@ -142,18 +142,18 @@
           width: 50%;
         }
     }
-    @include breakpoint(medium) {  
+    @include breakpoint(medium) {
       @include xy-cell(4);
     }
     @include breakpoint(large) {
       @include xy-cell(4);
     }
-    @include breakpoint(xlarge) {  
+    @include breakpoint(xlarge) {
       @include xy-cell(3);
     }
   }
   .site-desktop-title {
-    @include breakpoint(small only) {  
+    @include breakpoint(small only) {
       width: 100%;
       text-align: center;
       .top-bar-title {
@@ -164,16 +164,16 @@
         }
       }
     }
-    @include breakpoint(medium) {  
+    @include breakpoint(medium) {
       @include xy-cell(8);
       text-align: left;
     }
-    @include breakpoint(large) {  
+    @include breakpoint(large) {
       @include xy-cell(8);
     }
-    @include breakpoint(xlarge) {  
+    @include breakpoint(xlarge) {
       @include xy-cell(9);
-    }    
+    }
     h1 {
         @include breakpoint(medium) {
           line-height: 1.1em;
@@ -195,7 +195,7 @@
           color: $white;
         }
       }
-    }    
+    }
   }
   .menu {
     font-family: $font-stack-bold;
@@ -203,7 +203,7 @@
     a {
       @include breakpoint (small){
         font-size: 1rem;
-      }      
+      }
       @include breakpoint (xxlarge){
         font-size: 1.125rem;
       }
@@ -256,7 +256,7 @@
     @include breakpoint(large) {
       font-size: 2.35rem;
       line-height: 1.1em;
-    }      
+    }
     small {
       font-size: 50%;
       color: $white;
@@ -269,7 +269,7 @@
         &:hover, &:focus {
           color: $white;
         }
-    }        
+    }
   }
   .input-group {
     margin-bottom: 0;
@@ -297,7 +297,7 @@
   }
   .top-bar-left {
     padding-left: 2rem;
-  } 
+  }
   ul li ul.submenu {
     background-color: $white;
     li {
@@ -353,9 +353,9 @@
             &:hover, &:focus {
               color: $blue;
             }
-        } 
+        }
       }
-    }    
+    }
   }
 }
 
@@ -384,7 +384,7 @@
   height: 1.5rem;
   padding: 8px 20px 10px;
   li.bar {
-    &:after { 
+    &:after {
       font-family: $font-stack-semibold;
       content: "|";
       color: $black;
@@ -422,7 +422,7 @@
       &:hover {
         background: $light-gray;
       }
-    }    
+    }
   }
   #global-links {
     h3 {
@@ -436,18 +436,18 @@
       li {
         display: list-item;
         a {
-          padding: 0.35rem 1rem; 
+          padding: 0.35rem 1rem;
           font-family: $font-stack-bold;
           font-weight: $font-stack-bold-weight;
           color: $blue;
           &:hover, &:active {
               color: $black;
           }
-        }      
+        }
       }
     }
-  } 
-  form { 
+  }
+  form {
       @include breakpoint (medium) {
         width: 200px;
         //margin-top: -5px;
@@ -468,9 +468,9 @@
       padding: 0 1rem;
       &:hover {
         border: 1px solid $white;
-      }      
+      }
     }
-  }  
+  }
 }
 
 //Breadcrumbs
@@ -492,15 +492,11 @@
       position: relative;
       font-size: .85rem;
     }
-    li:first-child a {
-      
-    }
-
     li.current_page_item > a {
       background-color: transparent;
     }
     @include breakpoint (small only) {
-      li { 
+      li {
           font-size: .85rem;
         }
       }
@@ -538,7 +534,7 @@
       margin-bottom: 1rem;
       a {
         @include accessiblelink;
-      }      
+      }
     }
     margin-bottom: 1rem;
     ul.nav {
@@ -556,7 +552,7 @@
         }
         &.is-active {
           a {
-            
+
           }
         }
         ul.sub-menu {
@@ -593,7 +589,7 @@
     ul.sub-menu {
       li {
         a {
-          
+
         }
       }
     }
@@ -608,11 +604,100 @@
       h1 {
         font-size:1.25rem;
         font-family: $font-stack-semibold;
-        font-weight: $font-stack-semibold-weight; 
+        font-weight: $font-stack-semibold-weight;
       }
     }
     &.widow {
       display: none;
     }
-  } 
+  }
+}
+
+.site-information {
+  @include xy-grid-container;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  flex-wrap: wrap;
+  max-width: 87.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  .nav-shield {
+    height: auto;
+    @include breakpoint(small only) {
+      height: 100px;
+      @include xy-cell(12);
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      .white {
+        display: none;
+      }
+    }
+    @include breakpoint(medium) {
+      .blue {
+        display: none;
+      }
+      @include xy-cell(5);
+      img {
+        padding: 0rem 1rem .75rem;
+      }
+    }
+    @include breakpoint(medium only) {
+       margin-top: 1rem;
+    }
+    @include breakpoint(large) {
+      @include xy-cell(3);
+    }
+
+  }
+  .site-desktop-title {
+    @include breakpoint(small only) {
+      width: 100%;
+      text-align: center;
+      .top-bar-title {
+        @include breakpoint (small only) {
+          @include xy-cell(12);
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    @include breakpoint(medium) {
+      @include xy-cell(7);
+      text-align: left;
+    }
+    @include breakpoint(large) {
+      @include xy-cell(9);
+    }
+  }
+  h1 {
+    @include breakpoint(medium) {
+      font-size: 2rem;
+      line-height: 1.1em;
+    }
+    @include breakpoint(large) {
+      font-size: 2.35rem;
+      line-height: 1.1em;
+    }
+    small {
+      font-size: 50%;
+      color: $white;
+      margin-bottom: 1px;
+      display: block;
+      line-height: 1.3;
+    }
+    a, a:visited {
+      color: $white;
+        &:hover, &:focus {
+          color: $white;
+        }
+    }
+  }
 }

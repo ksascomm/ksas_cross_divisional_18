@@ -32,32 +32,46 @@ get_header(); ?>
 </div>
 
 <div class="main-container" id="page">
-	    <div class="main-grid homepage sidebar-right">
-	        <main class="main-content homepage-news">
+		<div class="main-grid homepage sidebar-right">
+			<main class="main-content homepage-news">
 
 
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+				<?php
+				if ( have_posts() ) :
+					while ( have_posts() ) :
+						the_post();
+						?>
 					<div class="cell small-12 large-9">
 						<?php the_content(); ?>
 					</div>
 					<hr>
-				<?php endwhile; endif; ?>
+						<?php
+				endwhile;
+endif;
+				?>
 
 
 				<div class="homepage-news">
 
-				<?php //News Query
-				$theme_option = flagship_sub_get_global_options();
+				<?php
+				// News Query
+				$theme_option  = flagship_sub_get_global_options();
 				$news_quantity = $theme_option['flagship_sub_news_quantity'];
-				$news_query = new WP_Query(array(
-						'post_type' => 'post',
+				$news_query    = new WP_Query(
+					array(
+						'post_type'      => 'post',
 						'posts_per_page' => $news_quantity,
-					));
-				if ( $news_query->have_posts() ) : ?>
+					)
+				);
+				if ( $news_query->have_posts() ) :
+					?>
 					<header class="news-title" aria-label="Site Feed">
 						<h2><?php echo $theme_option['flagship_sub_feed_name']; ?></h2>
 					</header>
-					<?php while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+					<?php
+					while ( $news_query->have_posts() ) :
+						$news_query->the_post();
+						?>
 						<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
 					<?php endwhile; ?>
 					<div class="homepage-news-archive">
@@ -70,7 +84,7 @@ get_header(); ?>
 				<?php endif; ?>
 				</div>
 			</main>
-			<?php if ( is_active_sidebar('homepage0') ) : ?>
+			<?php if ( is_active_sidebar( 'homepage0' ) ) : ?>
 				<div class="homepage sidebar" id="sidebar1">
 					<?php dynamic_sidebar( 'homepage0' ); ?>
 				</div>
@@ -79,4 +93,5 @@ get_header(); ?>
 	</div>
 <?php do_action( 'ksasacademic_after_content' ); ?>
 
-<?php get_footer();
+<?php
+get_footer();

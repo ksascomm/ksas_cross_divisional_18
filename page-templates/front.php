@@ -1,7 +1,14 @@
 <?php
-/*
-Template Name: Front
-*/
+/**
+ * Template Name: Front
+ * The template for displaying the a front page with no
+ * buckets, slides, or video.
+ * Option for news or hub feed below buckets.
+ *
+ * @package KSASAcademicDepartment
+ * @since KSASAcademicDepartment 1.0.0
+ */
+
 get_header(); ?>
 
 <?php $theme_option = flagship_sub_get_global_options();

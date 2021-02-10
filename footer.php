@@ -10,7 +10,7 @@
 ?>
 
 <footer class="footer">
-    <div class="footer-container">
+	<div class="footer-container">
 
 	<?php if ( has_nav_menu( 'footer-links' ) ) : ?>
 		<div class="grid-x grid-padding-x hide-for-print">
@@ -19,20 +19,20 @@
 			</div>
 			<div class="small-12 cell centered">
 				<a href="https://www.jhu.edu/">
-					<img class="jhushield" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
+				<img class="jhushield" src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/assets/images/university.logo.white.png" alt="Johns Hopkins University"  width="567" height="109" loading="lazy">
 				</a>
 			</div>
 		</div>
 
-	<?php else: ?>
+	<?php else : ?>
 
-       <div class="grid-x grid-padding-x hide-for-print">
-			<div class="small-12 medium-4 cell">
+	<div class="grid-x grid-padding-x hide-for-print">
+			<div class="small-12 medium-3 cell">
 				<a href="https://www.jhu.edu/">
-					<img class="jhushield" src="<?php echo get_template_directory_uri(); ?>/dist/assets/images/jhu-horizontal.png" alt="Johns Hopkins University">
+					<img class="jhushield" src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/assets/images/university.logo.white.png" alt="Johns Hopkins University"  width="567" height="109" loading="lazy">
 				</a>
 			</div>
-			<div class="small-12 medium-4 cell">
+			<div class="small-12 medium-4 medium-offset-1 cell">
 				<div class="footer-links">
 					<ul class="menu" role="menu">
 						<li role="menuitem"><a href="https://accessibility.jhu.edu/" target="_blank">Accessibility</a></li>
@@ -47,15 +47,15 @@
 				<a href="https://twitter.com/JHUArtsSciences"><span class="fab fa-twitter fa-2x"></span><span class="screen-reader-text">Twitter</span></a>
 				<a href="https://www.youtube.com/jhuartssciences"><span class="fab fa-youtube fa-2x"></span><span class="screen-reader-text">YouTube</span></a>
 			</div>
-	<?php endif;?>
+	<?php endif; ?>
 
 			<div class="small-12 cell copydate">
-				<?php $theme_option = flagship_sub_get_global_options()?>
-				<p>&copy; <?php print date('Y'); ?> Johns Hopkins University, <?php echo $theme_option['flagship_sub_copyright'];?></p>
+				<?php $theme_option = flagship_sub_get_global_options(); ?>
+				<p>&copy; <?php print date( 'Y' ); ?> Johns Hopkins University, <?php echo $theme_option['flagship_sub_copyright']; ?></p>
 			</div>
-        </div>
+		</div>
 
-    </div>
+	</div>
 </footer>
 
 <?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) === 'offcanvas' ) : ?>

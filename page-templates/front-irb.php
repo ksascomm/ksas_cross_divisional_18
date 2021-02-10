@@ -7,14 +7,21 @@ get_header(); ?>
 <?php do_action( 'ksasacademic_before_content' ); ?>
 
 	<div class="main-container" id="page">
-	    <div class="main-grid homepage">
-	        <main class="main-content-full-width">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<div class="main-grid homepage">
+			<main class="main-content-full-width">
+				<?php
+				if ( have_posts() ) :
+					while ( have_posts() ) :
+						the_post();
+						?>
 					<div class="cell small-12 large-9">
 						<?php the_content(); ?>
 					</div>
 					<hr>
-				<?php endwhile; endif; ?>
+						<?php
+				endwhile;
+endif;
+				?>
 
 				<div class="grid-x grid-margin-x" id="hp-buckets" role="complementary">
 				<?php if ( is_active_sidebar( 'homepage-left-3rd', 'homepage-middle-3rd', 'homepage-right-3rd' ) ) : ?>
@@ -37,21 +44,28 @@ get_header(); ?>
 						<?php endif; ?>
 					</div>
 				<?php endif; ?>
-			    </div>
+				</div>
 				<div class="homepage-news">
 
-				<?php //News Query
-				$theme_option = flagship_sub_get_global_options();
+				<?php
+				// News Query.
+				$theme_option  = flagship_sub_get_global_options();
 				$news_quantity = $theme_option['flagship_sub_news_quantity'];
-				$news_query = new WP_Query(array(
-						'post_type' => 'post',
+				$news_query    = new WP_Query(
+					array(
+						'post_type'      => 'post',
 						'posts_per_page' => $news_quantity,
-					));
-				if ( $news_query->have_posts() ) : ?>
+					)
+				);
+				if ( $news_query->have_posts() ) :
+					?>
 					<header class="news-title" aria-label="Site Feed">
 						<h2><?php echo $theme_option['flagship_sub_feed_name']; ?></h2>
 					</header>
-					<?php while ($news_query->have_posts() ) : $news_query->the_post(); ?>
+					<?php
+					while ( $news_query->have_posts() ) :
+						$news_query->the_post();
+						?>
 						<?php get_template_part( 'template-parts/content-news-teaser', get_post_format() ); ?>
 					<?php endwhile; ?>
 					<article class="homepage-news-archive" aria-label="<?php echo $theme_option['flagship_sub_feed_name']; ?>">
@@ -69,4 +83,5 @@ get_header(); ?>
 	</div>
 <?php do_action( 'ksasacademic_after_content' ); ?>
 
-<?php get_footer();
+<?php
+get_footer();
