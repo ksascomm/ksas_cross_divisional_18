@@ -72,7 +72,7 @@
 					if ( 'jhu' === $shield ) :
 						?>
 						<a href="https://www.jhu.edu/" title="Johns Hopkins University">
-							<img width="300" height="87" src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/assets/images/university.logo.white.png" alt="Johns Hopkins University" loading="lazy">
+							<img width="300" height="87" src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/assets/images/university.logo.white.png" alt="Johns Hopkins University" loading="eager">
 						</a>
 					<?php elseif ( 'custom' === $shield ) : ?>
 						<a href="https://www.jhu.edu/" title="Johns Hopkins University">
@@ -80,7 +80,7 @@
 						</a>
 					<?php else : ?>
 					<a href="https://krieger.jhu.edu" title="Krieger School of Arts & Sciences">
-						<img width="300" height="87" src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/assets/images/krieger.white.svg" alt="KSAS Shield" loading="lazy">
+						<img width="300" height="87" src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/assets/images/krieger.white.svg" alt="KSAS Shield" loading="eager">
 					</a>
 					<?php endif; ?>
 				</div>
