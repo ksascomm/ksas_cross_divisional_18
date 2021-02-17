@@ -34,7 +34,23 @@ if ( $slider_query->have_posts() ) :?>
 	</div>
 </div>
 <?php endif; ?>
-
+<?php if ( has_post_thumbnail( $post->ID ) ) : ?>
+	<header class="hero" role="banner" aria-label="Featured Image">
+			<div class="full-screen-image show-for-large">
+				<div class="front-hero static" role="banner">
+				<?php
+						the_post_thumbnail(
+							'full',
+							array(
+								'class'   => 'featured-hero-image',
+								'loading' => 'eager',
+							)
+						);
+				?>
+				</div>
+			</div>
+		</header>
+<?php endif; ?>
 <?php do_action( 'ksasacademic_before_content' ); ?>
 
 	<div class="main-container" id="page">
