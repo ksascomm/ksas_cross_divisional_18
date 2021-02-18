@@ -65,7 +65,6 @@ endif;
 if ( is_active_sidebar( 'homepage-featured' ) ) :
 	?>
 <div class="grid-x grid-padding-x grid-container">
-
 	<div class="small-12 cell home-featured-widget-area">
 		<?php dynamic_sidebar( 'homepage-featured' ); ?>
 	</div>
