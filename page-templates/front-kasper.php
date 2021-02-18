@@ -4,7 +4,7 @@ Template Name: Front (KASPER Only)
 */
 get_header(); ?>
 
-<?php do_action( 'ksasacademic_before_content' ); ?>
+
 
 <div class="hero">
 	<div class="grid-x grid-padding-x grid-container">
@@ -54,7 +54,7 @@ endif;
 				<div class="homepage-news">
 
 				<?php
-				// News Query
+				// News Query.
 				$theme_option  = flagship_sub_get_global_options();
 				$news_quantity = $theme_option['flagship_sub_news_quantity'];
 				$news_query    = new WP_Query(
@@ -91,7 +91,7 @@ endif;
 			<?php endif; ?>
 		</div>
 	</div>
-<?php do_action( 'ksasacademic_after_content' ); ?>
+
 
 <?php
 get_footer();

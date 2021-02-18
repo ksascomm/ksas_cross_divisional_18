@@ -866,3 +866,34 @@ h3.tribe-events-widget-events-list__event-title.tribe-common-h7 {
     }
   }
 }
+
+
+.home-featured-widget-area {
+  margin-top: 1rem;
+    .callout.home-featured-widget.widget.widget_text {
+      background: rgba(191,204,217,.5);
+      border: 1px solid rgba(10, 10, 10, 0.25);
+      box-shadow: none;
+      color: $black;
+      .textwidget {
+        p {
+          font-size: 1.125rem;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          a {
+            font-family: "gentona-semibold", "Helvetica Neue", Roboto, sans-serif;
+            font-weight: 600;
+            color: $blue;
+            border-bottom-color: $medium-gray;
+            &:hover {
+              border-bottom: 0.0625rem solid;
+              border-bottom-color: $dark-gray;
+              box-shadow: none;
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+}

@@ -296,3 +296,27 @@ Frontend styles for gutenberg blocks
 .edit-post-layout__metaboxes {
   background-color: #fff !important;
 }
+
+
+.wp-block-quote {
+  border-left-color: $black;
+  p {
+    color: $black;
+  }
+  cite {
+    color: $black;
+    font-size: 1rem;
+    font-style: inherit;
+    font-family: $font-stack-semibold;
+    font-weight: $font-stack-semibold-weight;
+  }
+  &.is-style-large {
+    border-left: .25em solid $black;
+    p {
+      font-style: normal;
+    }
+    cite {
+      text-align: left;
+    }
+  }
+}

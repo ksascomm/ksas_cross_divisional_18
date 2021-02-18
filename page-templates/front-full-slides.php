@@ -30,7 +30,7 @@ get_header(); ?>
 		</header>
 <?php endif; ?>
 <?php get_template_part( 'template-parts/homepage-slider-full' ); ?>
-<?php do_action( 'ksasacademic_before_content' ); ?>
+
 <?php
 if ( have_posts() ) :
 	while ( have_posts() ) :
@@ -47,7 +47,7 @@ if ( have_posts() ) :
 	endwhile;
 endif;
 ?>
-<?php do_action( 'ksasacademic_after_content' ); ?>
+
 <div class="main-container">
 	<div class="main-grid homepage sidebar-right">
 		<div class="main-content homepage-news">
@@ -125,7 +125,7 @@ endif;
 	</div>
 </div>
 
-<?php do_action( 'ksasacademic_after_content' ); ?>
+
 
 <?php
 get_footer();

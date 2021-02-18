@@ -4,7 +4,7 @@ Template Name: Front (IRB Only)
 */
 get_header(); ?>
 
-<?php do_action( 'ksasacademic_before_content' ); ?>
+
 
 	<div class="main-container" id="page">
 		<div class="main-grid homepage">
@@ -81,7 +81,7 @@ endif;
 			</main>
 		</div>
 	</div>
-<?php do_action( 'ksasacademic_after_content' ); ?>
+
 
 <?php
 get_footer();
