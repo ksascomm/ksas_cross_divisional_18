@@ -1,7 +1,7 @@
 <?php $theme_option = flagship_sub_get_global_options();
 $analytics_id = $theme_option['flagship_sub_google_analytics']; ?>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100553583-15"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40512757-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -16,7 +16,7 @@ $analytics_id = $theme_option['flagship_sub_google_analytics']; ?>
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-5VTN64C');</script>
-<!-- End Google Tag Manager -->		
+<!-- End Google Tag Manager -->
 
 
 <?php $siteimprove_analytics = $theme_option['flagship_sub_siteimprove_analytics'];
