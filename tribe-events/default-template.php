@@ -17,17 +17,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header();
 ?>
-<div class="main-container" id="page">
-    <div class="main-grid">
-		<main id="tribe-events-pg-template" class="tribe-events-pg-template main-content-full-width">
-			<div class="secondary">
-				<?php ksasacademic_breadcrumb(); ?>
-			</div>
-			<?php tribe_events_before_html(); ?>
-			<?php tribe_get_view(); ?>
-			<?php tribe_events_after_html(); ?>
-		</main> <!-- #tribe-events-pg-template -->
+	<main id="tribe-events-pg-template" class="tribe-events-pg-template">
+		<div class="secondary">
+			<?php ksasacademic_breadcrumb(); ?>
 		</div>
-</div>
+		<?php tribe_events_before_html(); ?>
+		<?php tribe_get_view(); ?>
+		<?php tribe_events_after_html(); ?>
+	</main> <!-- #tribe-events-pg-template -->
 <?php
 get_footer();

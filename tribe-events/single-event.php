@@ -23,6 +23,10 @@ $event_id = get_the_ID();
 ?>
 
 <div id="tribe-events-content" class="tribe-events-single">
+	<div id="page">
+	<p class="tribe-events-back">
+		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( '&laquo; ' . esc_html_x( 'All %s', '%s Events plural label', 'the-events-calendar' ), $events_label_plural ); ?></a>
+	</p>
 
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
@@ -31,9 +35,9 @@ $event_id = get_the_ID();
 
 	<div class="tribe-events-schedule tribe-clearfix">
 		<?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
-		<!--<?php if ( tribe_get_cost() ) : ?>
+		<?php if ( tribe_get_cost() ) : ?>
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
-		<?php endif; ?>-->
+		<?php endif; ?>
 	</div>
 
 	<!-- Event header -->
@@ -50,48 +54,37 @@ $event_id = get_the_ID();
 	<!-- #tribe-events-header -->
 
 	<?php while ( have_posts() ) :  the_post(); ?>
-		<div class="grid-x">
-			<div class="cell large-7">
-				<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<!-- Event featured image, but exclude link -->
-					<?php echo tribe_event_featured_image( $event_id, 'featured-medium', false ); ?>
+		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<!-- Event featured image, but exclude link -->
+			<?php echo tribe_event_featured_image( $event_id, 'medium', false ); ?>
 
-					<!-- Event content -->
-					<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
-					<div class="tribe-events-single-event-description tribe-events-content">
-						<?php the_content(); ?>
-					</div>
-					<!-- .tribe-events-single-event-description -->
-					<div class="categories">
-						<dl>
-							<?php
-							echo tribe_get_event_categories(
-								get_the_id(), array(
-									'before'       => '',
-									'sep'          => ', ',
-									'after'        => '',
-									'label'        => null, // An appropriate plural/singular label will be provided
-									'label_before' => '<dt class="tribe-events-event-categories-label">',
-									'label_after'  => '</dt>',
-									'wrap_before'  => '<dd class="tribe-events-event-categories">',
-									'wrap_after'   => '</dd>',
-								)
-							);
-							?>
-						</dl>
-					</div>					
-					<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
-				</div> <!-- #post-x -->
+			<!-- Event content -->
+			<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
+			<div class="tribe-events-single-event-description tribe-events-content">
+				<?php the_content(); ?>
 			</div>
-			<div class="cell large-4 large-offset-1">
-				<!-- Event meta -->
-					<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
-					<?php tribe_get_template_part( 'modules/meta' ); ?>
-					<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
-			</div>
-		</div>
+			<!-- .tribe-events-single-event-description -->
+			<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
 
+			<!-- Event meta -->
+			<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
+			<?php tribe_get_template_part( 'modules/meta' ); ?>
+			<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
+		</div> <!-- #post-x -->
 		<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 	<?php endwhile; ?>
 
+	<!-- Event footer -->
+	<div id="tribe-events-footer">
+		<!-- Navigation -->
+		<nav class="tribe-events-nav-pagination" aria-label="<?php printf( esc_html__( '%s Navigation', 'the-events-calendar' ), $events_label_singular ); ?>">
+			<ul class="tribe-events-sub-nav">
+				<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
+				<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
+			</ul>
+			<!-- .tribe-events-sub-nav -->
+		</nav>
+	</div>
+	<!-- #tribe-events-footer -->
+	</div>
 </div><!-- #tribe-events-content -->

@@ -29,16 +29,16 @@
     border-right: $size solid $color;
     border-bottom: $size solid transparent;
   } @else if $direction == 'top-left' {
-    border-top: $size solid $color; 
-    border-right: $size solid transparent;  
+    border-top: $size solid $color;
+    border-right: $size solid transparent;
   } @else if $direction == 'top-right' {
-    border-top: $size solid $color; 
+    border-top: $size solid $color;
     border-left: $size solid transparent;
   } @else if $direction == 'bottom-left' {
-    border-bottom: $size solid $color; 
-    border-right: $size solid transparent;  
+    border-bottom: $size solid $color;
+    border-right: $size solid transparent;
   } @else if $direction == 'bottom-right' {
-    border-bottom: $size solid $color; 
+    border-bottom: $size solid $color;
     border-left: $size solid transparent;
   }
 }
@@ -66,4 +66,34 @@
 @mixin widget-title {
   font-family: $font-header-extrabold;
   font-weight: $font-header-extrabold-weight;
+}
+
+@mixin font-header {
+  font-family: $font-header;
+  font-weight: $font-header-weight;
+}
+
+@mixin font-header-extrabold {
+  font-family: $font-header-extrabold;
+  font-weight: $font-header-extrabold-weight;
+}
+
+@mixin font-stack {
+  font-family: $font-stack;
+  font-weight: $font-stack-weight;
+}
+
+@mixin font-stack-italic {
+  font-family: $font-stack-italic;
+  font-style: italic;
+}
+
+@mixin font-stack-semibold {
+  font-family: $font-stack-semibold;
+  font-weight: $font-stack-semibold-weight;
+}
+
+@mixin font-stack-bold {
+  font-family: $font-stack-bold;
+  font-weight: $font-stack-bold-weight;
 }
