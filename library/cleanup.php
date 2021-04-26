@@ -57,7 +57,7 @@ if ( ! function_exists( 'ksasacademic_cleanup_head' ) ) :
 		remove_action( 'wp_head', 'rel_canonical', 10 );
 
 		// Shortlink.
-		remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0); // remove the next and previous post links
+		remove_action( 'wp_head', 'adjacent_posts_rel_link', 10, 0 ); // remove the next and previous post links
 		remove_action( 'wp_head', 'wp_shortlink_wp_head', 10 );
 
 		// Links for adjacent posts.
@@ -100,91 +100,91 @@ if ( ! function_exists( 'ksasacademic_remove_recent_comments_style' ) ) :
 	}
 endif;
 
-//Disable jQuery migrate
-function remove_jquery_migrate( &$scripts) {
-	if(!is_admin()) {
-		$scripts->remove('jquery');
-		$scripts->add('jquery', false, array( 'jquery-core' ), '1.12.4');
+// Disable jQuery migrate
+function remove_jquery_migrate( &$scripts ) {
+	if ( ! is_admin() ) {
+		$scripts->remove( 'jquery' );
+		$scripts->add( 'jquery', false, array( 'jquery-core' ), '1.12.4' );
 	}
 }
 add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
 
-//Remove plugin CSS on specific page types
+// Remove plugin CSS on specific page types
 function dequeue_css() {
-	if (is_home() || is_front_page()) {
+	if ( is_home() || is_front_page() ) {
 		wp_dequeue_style( 'tablepress-default' );
 		wp_dequeue_style( 'tablepress-responsive-tables' );
 		wp_dequeue_style( 'slb_core' );
 	}
-	if (is_singular(array('people', 'profile','testimonial','bulletinboard', 'ksasexhibits'))) {
-		wp_dequeue_style( 'tablepress-default' );
-		wp_dequeue_style( 'tablepress-responsive-tables' );
-		wp_dequeue_style( 'ai1ec_style' );
-		wp_dequeue_style( 'widget-calendar-pro-style' );
-		wp_dequeue_style( 'slb_core' );
-		wp_dequeue_style('formidable');
-	}
-	if (is_page_template(array('page-templates/courses-undergrad.php', 'page-templates/courses-graduate.php','page-templates/people-research-staff.php','page-templates/graduate-student.php','page-templates/people-job-market-candidate'))) {
-		wp_dequeue_style( 'ai1ec_style' );
-		wp_dequeue_style( 'widget-calendar-pro-style' );
-		wp_dequeue_style( 'slb_core' );
-		wp_dequeue_style('formidable');
-	}
-	if (is_page('people')) {
+	if ( is_singular( array( 'people', 'profile', 'testimonial', 'bulletinboard', 'ksasexhibits' ) ) ) {
 		wp_dequeue_style( 'tablepress-default' );
 		wp_dequeue_style( 'tablepress-responsive-tables' );
 		wp_dequeue_style( 'ai1ec_style' );
 		wp_dequeue_style( 'widget-calendar-pro-style' );
 		wp_dequeue_style( 'slb_core' );
-		wp_dequeue_style('formidable');
+		wp_dequeue_style( 'formidable' );
+	}
+	if ( is_page_template( array( 'page-templates/courses-undergrad.php', 'page-templates/courses-graduate.php', 'page-templates/people-research-staff.php', 'page-templates/graduate-student.php', 'page-templates/people-job-market-candidate' ) ) ) {
+		wp_dequeue_style( 'ai1ec_style' );
+		wp_dequeue_style( 'widget-calendar-pro-style' );
+		wp_dequeue_style( 'slb_core' );
+		wp_dequeue_style( 'formidable' );
+	}
+	if ( is_page( 'people' ) ) {
+		wp_dequeue_style( 'tablepress-default' );
+		wp_dequeue_style( 'tablepress-responsive-tables' );
+		wp_dequeue_style( 'ai1ec_style' );
+		wp_dequeue_style( 'widget-calendar-pro-style' );
+		wp_dequeue_style( 'slb_core' );
+		wp_dequeue_style( 'formidable' );
 	}
 }
 add_action( 'wp_print_styles', 'dequeue_css', 100 );
 
 
-//Deregister Modern Tribe styles on specific page types
+// Deregister Modern Tribe styles on specific page types
 add_action( 'wp_enqueue_scripts', 'deregister_tribe_styles' );
 
 function deregister_tribe_styles() {
-	if (is_singular(array('people', 'profile','testimonial','bulletinboard', 'ksasexhibits'))) {
+	if ( is_singular( array( 'people', 'profile', 'testimonial', 'bulletinboard', 'ksasexhibits' ) ) ) {
 		wp_deregister_style( 'tribe-events-pro-views-v2-skeleton' );
-	    wp_deregister_style( 'tribe-events-pro-views-v2-full' );
-	    wp_deregister_style( 'tribe-events-views-v2-skeleton' );
-	    wp_deregister_style( 'tribe-events-views-v2-full' );
-	    wp_deregister_style( 'tribe-common-skeleton-style' );
-	    wp_deregister_style( 'tribe-common-full-style' );
-	    wp_deregister_style( 'tribe-common-skeleton-style' );
-	    wp_deregister_style( 'tribe-tooltip');
+		wp_deregister_style( 'tribe-events-pro-views-v2-full' );
+		wp_deregister_style( 'tribe-events-views-v2-skeleton' );
+		wp_deregister_style( 'tribe-events-views-v2-full' );
+		wp_deregister_style( 'tribe-common-skeleton-style' );
+		wp_deregister_style( 'tribe-common-full-style' );
+		wp_deregister_style( 'tribe-common-skeleton-style' );
+		wp_deregister_style( 'tribe-tooltip' );
 	}
-	if (is_page_template(array('page-templates/courses-undergrad.php', 'page-templates/courses-graduate.php','page-templates/people-research-staff.php','page-templates/graduate-student.php','page-templates/people-job-market-candidate'))) {
+	if ( is_page_template( array( 'page-templates/courses-undergrad.php', 'page-templates/courses-graduate.php', 'page-templates/people-research-staff.php', 'page-templates/graduate-student.php', 'page-templates/people-job-market-candidate' ) ) ) {
 		wp_deregister_style( 'tribe-events-pro-views-v2-skeleton' );
-	    wp_deregister_style( 'tribe-events-pro-views-v2-full' );
-	    wp_deregister_style( 'tribe-events-views-v2-skeleton' );
-	    wp_deregister_style( 'tribe-events-views-v2-full' );
-	    wp_deregister_style( 'tribe-common-skeleton-style' );
-	    wp_deregister_style( 'tribe-common-full-style' );
-	    wp_deregister_style( 'tribe-common-skeleton-style' );
-	    wp_deregister_style( 'tribe-tooltip');
+		wp_deregister_style( 'tribe-events-pro-views-v2-full' );
+		wp_deregister_style( 'tribe-events-views-v2-skeleton' );
+		wp_deregister_style( 'tribe-events-views-v2-full' );
+		wp_deregister_style( 'tribe-common-skeleton-style' );
+		wp_deregister_style( 'tribe-common-full-style' );
+		wp_deregister_style( 'tribe-common-skeleton-style' );
+		wp_deregister_style( 'tribe-tooltip' );
 	}
-	if (is_page('people')) {
+	if ( is_page( 'people' ) ) {
 		wp_deregister_style( 'tribe-events-pro-views-v2-skeleton' );
-	    wp_deregister_style( 'tribe-events-pro-views-v2-full' );
-	    wp_deregister_style( 'tribe-events-views-v2-skeleton' );
-	    wp_deregister_style( 'tribe-events-views-v2-full' );
-	    wp_deregister_style( 'tribe-common-skeleton-style' );
-	    wp_deregister_style( 'tribe-common-full-style' );
-	    wp_deregister_style( 'tribe-common-skeleton-style' );
-	    wp_deregister_style( 'tribe-tooltip');
+		wp_deregister_style( 'tribe-events-pro-views-v2-full' );
+		wp_deregister_style( 'tribe-events-views-v2-skeleton' );
+		wp_deregister_style( 'tribe-events-views-v2-full' );
+		wp_deregister_style( 'tribe-common-skeleton-style' );
+		wp_deregister_style( 'tribe-common-full-style' );
+		wp_deregister_style( 'tribe-common-skeleton-style' );
+		wp_deregister_style( 'tribe-tooltip' );
 	}
 }
 
 /** Disable/Clean Inline Styles */
 function clean_post_content( $content ) {
 	// Remove inline styling.
-	// $content = preg_replace( '/(<[^>]+) style=".*?"/i', '$1', $content );.
-	$content = preg_replace( '/(<[span>]+) style=".*?"/i', '$1', $content );
+	$content = preg_replace( '/(<[^>]+) style=".*?"/i', '$1', $content );
+	//$content = preg_replace( '/(<[span>]+) style=".*?"/i', '$1', $content );
 	$content = preg_replace( '/font-family\:.+?;/i', '', $content );
-	$content = preg_replace( '/color\:.+?;/i', '', $content );
+	//$content = preg_replace( '/color\:.+?;/i', '', $content );
 
 	// Remove font tag.
 	$content = preg_replace( '/<font[^>]+>/', '', $content );
@@ -197,8 +197,6 @@ function clean_post_content( $content ) {
 		'<span></span>'       => '',
 		'<span> </span>'      => '',
 		'<span>&nbsp;</span>' => '',
-		'<span>'              => '',
-		'</span>'             => '',
 		'<font>'              => '',
 		'</font>'             => '',
 	);
