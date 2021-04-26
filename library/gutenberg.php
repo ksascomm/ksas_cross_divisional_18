@@ -4,7 +4,25 @@ function ksas_disable_gutenberg_colour_settings() {
 	// Disable custom colors
 	add_theme_support( 'disable-custom-colors' );
 	// Add foundation color palette to the editor
-	add_theme_support( 'editor-color-palette' );
+	add_theme_support( 'editor-color-palette',
+		array(
+			array(
+				'name'  => __( 'Blue', 'ksas-academic' ),
+				'slug'  => 'blue',
+				'color'	=> '#002d72',
+			),
+			array(
+				'name'  => __( 'Grey', 'ksas-academic' ),
+				'slug'  => 'Grey',
+				'color' => '#e5e2e0',
+			),
+			array(
+				'name'  => __( 'Cool Grey', 'ksas-academic' ),
+				'slug'  => 'cool',
+				'color' => '#bfccd9',
+			),
+		)
+	);
 
 	// Set normal font size
 	add_theme_support(
