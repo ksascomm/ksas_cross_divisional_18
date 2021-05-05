@@ -181,10 +181,10 @@ function deregister_tribe_styles() {
 /** Disable/Clean Inline Styles */
 function clean_post_content( $content ) {
 	// Remove inline styling.
-	$content = preg_replace( '/(<[^>]+) style=".*?"/i', '$1', $content );
+	//$content = preg_replace( '/(<[^>]+) style=".*?"/i', '$1', $content );
 	//$content = preg_replace( '/(<[span>]+) style=".*?"/i', '$1', $content );
 	$content = preg_replace( '/font-family\:.+?;/i', '', $content );
-	//$content = preg_replace( '/color\:.+?;/i', '', $content );
+	$content = preg_replace( '/color\:.+?;/i', '', $content );
 
 	// Remove font tag.
 	$content = preg_replace( '/<font[^>]+>/', '', $content );
