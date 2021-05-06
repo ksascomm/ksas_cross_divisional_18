@@ -77,7 +77,7 @@ function flagship_sub_options_page_fields() {
 		'std'     => '1',
 );
 	$options[4] =
-	array(		
+	array(
 		'section' => 'directory_section',
 		'id'      => FLAGSHIP_SUB_SHORTNAME . '_directory_search',
 		'title'   => __( 'Directory Search', 'flagship_sub_textdomain' ),
@@ -103,7 +103,7 @@ function flagship_sub_options_page_fields() {
 		'desc'    => __( 'Enter your Google Analytics ID ie. UA-2497774-9', 'flagship_sub_textdomain' ),
 		'type'    => 'text',
 		'class'   => 'nohtml',
-		'std'     => 'UA-40512757-1',
+		'std'     => 'UA-100553583-1',
 );
 	$options[11] =
 	array(
@@ -115,7 +115,7 @@ function flagship_sub_options_page_fields() {
 		'std'     => 'Zanvyl Krieger School of Arts & Sciences',
 );
 	$options[12] =
-	array(		
+	array(
 		'section' => 'directory_section',
 		'id'      => FLAGSHIP_SUB_SHORTNAME . '_role_search',
 		'title'   => __( 'Filter by Role', 'flagship_sub_textdomain' ),
@@ -131,7 +131,7 @@ $options[13] =
 		'desc'    => __( 'Do you want to be able to filter by expertise/research area?', 'flagship_sub_textdomain' ),
 		'type'    => 'checkbox',
 		'std'    => '0',
-	);	
+	);
 	$options[16] =
 	array(
 		'section' => 'select_section',
@@ -162,7 +162,7 @@ $options[13] =
 		'std'     => '',
 );
 	$options[19] =
-	array(		
+	array(
 		'section' => 'directory_section',
 		'id'      => FLAGSHIP_SUB_SHORTNAME . '_research_label',
 		'title'   => __( 'Research/Expertise Label', 'flagship_sub_textdomain' ),
@@ -209,7 +209,7 @@ $options[13] =
 		'type'    => 'select',
 		'choices' => array(' ', 'arts-culture', 'at-work', 'health', 'politics-society', 'science-technology', 'student-life', 'university-news', 'voices-opinion'),
 		'std'    => ' ',
-	);	
+	);
 	$options[24] =
 	array(
 		'section' => 'technical_section',
@@ -227,6 +227,6 @@ $options[13] =
 		'desc'    => __( 'Do you want hide the "Explore KSAS" button?', 'flagship_sub_textdomain' ),
 		'type'    => 'checkbox',
 		'std'    => '0',
-);	
+);
 	return $options;
 }
