@@ -320,3 +320,24 @@ Frontend styles for gutenberg blocks
     }
   }
 }
+
+.wp-block-columns.calls-to-action, .wp-block-group.alignwide.call-to-action.has-background {
+  .has-text-align-center, p.has-text-align-center, .aligncenter {
+    text-align: center;
+  }
+}
+
+
+.entry-content > .three-column-feature {
+  padding-top: 1rem;
+}
+
+.entry-content > .three-column-feature ~ .three-column-feature {
+  padding-top: 0rem;
+}
+
+.wp-block-button a.wp-block-button__link:hover {
+  background-color: $white;
+  color: $blue;
+  border: 1px solid $blue;
+}

@@ -60,6 +60,9 @@ require_once( 'library/searchwp.php');
 /** Gutenberg editor support */
 require_once( 'library/gutenberg.php' );
 
+/** Block Patterns */
+require_once( 'library/block-patterns.php' );
+
 /** Theme support options */
 require_once( 'library/directory.php');
 require_once( 'library/theme-options.php');
