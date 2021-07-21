@@ -23,21 +23,17 @@ if ( ! function_exists( 'ksasacademic_theme_support' ) ) :
 			)
 		);
 
+		// Add post thumbnail support: http://codex.wordpress.org/Post_Thumbnails
+		add_theme_support( 'post-thumbnails' );
+
 		// Add menu support
 		add_theme_support( 'menus' );
+
 		// RSS thingy
 		add_theme_support( 'automatic-feed-links' );
 
 		// Add post formats support: http://codex.wordpress.org/Post_Formats
 		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat' ) );
-
-		// Additional theme support for woocommerce 3.0.+
-		add_theme_support( 'wc-product-gallery-zoom' );
-		add_theme_support( 'wc-product-gallery-lightbox' );
-		add_theme_support( 'wc-product-gallery-slider' );
-
-		// Add foundation.css as editor style https://codex.wordpress.org/Editor_Style
-		// add_editor_style( 'dist/assets/css/' . ksasacademic_asset_path( 'app.css' ) );
 
 		// Add Page Excerpt Box
 		add_post_type_support( 'page', 'excerpt' );
