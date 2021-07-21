@@ -8,32 +8,12 @@
  */
 
 // Add featured image sizes.
-//
 // Sizes are optimized and cropped for landscape aspect ratio
 // and optimized for HiDPI displays on 'small' and 'medium' screen sizes.
 add_image_size( 'featured-small', 640, 200, true ); // name, width, height, crop.
 add_image_size( 'featured-medium', 1280, 400, true );
 add_image_size( 'featured-large', 1440, 400, true );
-
-// Add additional image sizes.
-add_image_size( 'fp-small', 640 );
-add_image_size( 'fp-medium', 1024 );
-add_image_size( 'fp-large', 1200 );
-add_image_size( 'fp-xlarge', 1920 );
-
-// Register the new image sizes for use in the add media modal in wp-admin.
-function ksasacademic_custom_sizes( $sizes ) {
-	return array_merge(
-		$sizes,
-		array(
-			'fp-small'  => __( 'FP Small' ),
-			'fp-medium' => __( 'FP Medium' ),
-			'fp-large'  => __( 'FP Large' ),
-			'fp-xlarge' => __( 'FP XLarge' ),
-		)
-	);
-}
-add_filter( 'image_size_names_choose', 'ksasacademic_custom_sizes' );
+add_image_size( 'directory', 150, 217, true );
 
 // Add custom image sizes attribute to enhance responsive image functionality for content images.
 function ksasacademic_adjust_image_sizes_attr( $sizes, $size ) {
@@ -69,4 +49,16 @@ function wpsites_attachment_redirect() {
 		exit();
 		wp_reset_postdata();
 		endif;
+}
+
+// Disable a few default image sizes that I don’t need
+add_filter( 'intermediate_image_sizes', 'remove_default_img_sizes', 10, 1 );
+function remove_default_img_sizes( $sizes ) {
+	$targets = array( 'medium_large', '1536x1536', '2048x2048' );
+	foreach ( $sizes as $size_index => $size ) {
+		if ( in_array( $size, $targets ) ) {
+			unset( $sizes[ $size_index ] );
+		}
+	}
+	return $sizes;
 }
