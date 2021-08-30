@@ -83,7 +83,6 @@ li u {
 }
 
 p.block-editor-rich-text__editable, ul.block-editor-rich-text__editable li, ol.block-editor-rich-text__editable li {
-  line-height: 1.45;
   letter-spacing: -.2px;
 }
 
