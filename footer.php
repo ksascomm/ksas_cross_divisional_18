@@ -15,7 +15,7 @@
 
 	<div class="grid-x grid-padding-x hide-for-print">
 			<div class="small-12 medium-3 cell">
-				<a href="https://www.jhu.edu/">
+				<a href="https://www.jhu.edu/" aria-label="Johns Hopkins University">
 					<img class="jhushield" src="<?php echo esc_url( get_template_directory_uri() ); ?>/dist/assets/images/university.logo.white.png" alt="Johns Hopkins University"  width="567" height="109" loading="lazy">
 				</a>
 			</div>
