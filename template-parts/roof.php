@@ -7,31 +7,18 @@
  */
 
 ?>
-<?php $theme_option = flagship_sub_get_global_options();?>
+<?php $theme_option = flagship_sub_get_global_options(); ?>
 
 <ul class="menu simple roof-menu align-right">
-	<?php global $blog_id; $kasper = array(124); if (!in_array($blog_id, $kasper)) :?>
-	<li class="roof-padding">
-		<form method="GET" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search" aria-label="Utility Bar Search">
-			<div class="input-group">
-				<div class="input-group-button">
-	    			<input type="submit" class="button" value="&#xf002;" aria-label="search">
-	  			</div>
-				<label for="s" class="screen-reader-text">
-	                Search This Website
-	            </label>
-				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" data-swplive="true" placeholder="Search this site" aria-label="Search This Website"/>
-			</div>
-		</form>
-	</li>
-	<?php endif;?>
-	<?php $explore_ksas_cond = $theme_option['flagship_sub_explore_ksas'];
-		if ($explore_ksas_cond === 0 ):?>
-	<li><a class="button" href="#" aria-label="Explore KSAS" data-toggle="offCanvasTop1">Explore JHU <span class="fa fa-bars" aria-hidden="true"></span></a></li>
-	<?php endif;?>
+	<?php
+	$explore_ksas_cond = $theme_option['flagship_sub_explore_ksas'];
+	if ( $explore_ksas_cond === 0 ) :
+		?>
+	<li><a class="button" href="#" aria-label="Explore JHU" data-toggle="offCanvasTop1">Explore JHU <span class="fa fa-bars" aria-hidden="true"></span></a></li>
+	<?php endif; ?>
 </ul>
-<?php if ($explore_ksas_cond === 0 ):?>
-<div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas aria-hidden="true">
+<?php if ( $explore_ksas_cond === 0 ) : ?>
+<div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas>
 	<div id="global-links" class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-3">
 		<h1 class="show-for-sr">Explore JHU</h1>
 		<div class="cell">
@@ -62,8 +49,8 @@
 			</ul>
 		</div>
 		<button class="close-button" aria-label="Close menu" type="button" data-close>
-		  <span aria-hidden="true">&times;</span>
+			<span aria-hidden="true">&times;</span>
 		</button>
 	</div>
 </div>
-<?php endif;?>
+<?php endif; ?>
