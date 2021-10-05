@@ -9,14 +9,14 @@
 ?>
 <?php $theme_option = flagship_sub_get_global_options(); ?>
 
-<ul class="menu simple roof-menu align-right">
-	<?php
+<?php
 	$explore_ksas_cond = $theme_option['flagship_sub_explore_ksas'];
-	if ( $explore_ksas_cond === 0 ) :
-		?>
-	<li><a class="button" href="#" aria-label="Explore JHU" data-toggle="offCanvasTop1">Explore JHU <span class="fa fa-bars" aria-hidden="true"></span></a></li>
+if ( $explore_ksas_cond === 0 ) :
+	?>
+	<ul class="menu simple roof-menu align-right">
+		<li><a class="button" href="#" aria-label="Explore JHU" data-toggle="offCanvasTop1">Explore JHU <span class="fa fa-bars" aria-hidden="true"></span></a></li>
+	</ul>
 	<?php endif; ?>
-</ul>
 <?php if ( $explore_ksas_cond === 0 ) : ?>
 <div class="off-canvas position-top" id="offCanvasTop1" data-off-canvas>
 	<div id="global-links" class="grid-x grid-padding-x small-up-2 medium-up-3 large-up-3">
