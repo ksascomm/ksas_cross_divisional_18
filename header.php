@@ -16,7 +16,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<meta name="date" content="<?php the_modified_date(); ?>" />
-		<title><?php create_page_title(); ?></title>
 
 		<?php wp_head(); ?>
 
