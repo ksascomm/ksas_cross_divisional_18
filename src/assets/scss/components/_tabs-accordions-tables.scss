@@ -84,7 +84,7 @@ table thead {
       margin: 2px;
       width: auto;
     }
-  }  
+  }
 }
 
 .dataTables_length {
@@ -129,7 +129,7 @@ table thead {
     }
     &:focus {
       outline: -webkit-focus-ring-color auto 5px;
-    }    
+    }
   }
   &.paging_simple {
     padding: 0 15px;
@@ -195,7 +195,7 @@ table thead {
   }
   &:focus {
     outline: -webkit-focus-ring-color auto 5px;
-  }  
+  }
 }
 
 .resources-documents {
@@ -224,6 +224,56 @@ table thead {
     }
     dd {
       margin-bottom: 0.5rem;
-    }    
+    }
   }
+}
+
+//Accordion Block Plugin
+/* The accordion item container */
+.wp-block-pb-accordion-item.c-accordion__item {
+    padding-bottom: .5rem;
+    &:last-child:not(.is-open) > .c-accordion__title {
+      border-bottom: 1px solid $gray;
+      border-radius: 0 0 0 0;
+    }
+    &:last-child > .c-accordion__content:last-child {
+      border-bottom: 1px solid $gray;
+    }
+    /* is-open is added to open accordion items */
+    &.is-open {
+      .c-accordion__title {
+        background: $light-gray;
+        border-bottom: 0px;
+      }
+    }
+    /* is-read is added to accordion items that have been opened at least once */
+    &.is-read {}
+    /* An accordion item title */
+    .c-accordion__title {
+      color: $blue;
+      font-family: $font-stack-bold;
+      font-weight: $font-stack-bold-weight;
+      font-size: 1.125rem;
+      padding: 1rem;
+      border: 1px solid $gray;
+      margin-bottom: 0 !important;
+      &::after {
+        right: 1rem;
+        color: $blue;
+      }
+    }
+    /* An accordion item title that is using a `<button>` tag */
+    .c-accordion__title--button {}
+    /* To modify the style when hovering over an accordion item title */
+    .c-accordion__title:hover {}
+    /* To modify the style when an accordion item title currently has broswer focus */
+    .c-accordion__title:focus {}
+    /* An accordion item content container */
+    .c-accordion__content {
+      padding: 1rem;
+      border: 1px solid $gray;
+      //border-bottom: 0;
+      background-color: $white;
+      color: $black;
+    }
 }
