@@ -17,7 +17,7 @@ if ( 'keyword' === $selection ) {
 	$topic      = $theme_option['flagship_sub_hub_topic'];
 	$topics     = array(
 		'arts-culture'       => 32,
-		'at-work'            => 3158,
+		'at-work'            => 3159,
 		'athletics'          => 34,
 		'health'             => 31,
 		'politics-society'   => 167,
